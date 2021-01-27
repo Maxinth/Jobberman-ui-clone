@@ -1,0 +1,24 @@
+.nav {
+  width: 100%;
+  max-width: 1400px;
+  border: 1px solid blue;
+}
+
+.nav__left {
+  display: flex;
+  align-items: center;
+}
+
+.nav__header {
+  padding: 0.8rem 2rem;
+}
+.nav__menuIcon {
+  font-size: 2rem !important;
+  margin-right: 0.5rem;
+}
+
+.nav__logo {
+  object-fit: contain;
+  width: 200px;
+  display: block;
+}
