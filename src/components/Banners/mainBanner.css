@@ -1,3 +1,113 @@
 .mainBanner {
   margin-top: 4.5rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.mainBanner__main {
+  background-image: url("../../assets/sm-jobseeker-hero.jpg");
+  object-fit: cover;
+  padding: 1rem;
+  width: 100%;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  min-height: 648px;
+  display: block;
+  min-width: 300px;
+}
+.mainBanner__img {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  margin: 4rem 0 2rem;
+}
+.mainBanner__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainBanner__heading {
+  font-weight: 300;
+  color: #fff;
+  font-size: 1.2rem;
+  /* text-align: center; */
+}
+
+.mainBanner__bottom {
+  text-align: center;
+}
+
+.mainBanner__video {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  justify-content: center;
+}
+
+.mainBanner__btn {
+  outline: none;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.mainBanner__link {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
+}
+
+.mainBanner__img.lg {
+  display: none;
+}
+@media (min-width: 642px) {
+  .mainBanner__main {
+    background-image: url("../../assets/jm-jobseeker-hero-3.jpg");
+    object-fit: contain;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    display: inline-flex;
+    width: 100%;
+    min-height: 500px;
+    /* height: 200px; */
+  }
+
+  .mainBanner__img {
+    display: none;
+  }
+
+  .mainBanner__img.lg {
+    display: block;
+    max-width: 400px;
+  }
+
+  .mainBanner__bottom {
+    text-align: left;
+    max-width: 500px;
+  }
+
+  .mainBanner__video {
+    justify-content: flex-start;
+    margin-right: 2rem;
+  }
+
+  .mainBanner__videoContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+
+  .mainBanner__link {
+    padding: 0.1rem 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .mainBanner__btn {
+    margin-right: 1rem;
+  }
+  .mainBanner__heading {
+    font-size: 1rem;
+  }
 }
