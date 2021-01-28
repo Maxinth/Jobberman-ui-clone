@@ -8,6 +8,7 @@
   width: 100vw;
   background-color: rgb(255, 255, 255);
   transition: transform 0.2s ease-in-out, width 0.3s ease-in;
+  z-index: 300;
 }
 
 .navSidebar.open {

@@ -11,14 +11,12 @@ const animateOpacity = {
     opacity: 1,
     transition: {
       type: "tween",
-      duration: 3,
+      duration: 1,
     },
   },
 };
 
 // custom hook to expose variants and the variant props
-const useVariants = () => {
+export const useVariants = () => {
   return { variantProps, animateOpacity };
 };
-
-export default useVariants;
