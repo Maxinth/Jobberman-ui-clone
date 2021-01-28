@@ -20,9 +20,25 @@
 .nav__header {
   padding: 0.8rem 2rem;
 }
+.nav__menuIconContainer {
+  border-radius: 5px;
+  /* border-color: blue; */
+  outline: none;
+  border: none;
+  background-color: transparent;
+  margin-right: 0.5rem;
+  padding: 0.2rem;
+  padding-top: 0.3rem;
+  border: 1px dotted transparent;
+  transition: border 0.2s;
+}
+
+.nav__menuIconContainer:active {
+  border: 1px dotted var(--main-orange);
+}
 .nav__menuIcon {
   font-size: 1.8rem !important;
-  margin-right: 0.5rem;
+
   color: rgb(78, 85, 89);
 }
 
