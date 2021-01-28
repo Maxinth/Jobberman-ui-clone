@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <BackDrops />
       <Navbar />
-
       <MainBanner />
     </div>
   );

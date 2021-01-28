@@ -10,6 +10,7 @@
   transition: transform 0.2s ease-in-out, width 0.3s ease-in;
   z-index: 300;
   --border: 1px solid rgb(231, 228, 228);
+  overflow: auto;
 }
 
 .navSidebar.open {
@@ -109,6 +110,10 @@
 
 .navSidebar__link.main {
   color: var(--main-orange);
+}
+
+.navSidebar__postJobs {
+  margin-bottom: 5rem;
 }
 /* OTHER VIEWPORTS */
 @media (min-width: 640px) {

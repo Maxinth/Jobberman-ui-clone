@@ -1,7 +1,11 @@
 .nav {
   width: 100%;
   max-width: 1400px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
 }
 
 .nav__left {
@@ -83,6 +87,19 @@
   font-weight: 700;
 }
 
+.nav__backdrop {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  top: 0;
+  bottom: 0;
+  /* height: 400vh; */
+  /* height: 100vh; */
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 200;
+  cursor: pointer;
+}
 @media (min-width: 500px) {
   .nav__logo {
     width: 200px;

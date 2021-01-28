@@ -1,10 +1,14 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import NavLeft from "./NavLeft";
 import NavSideBar from "./NavSideBar/NavSideBar";
+import { motion } from "framer-motion";
+import { useVariants } from "../useVariants";
+import { useGlobalContext } from "../context";
 
 const Navbar = () => {
+  const { variantProps, animateOpacity } = useVariants();
+  const { toggleSideBar, isSideBarOpen } = useGlobalContext();
   return (
     <>
       <nav className="nav">
@@ -30,6 +34,16 @@ const Navbar = () => {
             </button>
           </div>
         </header>
+
+        {/* show this backdrop fix for navbar only when the sidebar is in view */}
+        {isSideBarOpen && (
+          <motion.div
+            className="nav__backdrop"
+            variants={animateOpacity}
+            onClick={toggleSideBar}
+            {...variantProps}
+          ></motion.div>
+        )}
       </nav>
       <NavSideBar />
     </>

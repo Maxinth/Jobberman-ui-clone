@@ -1,5 +1,6 @@
 import React from "react";
 import SmallBanner from "./SmallBanner";
+import "./mainBanner.css";
 
 const MainBanner = () => {
   return (
