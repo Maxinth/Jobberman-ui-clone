@@ -3,6 +3,10 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  --main-orange: rgb(255, 98, 0);
+}
 a {
   text-decoration: none;
 }
