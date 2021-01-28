@@ -2,13 +2,13 @@
   width: 100%;
   font-family: "Open Sans", sans-serif;
   border: 1px solid black;
-  background: linear-gradient(to right, rgb(19, 3, 65), rgb(38, 15, 141));
+  background: linear-gradient(to right, rgb(14, 1, 53), rgb(38, 15, 141));
 }
 
 .smallBanner__container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
@@ -16,8 +16,11 @@
 }
 
 .smallBanner__text {
+  font-family: inherit;
   color: #fff;
-  font-weight: 900;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  display: inline-block;
 }
 .smallBanner__link {
   text-transform: uppercase;
@@ -25,10 +28,15 @@
   color: tomato;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
+  margin-top: 2rem;
 }
 
 .smallBanner__container > * {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.smallBanner__link {
+  transition: all 0.3s;
 }
 @media (min-width: 556px) {
   .smallBanner__container {
@@ -40,5 +48,14 @@
   .smallBanner__container > * {
     margin-left: 1rem;
     margin-bottom: unset;
+  }
+
+  .smallBanner__text:first-child {
+    margin-left: unset;
+  }
+
+  .smallBanner__link {
+    margin-left: 1rem;
+    margin-top: unset;
   }
 }

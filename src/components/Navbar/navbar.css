@@ -7,6 +7,8 @@
 .nav__left {
   display: flex;
   align-items: center;
+
+  /* justify-content: space-between; */
 }
 
 .nav__right {
@@ -17,20 +19,18 @@
 
 .nav__header {
   padding: 0.8rem 2rem;
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between; */
 }
 .nav__menuIcon {
-  font-size: 2rem !important;
+  font-size: 1.8rem !important;
   margin-right: 0.5rem;
   color: rgb(78, 85, 89);
 }
 
 .nav__logo {
   object-fit: contain;
-  width: 200px;
+  width: 150px;
   display: block;
+  transition: width 0.3s ease-in-out;
 }
 
 .nav__link {
@@ -38,10 +38,10 @@
   width: 100%;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   color: var(--main-orange);
   font-size: calc(0.8rem + 0.2vw);
-  font-weight: 500;
+  font-weight: 700;
   transition: font-size 0.3s ease-in-out;
 }
 
@@ -58,14 +58,20 @@
   opacity: 0.8;
 }
 .nav__btn .nav__link {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #fff;
   font-weight: 600;
   border-radius: 5px;
   background-color: var(--main-orange);
   padding: 0.5rem 2rem;
+  font-weight: 700;
 }
 
+@media (min-width: 500px) {
+  .nav__logo {
+    width: 200px;
+  }
+}
 @media (min-width: 700px) {
   .nav__right {
     opacity: 0;
@@ -89,6 +95,6 @@
 
 @media (min-width: 1200px) {
   .nav__link {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
