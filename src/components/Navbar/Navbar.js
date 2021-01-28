@@ -2,7 +2,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import "./navbar.css";
-// import
 
 const Navbar = () => {
   return (

@@ -1,0 +1,44 @@
+.smallBanner {
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  border: 1px solid black;
+  background: linear-gradient(to right, rgb(19, 3, 65), rgb(38, 15, 141));
+}
+
+.smallBanner__container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.smallBanner__text {
+  color: #fff;
+  font-weight: 900;
+}
+.smallBanner__link {
+  text-transform: uppercase;
+  /* color: rgb(255, 98, 0); */
+  color: tomato;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+
+.smallBanner__container > * {
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 556px) {
+  .smallBanner__container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: unset;
+  }
+
+  .smallBanner__container > * {
+    margin-left: 1rem;
+    margin-bottom: unset;
+  }
+}
