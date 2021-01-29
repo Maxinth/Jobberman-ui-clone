@@ -7,7 +7,9 @@ const MainBannerSection = () => {
   return (
     <section className="mainBanner__main lg">
       <div className="mainBanner__container">
+        {/* show on small screens */}
         <img src={bannerImg} alt="banner" className="mainBanner__img" />
+        {/* show on small screens */}
         <img src={bannerImg2} alt="banner" className="mainBanner__img lg" />
         <section className="mainBanner__bottom">
           <h3 className="mainBanner__heading">

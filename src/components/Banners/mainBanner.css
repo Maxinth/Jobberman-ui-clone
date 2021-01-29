@@ -1,18 +1,19 @@
 .mainBanner {
-  margin-top: 4.5rem;
+  margin-top: 4.2rem;
   font-family: "Open Sans", sans-serif;
 }
 
 .mainBanner__main {
   background-image: url("../../assets/sm-jobseeker-hero.jpg");
-  object-fit: cover;
+  object-fit: contain;
   padding: 1rem;
   width: 100%;
-  background-position: 50% 0%;
+  background-position: 60% 2%;
   background-repeat: no-repeat;
   min-height: 648px;
   display: block;
   min-width: 300px;
+  transition: background-position 0.2s;
 }
 .mainBanner__img {
   object-fit: cover;
@@ -60,12 +61,13 @@
 
 .mainBanner__img.lg {
   display: none;
+  transition: width 0.3s ease-in-out;
 }
 @media (min-width: 642px) {
   .mainBanner__main {
-    background-image: url("../../assets/jm-jobseeker-hero-3.jpg");
-    object-fit: contain;
-    background-position: 50% 0%;
+    background-image: url("../../assets/jm-jobseeker-hero.jpg");
+    object-fit: cover;
+    background-position: 100% 5%;
     background-repeat: no-repeat;
     display: inline-flex;
     width: 100%;
@@ -79,7 +81,8 @@
 
   .mainBanner__img.lg {
     display: block;
-    max-width: 400px;
+    width: calc(400px + 10vw);
+    max-width: 600px;
   }
 
   .mainBanner__bottom {
@@ -100,12 +103,14 @@
   }
 
   .mainBanner__link {
-    padding: 0.1rem 1.2rem;
+    padding: 0rem 2.5rem;
     font-size: 1.1rem;
   }
 
   .mainBanner__btn {
     margin-right: 1rem;
+    height: 40px;
+    margin-top: 0.5rem;
   }
   .mainBanner__heading {
     font-size: 1rem;
