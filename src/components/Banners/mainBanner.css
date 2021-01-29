@@ -6,7 +6,7 @@
 .mainBanner__main {
   background-image: url("../../assets/sm-jobseeker-hero.jpg");
   object-fit: contain;
-  padding: 1rem;
+  /* padding: 1rem; */
   width: 100%;
   background-position: 60% 2%;
   background-repeat: no-repeat;
@@ -24,6 +24,7 @@
 .mainBanner__container {
   display: flex;
   flex-direction: column;
+  padding: 1rem;
 }
 
 .mainBanner__heading {
@@ -63,13 +64,52 @@
   display: none;
   transition: width 0.3s ease-in-out;
 }
+
+/* form */
+
+.mainBanner__formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.mainBanner__form {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainBanner__select {
+  padding: 0.8rem 0.5rem;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.mainBanner__options {
+  min-width: 300px;
+  font-family: "Raleway", sans-serif;
+  padding: 0.5rem;
+}
+
+.mainBanner__text {
+  text-transform: capitalize;
+}
 @media (min-width: 642px) {
   .mainBanner__main {
     background-image: url("../../assets/jm-jobseeker-hero.jpg");
     object-fit: cover;
     background-position: 100% 5%;
     background-repeat: no-repeat;
-    display: inline-flex;
+    /* display: inline-flex; */
     width: 100%;
     min-height: 500px;
     /* height: 200px; */
@@ -114,5 +154,15 @@
   }
   .mainBanner__heading {
     font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainBanner__form {
+    flex-direction: row;
+  }
+
+  .mainBanner__select {
+    margin-right: 1rem;
   }
 }

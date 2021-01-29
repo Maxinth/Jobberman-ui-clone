@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import bannerImg from "../../assets/jobseeker-hero-bold.png";
 import bannerImg2 from "../../assets/jobseeker-hero2.png";
 import PlayCircleOutlineOutlinedIcon from "@material-ui/icons/PlayCircleOutlineOutlined";
 import { Link } from "react-router-dom";
+import SelectBox from "./FormSelect";
+
+import { data } from "./formSelectData";
 const MainBannerSection = () => {
+  const { jobFunctions } = data;
+  const { jobId, jobItems } = jobFunctions;
+
+  const [choice, setChoice] = useState({
+    jobs: jobItems[0].itemValue,
+    industries: "",
+    locations: "",
+  });
+
+  const { jobs, industries, locations } = choice;
+
+  const onChange = (e) => {
+    setChoice({
+      ...choice,
+      [e.target.id]: e.target.value,
+    });
+  };
+
   return (
-    <section className="mainBanner__main lg">
+    <section className="mainBanner__main">
       <div className="mainBanner__container">
         {/* show on small screens */}
         <img src={bannerImg} alt="banner" className="mainBanner__img" />
@@ -28,8 +49,21 @@ const MainBannerSection = () => {
               </Link>
             </button>
           </section>
-        </section>
+        </section>{" "}
+        {/*END  mainBanner__bottom */}
+        {/* <section className="mainBanner__form"> */}
+        {/* </section> */}
       </div>
+      <section className="mainBanner__formContainer">
+        <form className="mainBanner__form">
+          <SelectBox
+            items={jobItems}
+            currentChoice={jobs}
+            onChange={onChange}
+            id={jobId}
+          />
+        </form>
+      </section>
     </section>
   );
 };
