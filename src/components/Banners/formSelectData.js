@@ -38,10 +38,109 @@ export const data = {
     ],
   },
 
-  jobIndustries: [
-    {
-      itemName: "All Industries",
-      itemValue: "allIndustries",
-    },
-  ],
+  jobIndustries: {
+    industryId: "industries",
+    industryItems: [
+      {
+        itemName: "All Industries",
+        itemValue: "allIndustries",
+      },
+      {
+        itemName: "Advertising, Media & Communications",
+        itemValue: "adverts",
+      },
+      {
+        itemName: "Agriculture, Fishing & Forestry",
+        itemValue: "agric",
+      },
+      {
+        itemName: "Automotive & Aviation",
+        itemValue: "aviation",
+      },
+      {
+        itemName: "Banking, Finance & Insurance",
+        itemValue: "banking",
+      },
+      {
+        itemName: "Construction",
+        itemValue: "construction",
+      },
+      {
+        itemName: "Education",
+        itemValue: "education",
+      },
+      {
+        itemName: "Energy & Utilities",
+        itemValue: "energy",
+      },
+      {
+        itemName: "Enforcement & Security",
+        itemValue: "security",
+      },
+      {
+        itemName: "Entertainment, Events & Sports",
+        itemValue: "entertainment",
+      },
+      {
+        itemName: "Government",
+        itemValue: "gov",
+      },
+      {
+        itemName: "Healthcare",
+        itemValue: "health",
+      },
+      //   {
+      //     itemName: "",
+      //     itemValue: "",
+      //   },
+      //   {
+      //     itemName: "",
+      //     itemValue: "",
+      //   },
+      //   {
+      //     itemName: "",
+      //     itemValue: "",
+      //   },
+      //   {
+      //     itemName: "",
+      //     itemValue: "",
+      //   },
+      //   {
+      //     itemName: "",
+      //     itemValue: "",
+      //   },
+      //   {
+      //     itemName: "",
+      //     itemValue: "",
+      //   },
+      //   {
+      //     itemName: "",
+      //     itemValue: "",
+      //   },
+      //   {
+      //     itemName: "",
+      //     itemValue: "",
+      //   },
+      //   {
+      //     itemName: "",
+      //     itemValue: "",
+      //   },
+      //   {
+      //     itemName: "",
+      //     itemValue: "",
+      //   },
+      //   {
+      //     itemName: "",
+      //     itemValue: "",
+      //   },
+      //   {
+      //     itemName: "",
+      //     itemValue: "",
+      //   },
+      //   {
+      //     itemName: "",
+      //     itemValue: "",
+      //   },
+    ],
+  },
 };

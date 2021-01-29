@@ -7,12 +7,16 @@ import SelectBox from "./FormSelect";
 
 import { data } from "./formSelectData";
 const MainBannerSection = () => {
-  const { jobFunctions } = data;
+  // destructure individual object items from data object
+  const { jobFunctions, jobIndustries } = data;
+
+  // destructuring needed properties from the objects from 12
   const { jobId, jobItems } = jobFunctions;
+  const { industryId, industryItems } = jobIndustries;
 
   const [choice, setChoice] = useState({
     jobs: jobItems[0].itemValue,
-    industries: "",
+    industries: industryItems[0].itemValue,
     locations: "",
   });
 
@@ -61,6 +65,12 @@ const MainBannerSection = () => {
             currentChoice={jobs}
             onChange={onChange}
             id={jobId}
+          />
+          <SelectBox
+            items={industryItems}
+            currentChoice={industries}
+            onChange={onChange}
+            id={industryId}
           />
         </form>
       </section>
