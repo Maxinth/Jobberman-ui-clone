@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import bgOnSmallScreen from "../../assets/sm-jobseeker-hero.jpg";
 import bgOnLargeScreen from "../../assets/jm-jobseeker-hero.jpg";
-
+import { global } from "../../globalStyles";
 const MainBannerContainer = styled.section`
   margin-top: 4.2rem;
   font-family: "Open Sans", sans-serif;
@@ -46,6 +46,52 @@ const BannerMain = styled.section`
   }
 `;
 
+const SelectBoxContainer = styled.div`
+  display: ${({ twoItems }) => (twoItems ? "flex" : "unset")};
+  justify-content: center;
+  align-items: center;
+`;
+
+const SearchText = styled.span`
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  display: none;
+`;
+
+const SearchButton = styled.button`
+  outline: none;
+  border: none;
+  background: ${global.mainOrange};
+  margin-bottom: 0.9rem;
+  margin-left: 0.5rem;
+  border-radius: 5px;
+  > svg {
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 3rem !important;
+  }
+
+  @media (min-width: 1024px) {
+    /* margin-left: 1rem; */
+  }
+
+  @media (min-width: 1150px) {
+    padding: 0.9rem 1rem;
+    margin-left: 1rem;
+
+    ${SearchText} {
+      display: block;
+      width: 100%;
+      font-weight: 700;
+    }
+    > svg {
+      display: none;
+    }
+  }
+`;
+
 const SelectBoxItem = styled.select`
   padding: 0.8rem 0.5rem;
   background-color: #fff;
@@ -57,17 +103,23 @@ const SelectBoxItem = styled.select`
   font-size: 1.1rem;
   text-transform: capitalize;
   cursor: pointer;
+  color: grey;
+  width: 100%;
 
   /* larger screen */
-  @media (min-width: 1024px) {
-    margin-right: 1rem;
+  @media (min-width: 1150px) {
+    /* margin-right: 1rem; */
+    width: unset;
   }
 `;
 
 const SelectBoxOption = styled.option`
   min-width: 300px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Open Sans", sans-serif;
   padding: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
 `;
 
 // SmallBanner components
@@ -139,7 +191,7 @@ const BannerLink = styled(Link)`
 
 // BannerBottom
 const Heading = styled.h3`
-  font-weight: 300;
+  font-weight: 400;
   color: #fff;
   font-size: 1.2rem;
   padding: 1rem;
@@ -219,10 +271,10 @@ const BannerForm = styled.form`
   background-color: rgba(0, 0, 0, 0.45);
 
   > * {
-    flex: 1;
+    margin-right: 1rem;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: 1140px) {
     flex-direction: row;
   }
 `;
@@ -243,4 +295,7 @@ export {
   BannerBtn,
   FormContainer,
   BannerForm,
+  SelectBoxContainer,
+  SearchButton,
+  SearchText,
 };

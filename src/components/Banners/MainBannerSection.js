@@ -47,27 +47,10 @@ const MainBannerSection = () => {
                 currentChoice={currentChoice}
                 onChange={onChange}
                 id={id}
+                choice={choice}
               />
             );
           })}
-          {/* <SelectBox
-            items={jobItems}
-            currentChoice={jobs}
-            onChange={onChange}
-            id={jobId}
-          />
-          <SelectBox
-            items={industryItems}
-            currentChoice={industries}
-            onChange={onChange}
-            id={industryId}
-          />
-          <SelectBox
-            items={locationItems}
-            currentChoice={locations}
-            onChange={onChange}
-            id={locationId}
-          /> */}
         </BannerForm>
       </FormContainer>
     </BannerMain>

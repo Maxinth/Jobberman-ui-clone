@@ -44,6 +44,10 @@ const NavLogo = styled.img`
   width: 150px;
   display: block;
   transition: width 0.3s ease-in-out;
+
+  @media (min-width: 900px) {
+    width: 200px;
+  }
 `;
 
 const Container = styled.div`
