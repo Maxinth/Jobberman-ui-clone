@@ -12,12 +12,17 @@ const MainBannerImg = styled.img`
   object-fit: cover;
   width: 100%;
   display: ${(props) => (props.lg ? "none" : "block")};
-
+  transition: padding-left 0.2s;
   /* margin: 4rem 1rem 2rem; */
 
   @media (min-width: 642px) {
     display: ${(props) => (!props.lg ? "none" : "block")};
     width: ${(props) => (props.lg ? `calc(400px + 10vw)` : "unset")};
+    padding-left: 3rem;
+  }
+
+  @media (min-width: 900px) {
+    padding-left: 5rem;
   }
 `;
 
@@ -98,17 +103,18 @@ const SelectBoxItem = styled.select`
   margin-bottom: 1rem;
   border: none;
   outline: none;
-  text-align: center;
+  /* text-align: center; */
   border-radius: 5px;
   font-size: 1.1rem;
   text-transform: capitalize;
   cursor: pointer;
   color: grey;
   width: 100%;
+  transition: text-align 0.3s;
 
   /* larger screen */
   @media (min-width: 1150px) {
-    /* margin-right: 1rem; */
+    text-align: center;
     width: unset;
   }
 `;

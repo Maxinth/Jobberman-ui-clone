@@ -11,9 +11,15 @@ import {
 
 const Container = styled.section`
   text-align: center;
+  transition: padding-left 0.3s;
   @media (min-width: 642px) {
     text-align: left;
     max-width: 500px;
+    padding-left: 3rem;
+  }
+
+  @media (min-width: 900px) {
+    padding-left: 5rem;
   }
 `;
 
