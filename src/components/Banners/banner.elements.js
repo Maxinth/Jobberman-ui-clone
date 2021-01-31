@@ -23,6 +23,7 @@ const MainBannerImg = styled.img`
 
 const BannerMain = styled.section`
   background-image: url(${bgOnSmallScreen});
+  background-color: rgba(9, 9, 156, 0.8);
   object-fit: contain;
   /* padding: 1rem; */
   width: 100%;
@@ -35,7 +36,6 @@ const BannerMain = styled.section`
   margin-top: -0.5rem;
 
   @media (min-width: 642px) {
-    /* background-image: url("../../assets/jm-jobseeker-hero.jpg"); */
     object-fit: cover;
     background-image: url(${bgOnLargeScreen});
     background-position: 100% 5%;

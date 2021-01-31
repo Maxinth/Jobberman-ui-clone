@@ -16,7 +16,7 @@ const NavSideBar = () => {
   const { mainSection, sign, post } = data;
   return (
     <NavSideBarContainer state={isSideBarOpen}>
-      <NavSection>
+      <NavSection pad={true}>
         <NavLeft toggleSideBar={toggleSideBar} />
       </NavSection>
       <Container>

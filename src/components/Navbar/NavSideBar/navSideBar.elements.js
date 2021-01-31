@@ -34,7 +34,10 @@ const NavLeftContainer = styled.section`
   }
 `;
 
-const NavSection = styled.section``;
+const NavSection = styled.section`
+  padding: ${({ pad }) => (pad ? "0.8rem 1rem" : "unset")};
+  border-bottom: ${({ pad }) => (pad ? `var(--border)` : "unset")};
+`;
 
 const NavLogo = styled.img`
   object-fit: contain;
