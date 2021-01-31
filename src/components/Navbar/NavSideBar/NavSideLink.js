@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
 
+import CheckCircleOutlineOutlinedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
+import {
+  SideBarListItem,
+  SideBarLink,
+  LinkIconContainer,
+} from "./navSideBar.elements";
 const NavSideLink = ({ linkText, goTo }) => {
   let linkClass;
   // setting the class based on linkText
@@ -20,18 +24,22 @@ const NavSideLink = ({ linkText, goTo }) => {
   }
 
   return (
-    <li className="navSidebar__listItem">
-      <Link to={goTo} className={`navSidebar__link ${linkClass}`}>
+    <SideBarListItem>
+      <SideBarLink
+        to={goTo}
+        item={linkClass}
+        // className={`navSidebar__link ${linkClass}`}
+      >
         {linkText}
 
         {/* show only when the linkText is 'post a free job' */}
         {linkText === "post a free job" && (
-          <span className="navSidebar__linkIconContainer">
-            <CheckCircleOutlineOutlinedIcon className="navSidebar__checkIcon" />
-          </span>
+          <LinkIconContainer>
+            <CheckCircleOutlineOutlinedIcon />
+          </LinkIconContainer>
         )}
-      </Link>
-    </li>
+      </SideBarLink>
+    </SideBarListItem>
   );
 };
 

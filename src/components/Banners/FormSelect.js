@@ -1,5 +1,6 @@
 import React from "react";
 import { SelectBoxItem, SelectBoxOption } from "./banner.elements";
+import PropTypes from "prop-types";
 
 const SelectBox = ({ items, currentChoice, onChange, id }) => {
   return (
@@ -21,5 +22,13 @@ const SelectBox = ({ items, currentChoice, onChange, id }) => {
     </SelectBoxItem>
   );
 };
+
+SelectBox.propTypes = {
+  items: PropTypes.array,
+  currentChoice: PropTypes.string,
+  onChange: PropTypes.func,
+  id: PropTypes.string,
+};
+
 
 export default SelectBox;

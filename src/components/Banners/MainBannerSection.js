@@ -27,13 +27,30 @@ const MainBannerSection = () => {
     });
   };
 
+  const selectBoxList = [
+    { items: jobItems, currentChoice: jobs, id: jobId },
+    { items: industryItems, currentChoice: industries, id: industryId },
+    { items: locationItems, currentChoice: locations, id: locationId },
+  ];
   return (
     <BannerMain>
       <BannerContainer />
 
       <FormContainer>
         <BannerForm>
-          <SelectBox
+          {selectBoxList.map((item) => {
+            const { items, currentChoice, id } = item;
+            return (
+              <SelectBox
+                key={id}
+                items={items}
+                currentChoice={currentChoice}
+                onChange={onChange}
+                id={id}
+              />
+            );
+          })}
+          {/* <SelectBox
             items={jobItems}
             currentChoice={jobs}
             onChange={onChange}
@@ -50,7 +67,7 @@ const MainBannerSection = () => {
             currentChoice={locations}
             onChange={onChange}
             id={locationId}
-          />
+          /> */}
         </BannerForm>
       </FormContainer>
     </BannerMain>

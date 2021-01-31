@@ -1,18 +1,18 @@
 import { IconButton } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import logo from "../../assets/logo.png";
-
+import { NavLogo, NavLeftContainer } from "./NavSideBar/navSideBar.elements";
 import { useGlobalContext } from "../context";
 
 const NavLeft = () => {
   const { toggleSideBar } = useGlobalContext();
   return (
-    <div className="nav__left">
+    <NavLeftContainer>
       <IconButton onClick={toggleSideBar}>
-        <MenuIcon className="nav__menuIcon" />
+        <MenuIcon />
       </IconButton>
-      <img src={logo} alt="jobber-man logo" className="nav__logo" />
-    </div>
+      <NavLogo src={logo} alt="jobber-man logo" />
+    </NavLeftContainer>
   );
 };
 

@@ -6,22 +6,6 @@ import bgOnLargeScreen from "../../assets/jm-jobseeker-hero.jpg";
 const MainBannerContainer = styled.section`
   margin-top: 4.2rem;
   font-family: "Open Sans", sans-serif;
-
-  /* @media (min-width: 510px) {
-    margin-top: 4rem;
-  }
-  @media (min-width: 525px) {
-    margin-top: 3.8rem;
-  }
-  @media (min-width: 541px) {
-    margin-top: 3.6rem;
-  }
-  @media (min-width: 556px) {
-    margin-top: 3.4rem;
-  }
-  @media (min-width: 596px) {
-    margin-top: 4.2rem;
-  } */
 `;
 
 const MainBannerImg = styled.img`
@@ -29,7 +13,7 @@ const MainBannerImg = styled.img`
   width: 100%;
   display: ${(props) => (props.lg ? "none" : "block")};
 
-  margin: 4rem 1rem 2rem;
+  /* margin: 4rem 1rem 2rem; */
 
   @media (min-width: 642px) {
     display: ${(props) => (!props.lg ? "none" : "block")};
@@ -77,7 +61,6 @@ const SelectBoxItem = styled.select`
   /* larger screen */
   @media (min-width: 1024px) {
     margin-right: 1rem;
-    margin-bottom: unset;
   }
 `;
 
@@ -202,7 +185,7 @@ const BannerBtn = styled.button`
   > a {
     display: block;
     width: 100%;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     font-size: 1.1rem;
   }
   @media (min-width: 642px) {
