@@ -1,17 +1,18 @@
 import React from "react";
 import SearchIcon from "@material-ui/icons/Search";
+import {
+  SearchIconContainer,
+  SideBarForm,
+  SideBarInput,
+} from "./navSideBar.elements";
 const NavSideBarForm = () => {
   return (
-    <form className="navSidebar__form">
-      <input
-        type="text"
-        className="navSidebar__input"
-        placeholder="Keyword Search"
-      />
-      <span className="navSidebar__searchIconContainer">
-        <SearchIcon className="navSidebar__searchIcon" />
-      </span>
-    </form>
+    <SideBarForm>
+      <SideBarInput type="text" placeholder="Keyword Search" />
+      <SearchIconContainer>
+        <SearchIcon />
+      </SearchIconContainer>
+    </SideBarForm>
   );
 };
 

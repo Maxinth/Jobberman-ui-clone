@@ -25,11 +25,7 @@ const NavSideLink = ({ linkText, goTo }) => {
 
   return (
     <SideBarListItem>
-      <SideBarLink
-        to={goTo}
-        item={linkClass}
-        // className={`navSidebar__link ${linkClass}`}
-      >
+      <SideBarLink to={goTo} item={linkClass}>
         {linkText}
 
         {/* show only when the linkText is 'post a free job' */}

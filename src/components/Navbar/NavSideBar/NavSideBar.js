@@ -5,33 +5,38 @@ import { useGlobalContext } from "../../context";
 import { data } from "./data";
 import GenerateSideBarList from "./GenerateSideBarList";
 import NavSideBarForm from "./NavSideBarForm";
-import { NavSideBarContainer, NavLeftContainer } from "./navSideBar.elements";
+import {
+  NavSideBarContainer,
+  NavLeftContainer as NavSection,
+  Container,
+  SideBarMain,
+} from "./navSideBar.elements";
 const NavSideBar = () => {
   const { isSideBarOpen, toggleSideBar } = useGlobalContext();
   // const classByState = isSideBarOpen ? "open" : "closed";
   const { mainSection, sign, post } = data;
   return (
     <NavSideBarContainer state={isSideBarOpen}>
-      <NavLeftContainer>
+      <NavSection>
         <NavLeft toggleSideBar={toggleSideBar} />
-      </NavLeftContainer>
-      <div className="navSidebar__container">
-        <section className="navSidebar__main">
+      </NavSection>
+      <Container>
+        <NavSection>
           <NavSideBarForm />
 
-          <section className="navSidebar__quickNav">
+          <SideBarMain fromTop={1}>
             <GenerateSideBarList items={mainSection} />
-          </section>
+          </SideBarMain>
 
-          <section className="navSidebar__sign">
+          <SideBarMain fromTop={0.5}>
             <GenerateSideBarList items={sign} />
-          </section>
+          </SideBarMain>
 
-          <section className="navSidebar__postJobs">
+          <SideBarMain fromBottom={5}>
             <GenerateSideBarList items={post} />
-          </section>
-        </section>
-      </div>
+          </SideBarMain>
+        </NavSection>
+      </Container>
     </NavSideBarContainer>
   );
 };
