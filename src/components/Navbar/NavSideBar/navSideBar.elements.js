@@ -24,12 +24,17 @@ const NavSideBarContainer = styled.section`
 
 // NavLeft
 const NavLeftContainer = styled.section`
+  display: flex;
+  align-items: center;
+
   > svg > svg {
     font-size: 1.8rem !important;
 
     color: rgb(78, 85, 89);
   }
 `;
+
+const NavSection = styled.section``;
 
 const NavLogo = styled.img`
   object-fit: contain;
@@ -126,4 +131,5 @@ export {
   SideBarInput,
   SearchIconContainer,
   SideBarMain,
+  NavSection,
 };
