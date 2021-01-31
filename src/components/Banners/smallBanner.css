@@ -1,11 +1,12 @@
-.smallBanner {
+/* .smallBanner {
   width: 100%;
   font-family: "Open Sans", sans-serif;
   /* border: 1px solid black; */
-  background: linear-gradient(to right, rgb(14, 1, 53), rgb(38, 15, 141));
-}
+/* background: linear-gradient(to right, rgb(14, 1, 53), rgb(38, 15, 141));
+} */
+*/
 
-.smallBanner__container {
+/* .smallBanner__container {
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem 2rem;
@@ -13,15 +14,15 @@
   flex-direction: column;
   font-family: "Roboto", sans-serif;
   text-align: center;
-}
+} */
 
-.smallBanner__text {
+/* .smallBanner__text {
   font-family: inherit;
   color: #fff;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
   display: inline-block;
-}
+} */
 .smallBanner__link {
   text-transform: uppercase;
   /* color: rgb(255, 98, 0); */
@@ -48,12 +49,12 @@
     margin-bottom: unset;
   }
 
-  .smallBanner__text:first-child {
+  /* .smallBanner__text:first-child {
     margin-left: unset;
-  }
+  } */
 
-  .smallBanner__link {
+  /* .smallBanner__link {
     margin-left: 1rem;
     margin-top: unset;
-  }
+  } */
 }

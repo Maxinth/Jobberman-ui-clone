@@ -1,23 +1,21 @@
 import React, { useState } from "react";
-import bannerImg from "../../assets/jobseeker-hero-bold.png";
-import bannerImg2 from "../../assets/jobseeker-hero2.png";
-import PlayCircleOutlineOutlinedIcon from "@material-ui/icons/PlayCircleOutlineOutlined";
-import { Link } from "react-router-dom";
 import SelectBox from "./FormSelect";
-
+import { BannerMain, FormContainer, BannerForm } from "./banner.elements";
 import { data } from "./formSelectData";
+import BannerContainer from "./BannerContainer";
 const MainBannerSection = () => {
-  // destructure individual object items from data object
-  const { jobFunctions, jobIndustries } = data;
+  // destructuring individual object items from data object
+  const { jobFunctions, jobIndustries, jobLocations } = data;
 
-  // destructuring needed properties from the objects from 12
+  // destructuring needed properties from the objects from 12 - SEE COMMENTS FOR id naming
   const { jobId, jobItems } = jobFunctions;
   const { industryId, industryItems } = jobIndustries;
+  const { locationId, locationItems } = jobLocations;
 
   const [choice, setChoice] = useState({
     jobs: jobItems[0].itemValue,
     industries: industryItems[0].itemValue,
-    locations: "",
+    locations: locationItems[0].itemValue,
   });
 
   const { jobs, industries, locations } = choice;
@@ -30,36 +28,11 @@ const MainBannerSection = () => {
   };
 
   return (
-    <section className="mainBanner__main">
-      <div className="mainBanner__container">
-        {/* show on small screens */}
-        <img src={bannerImg} alt="banner" className="mainBanner__img" />
-        {/* show on small screens */}
-        <img src={bannerImg2} alt="banner" className="mainBanner__img lg" />
-        <section className="mainBanner__bottom">
-          <h3 className="mainBanner__heading">
-            We will boost your skills and profile, provide you with personalised
-            career guidance and match you with the right opportunities, so that
-            you can be the Best and the Brightest.
-          </h3>
-          <section className="mainBanner__videoContainer">
-            <div className="mainBanner__video">
-              <PlayCircleOutlineOutlinedIcon className="mainBanner__videoIcon" />
-              <span className="mainBanner__text">Watch the Video</span>
-            </div>
-            <button className="mainBanner__btn">
-              <Link className="mainBanner__link" to="/sign-up">
-                Join Now!
-              </Link>
-            </button>
-          </section>
-        </section>{" "}
-        {/*END  mainBanner__bottom */}
-        {/* <section className="mainBanner__form"> */}
-        {/* </section> */}
-      </div>
-      <section className="mainBanner__formContainer">
-        <form className="mainBanner__form">
+    <BannerMain>
+      <BannerContainer />
+
+      <FormContainer>
+        <BannerForm>
           <SelectBox
             items={jobItems}
             currentChoice={jobs}
@@ -72,10 +45,23 @@ const MainBannerSection = () => {
             onChange={onChange}
             id={industryId}
           />
-        </form>
-      </section>
-    </section>
+          <SelectBox
+            items={locationItems}
+            currentChoice={locations}
+            onChange={onChange}
+            id={locationId}
+          />
+        </BannerForm>
+      </FormContainer>
+    </BannerMain>
   );
 };
 
 export default MainBannerSection;
+
+/*
+
+jobId, industryId and locationId have been named to match the properties of the choice object - so the onChange function can be reused
+  across <SelectBox /> components
+
+*/

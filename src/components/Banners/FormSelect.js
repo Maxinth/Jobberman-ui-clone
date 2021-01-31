@@ -1,28 +1,24 @@
 import React from "react";
+import { SelectBoxItem, SelectBoxOption } from "./banner.elements";
 
 const SelectBox = ({ items, currentChoice, onChange, id }) => {
   return (
-    <select
+    <SelectBoxItem
       name="jobFunction"
       id={id}
-      className="mainBanner__select"
       value={currentChoice}
       onChange={onChange}
     >
-      {items.map((item, index) => {
+      {items.map((item) => {
         const { itemName, itemValue } = item;
 
         return (
-          <option
-            className="mainBanner__options"
-            value={itemValue}
-            key={itemValue}
-          >
+          <SelectBoxOption value={itemValue} key={itemValue}>
             {itemName}
-          </option>
+          </SelectBoxOption>
         );
       })}
-    </select>
+    </SelectBoxItem>
   );
 };
 

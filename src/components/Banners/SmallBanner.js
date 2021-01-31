@@ -1,18 +1,20 @@
-import { Link } from "react-router-dom";
-import "./smallBanner.css";
+// import { Link } from "react-router-dom";
+// import "./smallBanner.css";
+import {
+  SmallBannerBox,
+  SmallBannerContainer,
+  Text,
+  BannerLink,
+} from "./banner.elements";
 const SmallBanner = () => {
   return (
-    <section className="smallBanner">
-      <section className="smallBanner__container">
-        <span className="smallBanner__text">Seize Your Next Opportunity!</span>
-        <span className="smallBanner__text">
-          Top companies on Jobberman are looking for you
-        </span>
-        <Link className="smallBanner__link" to="/">
-          Get Started Today
-        </Link>
-      </section>
-    </section>
+    <SmallBannerBox>
+      <SmallBannerContainer>
+        <Text>Seize Your Next Opportunity!</Text>
+        <Text>Top companies on Jobberman are looking for you</Text>
+        <BannerLink to="/">Get Started Today</BannerLink>
+      </SmallBannerContainer>
+    </SmallBannerBox>
   );
 };
 

@@ -94,11 +94,11 @@
   text-transform: capitalize;
 }
 
-.mainBanner__options {
+/* .mainBanner__options {
   min-width: 300px;
   font-family: "Raleway", sans-serif;
   padding: 0.5rem;
-}
+} */
 
 .mainBanner__text {
   text-transform: capitalize;

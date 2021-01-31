@@ -143,4 +143,23 @@ export const data = {
       //   },
     ],
   },
+
+  jobLocations: {
+    locationId: "locations",
+    locationItems: [
+      {
+        itemName: "All Locations",
+        itemValue: "allLocations",
+      },
+      {
+        itemName: "Abeokuta & Ogun state",
+        itemValue: "ogun",
+      },
+
+      {
+        itemName: "Abuja",
+        itemValue: "abuja",
+      },
+    ],
+  },
 };
