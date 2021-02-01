@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { global } from "../../globalStyles";
 const Container = styled.section`
   background: ghostwhite;
-  padding: 1rem;
+  padding: 1rem 2rem;
 `;
 
 const Heading = styled.h2`
@@ -21,25 +21,47 @@ const Heading = styled.h2`
   }
 `;
 
-const HelpBox = styled.section`
-  background: #fff;
-  box-shadow: 1px 2px 4px #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`;
-
 const Text = styled.span`
   color: ${({ colored }) => (colored ? global.mainOrange : "#333")};
   font-size: ${({ orText }) => (orText ? " 1.5rem" : "unset")};
   font-weight: ${({ orText }) => (orText ? " 700" : "unset")};
   margin: ${({ orText }) => (orText ? " 1rem 0" : "unset")};
   font-family: ${({ orText }) => (orText ? `"Raleway", sans-serif` : "unset")};
+  margin-left: ${({ shift }) => (shift ? "0.5rem" : "unset")};
+`;
+
+const HelpBox = styled.section`
+  background: #fff;
+  box-shadow: 1px 1px 5px #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+
+    > * {
+      margin-left: 2rem;
+    }
+
+    section:first-child {
+      margin-left: unset;
+    }
+  }
 `;
 
 const TextContainer = styled.p`
   margin-bottom: 1rem;
+
+  a {
+    margin-right: 0.5rem;
+  }
+
+  /* ${Text} {
+    margin-left: ${({ shift }) => (shift ? "0.7rem" : "unset")};
+  } */
 `;
 
 const FindOutContainer = styled.section`

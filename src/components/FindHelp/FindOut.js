@@ -1,21 +1,30 @@
 import React from "react";
 import PhoneInTalkIcon from "@material-ui/icons/PhoneInTalk";
-import { FindOutContainer, Text, TextContainer } from "./findHelp.elements";
+import {
+  FindOutContainer as Container,
+  Text,
+  TextContainer,
+} from "./findHelp.elements";
+import { Link } from "react-router-dom";
 const FindOut = () => {
   return (
-    <FindOutContainer>
+    <Container>
       <PhoneInTalkIcon />
       <TextContainer>
-        <Text colored={true}>
-          Find out how we help you get you the best candidates
-        </Text>
+        <Link to="/employer">
+          <Text colored={true}>
+            Find out how we help you get you the best candidates
+          </Text>
+        </Link>
       </TextContainer>
       <TextContainer>
         Call our Solutions Team on
-        <Text colored={true}>+234 (0) 813 985 9999 </Text>
+        <Text colored={true} shift={true}>
+          +234 (0) 813 985 9999{" "}
+        </Text>
         to get started
       </TextContainer>
-    </FindOutContainer>
+    </Container>
   );
 };
 
