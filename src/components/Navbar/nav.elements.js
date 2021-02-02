@@ -9,6 +9,7 @@ const Nav = styled.nav`
   top: 0;
   left: 0;
   background-color: #fff;
+  box-shadow: 1px 1px 9px grey;
 `;
 
 const NavHeader = styled.header`

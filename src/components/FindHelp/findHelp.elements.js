@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { global } from "../../globalStyles";
 const Container = styled.section`
-  background: ghostwhite;
-  padding: 1rem 2rem;
+  background: rgb(242, 242, 242);
+  padding: 3rem 1rem;
 `;
 
 const Heading = styled.h2`
@@ -11,7 +11,7 @@ const Heading = styled.h2`
   font-family: "Open Sans", sans-serif;
   text-align: center;
   transition: font-size 0.3s;
-  margin: 1rem 0;
+  margin: 2rem 0;
 
   @media (min-width: 642px) {
     font-size: calc(1rem + 2vw);
@@ -32,14 +32,15 @@ const Text = styled.span`
 
 const HelpBox = styled.section`
   background: #fff;
-  box-shadow: 1px 1px 5px #333;
+  box-shadow: 1px 1px 6px grey;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   border-radius: 5px;
+  margin: 0 1rem;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     flex-direction: row;
 
     > * {
@@ -77,7 +78,7 @@ const FindOutContainer = styled.section`
 
   svg {
     font-size: 6rem !important;
-    color: #333;
+    color: rgb(78, 85, 89);
   }
 `;
 export { Container, Heading, HelpBox, FindOutContainer, Text, TextContainer };

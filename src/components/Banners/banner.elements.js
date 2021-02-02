@@ -3,6 +3,7 @@ import styled from "styled-components";
 import bgOnSmallScreen from "../../assets/sm-jobseeker-hero.jpg";
 import bgOnLargeScreen from "../../assets/jm-jobseeker-hero.jpg";
 import { global } from "../../globalStyles";
+
 const MainBannerContainer = styled.section`
   margin-top: 4.2rem;
   font-family: "Open Sans", sans-serif;
@@ -55,6 +56,7 @@ const SelectBoxContainer = styled.div`
   display: ${({ twoItems }) => (twoItems ? "flex" : "unset")};
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
 `;
 
 const SearchText = styled.span`
@@ -113,6 +115,7 @@ const SelectBoxItem = styled.select`
   transition: text-align 0.3s;
 
   /* larger screen */
+
   @media (min-width: 1150px) {
     text-align: center;
     width: unset;
@@ -263,6 +266,7 @@ const FormContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 2rem;
   /* background-color: rgba(0, 0, 0, 0.45); */
   /* margin-bottom: 1rem; */
 `;
@@ -271,9 +275,11 @@ const BannerForm = styled.form`
   /* margin-top: 2rem; */
   width: 100%;
   padding: 2rem;
+  /* margin-top: 8rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* align-items: center; */
   background-color: rgba(0, 0, 0, 0.45);
 
   > * {
