@@ -72,12 +72,12 @@ const NavBtn = styled.button`
   transition: opacity 0.2s ease-in-out;
 
   ${NavRightLink} {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #fff;
     font-weight: 600;
     border-radius: 5px;
     background-color: var(--main-orange);
-    padding: 0.5rem 2rem;
+    padding: 0.8rem 2rem;
     font-weight: 700;
   }
 
