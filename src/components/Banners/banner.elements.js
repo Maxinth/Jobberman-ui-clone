@@ -264,7 +264,7 @@ const FormContainer = styled.section`
   justify-content: center;
   align-items: center;
   /* background-color: rgba(0, 0, 0, 0.45); */
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 `;
 
 const BannerForm = styled.form`
