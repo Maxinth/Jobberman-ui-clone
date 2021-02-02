@@ -5,10 +5,8 @@ const JobsContainer = styled.section`
   @media (min-width: 1250px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
-    > * {
-      margin-right: 1rem;
-    }
+    gap: 1rem;
+    /* &:hover */
   }
 `;
 
@@ -33,6 +31,10 @@ const JobSectionContainer = styled.section`
   padding: 1rem;
   margin-bottom: 3rem;
   margin-top: 1rem;
+
+  :last-child {
+    margin-bottom: unset;
+  }
 
   @media (min-width: 1250px) {
     border-top: 1px solid rgb(223, 209, 219);
@@ -61,12 +63,13 @@ const JobsListContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     > * {
-      margin-right: 1rem;
+      margin: 0 1rem;
+      transition: margin 0.2s;
     }
   }
   @media (min-width: 1250px) {
     > * {
-      margin-right: unset;
+      margin: unset;
     }
     display: block;
   }
@@ -79,15 +82,16 @@ const Container = styled.section`
   font-family: "Open Sans", sans-serif;
   box-shadow: 1px 2px 4px grey;
   border-radius: 5px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: min-height 0.2s;
+  transition: min-height 0.2s, margin-bottom 0.2s;
   min-height: 200px;
 
   @media (min-width: 1250px) {
     min-height: 170px;
+    margin-bottom: 2.5rem;
   }
 `;
 

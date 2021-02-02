@@ -5,7 +5,7 @@ export const data = {
   featuredJobs: {
     title: "Featured Jobs",
     icon: <StarIcon />,
-    iconColor: "red",
+    iconColor: "rgb(213, 44, 61)",
     jobs: [
       {
         jobTitle: "Product and Marketing Specialist",
@@ -39,7 +39,7 @@ export const data = {
   newlyAddedJobs: {
     title: "Newly Added Jobs",
     icon: <EcoIcon />,
-    iconColor: "green",
+    iconColor: "rgb(92, 184, 92)",
     jobs: [
       {
         jobTitle: "Key Accounts Manager",
@@ -73,7 +73,7 @@ export const data = {
   popularJobs: {
     title: "Popular Jobs",
     icon: <TrendingUpIcon />,
-    iconColor: "skyblue",
+    iconColor: "rgb(0, 145, 255)",
     jobs: [
       {
         jobTitle: "Waiter / Waitress",

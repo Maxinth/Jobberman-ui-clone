@@ -74,6 +74,7 @@ const SearchButton = styled.button`
   margin-bottom: 0.9rem;
   margin-left: 0.5rem;
   border-radius: 5px;
+  cursor: pointer;
   > svg {
     color: #fff;
     padding: 0.5rem;
