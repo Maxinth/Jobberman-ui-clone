@@ -10,6 +10,7 @@ const Nav = styled.nav`
   left: 0;
   background-color: #fff;
   box-shadow: 1px 1px 9px grey;
+  z-index: 100;
 `;
 
 const NavHeader = styled.header`

@@ -1,11 +1,45 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
-import testImg from "../../assets/babatunde-ogunyemi.jpg";
+import styled, { css } from "styled-components";
+
 import PropTypes from "prop-types";
 
+const DeleteMe = styled.div`
+  .testimonial {
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+    padding: 2rem;
+    width: 100%;
+    /* padding: 4rem 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    overflow: hidden;
+    max-width: 1000px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .testimonial.activeSlide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .testimonial.lastSlide {
+    transform: translateX(-100%);
+  }
+  .testimonial.nextSlide {
+    transform: translateX(100%);
+  }
+`;
 const Container = styled.section`
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1000px;
   padding: 1rem;
   background: #fff;
   display: flex;
@@ -14,6 +48,33 @@ const Container = styled.section`
   align-items: center;
   color: rgb(78, 85, 89);
   font-family: "Roboto", sans-serif;
+  position: absolute;
+  /* top: 12rem; */
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+  ${(props) =>
+    props.position === "activeSlide" &&
+    css`
+      opacity: 1;
+      transform: translateX(0%);
+    `}
+  ${(props) =>
+    props.position === "lastSlide" &&
+    css`
+      transform: translateX(-100%);
+    `}
+${(props) =>
+    props.position === "nextSlide" &&
+    css`
+      transform: translateX(100%);
+    `}
+
+  /* bottom: -2rem; */
+ 
+  border-radius: 5px;
 
   @media (min-width: 600px) {
     display: grid;
@@ -99,9 +160,9 @@ const MoreInfo = styled.button`
   }
 `;
 
-const Testimonial = ({ img, name, position, testimonial }) => {
+const Testimonial = ({ img, name, position, testimonial, slidePosition }) => {
   return (
-    <Container>
+    <Container position={slidePosition}>
       <ImageContainer>
         <Image src={img} alt="customerSuccess" />
       </ImageContainer>
