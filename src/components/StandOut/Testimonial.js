@@ -3,40 +3,6 @@ import styled, { css } from "styled-components";
 
 import PropTypes from "prop-types";
 
-const DeleteMe = styled.div`
-  .testimonial {
-    font-family: "Open Sans", sans-serif;
-    color: #333;
-    padding: 2rem;
-    width: 100%;
-    /* padding: 4rem 0; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    overflow: hidden;
-    max-width: 1000px;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .testimonial.activeSlide {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  .testimonial.lastSlide {
-    transform: translateX(-100%);
-  }
-  .testimonial.nextSlide {
-    transform: translateX(100%);
-  }
-`;
 const Container = styled.section`
   margin: 0 auto;
   max-width: 1000px;
@@ -54,27 +20,30 @@ const Container = styled.section`
   height: 100%;
   opacity: 0;
   transition: all 0.3s ease-in-out;
-
+  border-radius: 5px;
   ${(props) =>
     props.position === "activeSlide" &&
     css`
       opacity: 1;
       transform: translateX(0%);
     `}
+
   ${(props) =>
     props.position === "lastSlide" &&
     css`
       transform: translateX(-100%);
     `}
+
+    
 ${(props) =>
     props.position === "nextSlide" &&
     css`
       transform: translateX(100%);
     `}
 
-  /* bottom: -2rem; */
+
  
-  border-radius: 5px;
+  
 
   @media (min-width: 600px) {
     display: grid;
@@ -182,6 +151,7 @@ Testimonial.propTypes = {
   img: PropTypes.string,
   name: PropTypes.string,
   position: PropTypes.string,
+  slidePosition: PropTypes.string,
   testimonial: PropTypes.string,
 };
 export default Testimonial;
