@@ -8,6 +8,7 @@ const StandOut = () => {
   return (
     <Container>
       <Headings />
+
       <HowTo>
         <HowToBlock data={data} />
       </HowTo>

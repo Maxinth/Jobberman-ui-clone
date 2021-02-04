@@ -1,4 +1,3 @@
-import useSlider from "../useSlider";
 export const data = [
   {
     itemZero: {

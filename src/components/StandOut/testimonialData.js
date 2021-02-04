@@ -1,4 +1,3 @@
-// import me from '../../../testimonials'
 export const data = [
   {
     img: "../../../testimonials/robert-orere.jpg",
