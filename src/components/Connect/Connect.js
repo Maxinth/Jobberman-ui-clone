@@ -1,12 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import arm from "../../assets/ARM.webp";
-import ariosh from "../../assets/ariosh.webp";
-import biofem from "../../assets/BIOFEM.webp";
-import bpl from "../../assets/bpl.webp";
-import db from "../../assets/db.webp";
-import enterpriseHub from "../../assets/enterpriseHub.webp";
-import { batchOne } from "./data";
+
+import { batchOne, batchZero, batchTwo } from "./data";
 import CompanyBox from "./CompanyBox";
 const ConnectContainer = styled.section`
   background-color: rgb(242, 242, 242);
@@ -39,6 +34,13 @@ const Heading = styled.h5`
   }
 `;
 
+const Container = styled.section`
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+`;
 const CompaniesLogosContainer = styled.section`
   margin-top: 2rem;
   display: flex;
@@ -47,31 +49,6 @@ const CompaniesLogosContainer = styled.section`
   width: 100%;
 `;
 
-const CompaniesLogos = styled.div`
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  > * {
-    flex: 1;
-    margin: 0 1rem;
-    margin-bottom: 2rem;
-  }
-
-  @media (min-width: 900px) {
-    margin-bottom: unset;
-  }
-`;
-const CoyLogo = styled.img`
-  display: inline-block;
-  width: 100%;
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  transition: all 0.2s;
-`;
 // styled.``;
 const Connect = () => {
   return (
@@ -83,9 +60,11 @@ const Connect = () => {
         </Heading>
         <CompaniesLogosContainer>
           {/* move to seperate component */}
-          <CompaniesLogos>
+          <Container>
+            <CompanyBox items={batchZero} />
             <CompanyBox items={batchOne} />
-          </CompaniesLogos>
+            <CompanyBox items={batchTwo} />
+          </Container>
           {/* move to seperate component */}
         </CompaniesLogosContainer>
       </ConnectBox>
