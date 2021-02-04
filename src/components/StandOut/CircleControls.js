@@ -1,25 +1,6 @@
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-const ControlsContainer = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  transition: margin-top 0.2s;
-
-  @media (min-width: 1200px) {
-    margin-top: 0.5rem;
-  }
-
-  svg {
-    color: #333;
-    transition: color 0.2s;
-  }
-  svg.current {
-    color: rgb(255, 98, 0);
-  }
-`;
+import { ControlsContainer } from "./standOutElements";
 
 const CircleControls = ({ data, setIndex, currentItem }) => {
   return (
@@ -44,3 +25,7 @@ CircleControls.propTypes = {
 };
 
 export default CircleControls;
+
+/* I have added a className prop to the control icon so I can target it within the styling 
+as svg.current
+*/
