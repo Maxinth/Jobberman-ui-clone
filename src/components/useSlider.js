@@ -22,7 +22,7 @@ const useSlider = (data, timeInterval = 4000) => {
     return () => {
       clearInterval(slider);
     };
-  }, [index]);
+  }, [index, timeInterval]);
   return { items, index, setIndex };
 };
 

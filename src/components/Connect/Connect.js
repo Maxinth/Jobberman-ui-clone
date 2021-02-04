@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { getItems } from "./data";
-import CompanyBox from "./CompanyBox";
 import Headings from "./Headings";
-import { getSlidePosition } from "../useSlider";
-import useSlider from "../useSlider";
+import useSliderAndGetCurrentValues from "../useSliderAndGetCurrentValues";
 import { data } from "./data";
 import CompaniesLogo from "./CompaniesLogo";
+import CircleControls from "../../components/CircleControls";
+import CTA from "../CTA";
 
 const ConnectContainer = styled.section`
   background-color: rgb(242, 242, 242);
@@ -21,15 +20,15 @@ const ConnectBox = styled.section`
   background-color: #fff;
   box-shadow: 1px 1px 5px grey;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  button {
+    margin-top: 3rem;
+  }
 `;
 
-// const Container = styled.section`
-//   position: relative;
-//   display: flex;
-//   overflow: hidden;
-//   width: 100%;
-//   height: 400px;
-// `;
 const CompaniesLogosContainer = styled.section`
   /* margin-top: 2rem; */
   display: flex;
@@ -38,10 +37,13 @@ const CompaniesLogosContainer = styled.section`
   width: 100%;
 `;
 
-// styled.``;
 const Connect = () => {
-  const { items, index, setIndex } = useSlider(data, 5000);
-
+  const {
+    items,
+    index,
+    makeCurrentSlide,
+    matchCurrentItem,
+  } = useSliderAndGetCurrentValues(data, 5000);
   return (
     <ConnectContainer>
       <ConnectBox>
@@ -49,6 +51,12 @@ const Connect = () => {
         <CompaniesLogosContainer>
           <CompaniesLogo items={items} index={index} />
         </CompaniesLogosContainer>
+        <CircleControls
+          data={items}
+          setIndex={makeCurrentSlide}
+          currentItem={matchCurrentItem}
+        />
+        <CTA text="view more companies hiring" goTo="/companies" />
       </ConnectBox>
     </ConnectContainer>
   );

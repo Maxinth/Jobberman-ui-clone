@@ -1,21 +1,22 @@
 import TestimonialItems from "./TestimonialItems";
-import CircleControls from "./CircleControls";
-import useSlider from "../useSlider";
+import CircleControls from "../../components/CircleControls";
+import useSliderAndGetCurrentValues from "../useSliderAndGetCurrentValues";
 import { data as testimonials } from "./testimonialData";
-import { data } from "./data";
 import { Testimonials } from "./standOutElements";
 
 const TestimonialsSection = () => {
-  const { items, index, setIndex } = useSlider(testimonials);
-  const makeCurrentSlide = (itemIndex) => setIndex(itemIndex);
-  const matchCurrentItem = (itemIndex) =>
-    itemIndex === index ? "current" : "";
+  const {
+    items,
+    index,
+    makeCurrentSlide,
+    matchCurrentItem,
+  } = useSliderAndGetCurrentValues(testimonials);
 
   return (
     <Testimonials>
       <TestimonialItems items={items} index={index} />
       <CircleControls
-        data={data}
+        data={testimonials}
         setIndex={makeCurrentSlide}
         currentItem={matchCurrentItem}
       />

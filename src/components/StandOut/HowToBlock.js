@@ -1,8 +1,8 @@
 import React from "react";
-import { HowTosContainer, Btn } from "./standOutElements";
-import { Link } from "react-router-dom";
+import { HowTosContainer } from "./standOutElements";
 import StandOutCard from "./StandOutCard";
 import PropTypes from "prop-types";
+import CTA from "../CTA";
 
 const HowToBlock = ({ data }) => {
   return (
@@ -12,9 +12,7 @@ const HowToBlock = ({ data }) => {
           <StandOutCard {...item} key={index} />
         ))}
       </HowTosContainer>
-      <Btn>
-        <Link to="/sign-up">Create Your Account</Link>
-      </Btn>
+      <CTA text="Create Your Account" goTo="/sign-up" />
     </>
   );
 };
