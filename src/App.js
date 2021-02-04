@@ -5,6 +5,7 @@ import BackDrops from "./components/BackDrops/BackDrops";
 import FindHelp from "./components/FindHelp/FindHelp";
 import JobsView from "./components/JobsOverview/JobsView";
 import StandOut from "./components/StandOut/StandOut";
+import Connect from "./components/Connect/Connect";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <FindHelp />
       <JobsView />
       <StandOut />
+      <Connect />
     </div>
   );
 }
