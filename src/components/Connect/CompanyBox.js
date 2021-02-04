@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 
 const CoyLogo = styled.img`
@@ -20,6 +20,37 @@ const CompaniesLogos = styled.div`
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
+
+  // here
+
+  position: absolute;
+  /* top: 12rem; */
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  ${(props) =>
+    props.position === "activeSlide" &&
+    css`
+      opacity: 1;
+      transform: translateX(0%);
+    `}
+
+  ${(props) =>
+    props.position === "lastSlide" &&
+    css`
+      transform: translateX(-100%);
+    `}
+
+    
+${(props) =>
+    props.position === "nextSlide" &&
+    css`
+      transform: translateX(100%);
+    `}
+
+  // here
   > * {
     flex: 1;
     margin: 0 1rem;
@@ -31,9 +62,9 @@ const CompaniesLogos = styled.div`
   }
 `;
 
-const CompanyBox = ({ items }) => {
+const CompanyBox = ({ items, position }) => {
   return (
-    <CompaniesLogos>
+    <CompaniesLogos position={position}>
       {items.map((item, index) => (
         <CoyLogo
           src={item.img}
@@ -47,6 +78,7 @@ const CompanyBox = ({ items }) => {
 
 CompanyBox.propTypes = {
   items: PropTypes.array,
+  position: PropTypes.string,
 };
 
 export default CompanyBox;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useSlider = (data) => {
+const useSlider = (data, timeInterval = 4000) => {
   const [items] = useState(data);
   const [index, setIndex] = useState(0);
 
@@ -17,7 +17,8 @@ const useSlider = (data) => {
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex(index + 1);
-    }, 4000);
+    }, timeInterval);
+
     return () => {
       clearInterval(slider);
     };
