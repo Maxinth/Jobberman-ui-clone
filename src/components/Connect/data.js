@@ -44,12 +44,14 @@ export const data = [
   },
 ];
 
-// destructuring and exporting the needed parts
-// const { itemZero, itemOne, itemTwo } = data;
-// const { batchZero, indexZero } = itemZero;
-// const { batchOne, indexOne } = itemOne;
-// const { batchTwo, indexTwo } = itemTwo;
+/*
+custom function to export needed data elements 
+used a function, because of  
+const { items, index, setIndex } = useSlider(data, 6000);
 
+where items =  data  but in order to track state need items needs to be destructured from items and 
+not data.
+*/
 const getItems = (data) => {
   const { batchZero, indexZero } = data[0].itemZero;
   const { batchOne, indexOne } = data[1].itemOne;

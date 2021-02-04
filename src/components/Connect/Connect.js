@@ -19,17 +19,19 @@ const ConnectBox = styled.section`
   max-width: 1200px;
   margin: 0 auto;
   background-color: #fff;
+  box-shadow: 1px 1px 5px grey;
+  border-radius: 5px;
 `;
 
-const Container = styled.section`
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  height: 400px;
-`;
+// const Container = styled.section`
+//   position: relative;
+//   display: flex;
+//   overflow: hidden;
+//   width: 100%;
+//   height: 400px;
+// `;
 const CompaniesLogosContainer = styled.section`
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +40,7 @@ const CompaniesLogosContainer = styled.section`
 
 // styled.``;
 const Connect = () => {
-  const { items, index, setIndex } = useSlider(data, 6000);
+  const { items, index, setIndex } = useSlider(data, 5000);
 
   return (
     <ConnectContainer>

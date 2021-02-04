@@ -124,7 +124,7 @@ const HowTo = styled.section`
 `;
 
 const Testimonials = styled.section`
-  margin: 4rem 0 0.5rem;
+  margin: 4rem 2rem 0.5rem;
   background-color: rgb(226, 232, 240);
 `;
 
@@ -154,7 +154,7 @@ const ControlsContainer = styled.section`
 const TestimonyContainer = styled.section`
   margin: 0 auto;
   max-width: 1000px;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -163,6 +163,7 @@ const TestimonyContainer = styled.section`
   color: rgb(78, 85, 89);
   font-family: "Roboto", sans-serif;
   position: absolute;
+  /* border: 2px solid red; */
   /* top: 12rem; */
   width: 100%;
   height: 100%;
@@ -285,7 +286,6 @@ const TestimonialsContainer = styled.section`
   position: relative;
   overflow: hidden;
   max-width: 900px;
-
   height: 100%;
   padding: 2rem;
   margin: 0 auto;
@@ -300,8 +300,17 @@ const TestimonialsContainer = styled.section`
   @media (min-width: 500px) {
     min-height: 900px;
   }
+  @media (min-width: 620px) {
+    min-height: 750px;
+  }
+  @media (min-width: 700px) {
+    min-height: 650px;
+  }
   @media (min-width: 700px) {
     min-height: 550px;
+  }
+  @media (min-width: 900px) {
+    min-height: 520px;
   }
 `;
 export {

@@ -8,7 +8,21 @@ const Container = styled.section`
   display: flex;
   overflow: hidden;
   width: 100%;
-  height: 400px;
+  height: 900px;
+  transition: height 0.2s;
+
+  @media (min-width: 424px) {
+    height: 480px;
+  }
+  @media (min-width: 556px) {
+    height: 350px;
+  }
+  @media (min-width: 800px) {
+    height: 300px;
+  }
+  @media (min-width: 952px) {
+    height: 250px;
+  }
 `;
 
 const CompaniesLogo = ({ items, index }) => {

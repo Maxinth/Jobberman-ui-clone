@@ -15,7 +15,7 @@ const CompaniesLogos = styled.div`
   left: 0;
   right: 0;
   top: 60px;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
