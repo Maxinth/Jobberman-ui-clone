@@ -4,6 +4,9 @@ import CTA from "../CTA";
 import styled from "styled-components";
 
 const Container = styled(Testimonials)`
+  margin: unset;
+  padding: 3rem 2rem;
+
   ${Heading} {
     font-family: "Open Sans", sans-serif;
     padding: unset;
