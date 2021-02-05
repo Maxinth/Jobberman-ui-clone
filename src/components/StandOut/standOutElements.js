@@ -91,7 +91,8 @@ const HowTosContainer = styled.div`
 
 // StandOut
 const Container = styled.section`
-  background-color: rgb(226, 232, 240);
+  background-color: rgb(250, 250, 250);
+  /* background-color: rgb(226, 232, 240); */
   font-family: "Open Sans", sans-serif;
   padding: 2rem 0.5rem;
 `;
@@ -125,7 +126,7 @@ const HowTo = styled.section`
 
 const Testimonials = styled.section`
   margin: 4rem 2rem 0.5rem;
-  background-color: rgb(226, 232, 240);
+  background-color: rgb(250, 250, 250);
 `;
 
 // CircleControls

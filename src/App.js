@@ -6,6 +6,7 @@ import FindHelp from "./components/FindHelp/FindHelp";
 import JobsView from "./components/JobsOverview/JobsView";
 import StandOut from "./components/StandOut/StandOut";
 import Connect from "./components/Connect/Connect";
+import JobCount from "./components/JobCount";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <JobsView />
       <StandOut />
       <Connect />
+      <JobCount />
     </div>
   );
 }
