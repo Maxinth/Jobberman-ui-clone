@@ -24,22 +24,24 @@ const JobsStartingWithLetter = styled.div`
   display: flex;
   flex-direction: column;
   line-height: 1.6;
-  padding: 0.1rem 1rem;
-  border-left: 1px solid rgb(226, 22, 240);
+
+  /* border-left: 1px solid rgb(226, 22, 240); */
   flex: 1;
   /* text-align: center; */
   margin-left: ${({ paddingFix }) =>
     paddingFix ? `${paddingFix}rem` : "1rem"};
-  /* @media (min-width: 700px) {
-    flex-direction: row;
-  } */
+  @media (min-width: 1354px) {
+    margin-left: ${(props) => props.id && "1.1rem"};
+    margin-left: ${(props) => props.id === "t" && "1.05rem"};
+  }
 `;
 const JobLink = styled(Link)`
   color: inherit;
   text-overflow: ellipsis;
   transition: color 0.2;
+  padding: 0rem 1rem;
   /* margin-bottom: 0.5rem; */
-
+  border-left: 2px solid rgb(128, 128, 128);
   margin-right: 0.5rem;
 
   &:hover {
@@ -48,12 +50,11 @@ const JobLink = styled(Link)`
 `;
 
 const JobSegment = ({ text, items }) => {
-  console.log(text);
-  console.log(checkItemName(text));
+  const { value, id } = checkItemName(text);
   return (
     <SegmentContainer>
       <Letter>{text}</Letter>
-      <JobsStartingWithLetter paddingFix={checkItemName(text)}>
+      <JobsStartingWithLetter paddingFix={value} id={id}>
         {items.map((item, index) => (
           <JobLink to="/" key={index}>
             {item}

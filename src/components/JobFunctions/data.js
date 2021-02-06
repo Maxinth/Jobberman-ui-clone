@@ -82,8 +82,10 @@ export { firstBatch, secondBatch, thirdBatch, fourthBatch };
 
 export const checkItemName = (item) => {
   let value;
+  let id = "";
   if (item === "e" || item === "f") {
     value = 1.15;
+    id = "ef";
   }
   if (item === "c") value = 1.05;
   if (item === "d" || item === "h") value = 0.95;
@@ -91,7 +93,11 @@ export const checkItemName = (item) => {
   if (item === "m") value = 0.75;
   if (item === "p") value = 1.05;
   if (item === "q") value = 0.9;
-  if (item === "s") value = 1.15;
+  if (item === "s") {
+    value = 1.15;
+    id = "s";
+  }
+  if (item === "t") id = "t";
   // if ) value = 1.1;
-  return value;
+  return { value, id };
 };

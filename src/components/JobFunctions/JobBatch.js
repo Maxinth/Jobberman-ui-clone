@@ -11,6 +11,16 @@ const JobItem = styled.li`
   > * {
     width: 100%;
   }
+
+  @media (min-width: 728px) {
+    :nth-child(2) {
+      margin-top: 2.7rem;
+    }
+
+    :nth-child(4) {
+      margin-top: -2.9rem;
+    }
+  }
 `;
 const JobBatch = ({ batch }) => {
   // console.log(batch);
