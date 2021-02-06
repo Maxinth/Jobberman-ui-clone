@@ -78,8 +78,28 @@ export const data = {
 };
 
 const { firstBatch, secondBatch, thirdBatch, fourthBatch } = data;
-export { firstBatch, secondBatch, thirdBatch, fourthBatch };
 
+// creating an array to be mapped
+export const batches = [
+  {
+    id: 1,
+    batch: firstBatch,
+  },
+  {
+    id: 2,
+    batch: secondBatch,
+  },
+  {
+    id: 3,
+    batch: thirdBatch,
+  },
+  {
+    id: 4,
+    batch: fourthBatch,
+  },
+];
+
+// custom function to tweak the listing padding based on its letter.
 export const checkItemName = (item) => {
   let value;
   let id = "";
