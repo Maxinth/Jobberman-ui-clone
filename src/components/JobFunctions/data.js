@@ -82,11 +82,16 @@ export { firstBatch, secondBatch, thirdBatch, fourthBatch };
 
 export const checkItemName = (item) => {
   let value;
-  if (item.text === "e" || item.text === "f") {
-    value = 0.5;
+  if (item === "e" || item === "f") {
+    value = 1.15;
   }
-  // else{
-  //   return;
-  // }
+  if (item === "c") value = 1.05;
+  if (item === "d" || item === "h") value = 0.95;
+  if (item === "l" || item === "t") value = 1.1;
+  if (item === "m") value = 0.75;
+  if (item === "p") value = 1.05;
+  if (item === "q") value = 0.9;
+  if (item === "s") value = 1.15;
+  // if ) value = 1.1;
   return value;
 };
