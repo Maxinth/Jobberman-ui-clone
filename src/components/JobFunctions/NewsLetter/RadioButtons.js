@@ -7,6 +7,7 @@ const RadioContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   margin-top: 1rem;
 `;
 

@@ -4,7 +4,7 @@ import RadioButtonCheckedIcon from "@material-ui/icons/RadioButtonChecked";
 
 // Inputs
 const InputBox = styled.input`
-  padding: 1rem;
+  padding: 0.5rem;
   width: 100%;
   font-size: 0.9rem;
   font-family: "Open Sans", sans-serif;
@@ -13,8 +13,16 @@ const InputBox = styled.input`
   border-radius: 5px;
   color: var(--color);
   border: 3px solid rgb(238, 238, 238);
+  transition: padding 0.2;
+
+  @media (min-width: 500px) {
+    padding: 1rem;
+  }
 `;
 
+const Container = styled.div`
+  width: 100%;
+`;
 // RadioButton
 const RadioButtonUnchecked = styled(RadioButtonUncheckedIcon)``;
 const Label = styled.label`
@@ -27,6 +35,13 @@ const RadioButtonContainer = styled.div`
   display: flex;
   align-items: center;
   color: rgb(78, 85, 89);
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  @media (min-width: 400px) {
+    flex-direction: row;
+    margin-bottom: unset;
+  }
 `;
 
 // TopSection
@@ -34,6 +49,7 @@ const Title = styled.h5`
   font-size: 1.5rem;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+  text-align: center;
 `;
 
 const Text = styled.p`
@@ -50,4 +66,5 @@ export {
   RadioButtonContainer,
   Title,
   Text,
+  Container,
 };
