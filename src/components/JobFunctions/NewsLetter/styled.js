@@ -1,6 +1,27 @@
 import styled from "styled-components";
 import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
 import RadioButtonCheckedIcon from "@material-ui/icons/RadioButtonChecked";
+import { JobBox } from "../../JobCount/styled";
+// NewsLetter
+const NewsLetterContainer = styled(JobBox)`
+  margin-top: 3rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  --color: rgb(78, 85, 89);
+  padding: 2rem 1rem;
+  button {
+    background-color: #333;
+    width: 100%;
+  }
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+    padding: 0.5rem 2rem 2rem;
+    > * {
+      width: 30%;
+    }
+  }
+`;
 
 // Inputs
 const InputBox = styled.input`
@@ -20,8 +41,33 @@ const InputBox = styled.input`
   }
 `;
 
+const InputContainer = styled.div`
+  margin-bottom: 2rem;
+  transition: margin 0.2;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+    margin-bottom: unset;
+  }
+`;
+
 const Container = styled.div`
   width: 100%;
+
+  @media (min-width: 900px) {
+    width: 50%;
+  }
+`;
+
+// RadioButtons
+
+const RadioContainer = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 `;
 // RadioButton
 const RadioButtonUnchecked = styled(RadioButtonUncheckedIcon)``;
@@ -58,6 +104,38 @@ const Text = styled.p`
   font-family: "Raleway", sans-serif;
   text-align: center;
 `;
+
+const TopSectionContainer = styled(Container)`
+  color: rgb(78, 85, 89);
+
+  @media (min-width: 900px) {
+    /* width: unset; */
+    text-align: left;
+    > * {
+      text-align: inherit !important;
+      color: inherit;
+    }
+  }
+`;
+// Form
+const FormContainer = styled.form`
+  padding: 1rem 2rem;
+  width: 100%;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > * {
+      flex: 1;
+    }
+    /* width: 0%; */
+
+    ${Container} {
+      margin-top: 3.5rem;
+    }
+  }
+`;
 export {
   InputBox,
   RadioButtonUnchecked,
@@ -67,4 +145,9 @@ export {
   Title,
   Text,
   Container,
+  RadioContainer,
+  NewsLetterContainer,
+  FormContainer,
+  InputContainer,
+  TopSectionContainer,
 };

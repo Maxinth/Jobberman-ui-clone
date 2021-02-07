@@ -1,15 +1,7 @@
 import { useState } from "react";
-import styled from "styled-components";
+import { RadioContainer } from "./styled";
 import { radiosList } from "./formData";
 import RadioButton from "./RadioButton";
-
-const RadioContainer = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-`;
 
 const RadioButtons = () => {
   // state to decide which radio button is clicked

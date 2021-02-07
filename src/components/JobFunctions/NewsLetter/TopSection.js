@@ -1,17 +1,5 @@
-import { Title, Text, Container } from "./styled";
-import styled from "styled-components";
+import { Title, Text, TopSectionContainer } from "./styled";
 
-const TopSectionContainer = styled(Container)`
-  color: rgb(78, 85, 89);
-
-  @media (min-width: 900px) {
-    text-align: left;
-    > * {
-      text-align: inherit !important;
-      color: inherit;
-    }
-  }
-`;
 const TopSection = () => {
   return (
     <TopSectionContainer>
