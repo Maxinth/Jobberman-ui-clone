@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 // JobsView
 const JobsContainer = styled.section`
+  padding: 1rem 2rem;
   @media (min-width: 1250px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

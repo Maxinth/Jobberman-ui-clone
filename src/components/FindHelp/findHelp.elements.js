@@ -39,6 +39,7 @@ const HelpBox = styled.section`
   flex-direction: column;
   border-radius: 5px;
   margin: 0 1rem;
+  margin: 1rem 3rem;
 
   @media (min-width: 768px) {
     flex-direction: row;
