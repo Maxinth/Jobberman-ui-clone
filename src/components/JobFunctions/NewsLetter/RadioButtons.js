@@ -11,6 +11,7 @@ const RadioContainer = styled.section`
 `;
 
 const RadioButtons = () => {
+  // state to decide which radio button is clicked
   const [radio, setRadio] = useState({ jobSeeker: false, employer: false });
   // see comments
   const toggleCheck = (id) => {

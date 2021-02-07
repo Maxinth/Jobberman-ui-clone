@@ -1,19 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
-import RadioButtonCheckedIcon from "@material-ui/icons/RadioButtonChecked";
-const RadioButtonUnchecked = styled(RadioButtonUncheckedIcon)``;
-const Label = styled.label`
-  font-family: "Raleway", sans-serif;
-  font-size: 1rem;
-  margin-left: 0.5rem;
-`;
-const RadioButtonChecked = styled(RadioButtonCheckedIcon)``;
-const RadioButtonContainer = styled.div`
-  display: flex;
-  align-items: center;
-  color: rgb(78, 85, 89);
-`;
+import PropTypes from "prop-types";
+import {
+  RadioButtonUnchecked,
+  RadioButtonChecked,
+  Label,
+  RadioButtonContainer,
+} from "./styled";
+
 const RadioButton = ({ checked, toggleCheck, label, id }) => {
   // so I don;t have to write same props twice, once for each button state.
   const radioInputProps = {
@@ -21,18 +13,28 @@ const RadioButton = ({ checked, toggleCheck, label, id }) => {
     id: id,
     onClick: toggleCheck,
   };
+
   return (
     <RadioButtonContainer>
-      {!checked ? (
-        <RadioButtonUnchecked {...radioInputProps} />
-      ) : (
-        <RadioButtonChecked {...radioInputProps} />
-      )}
+      <>
+        {!checked ? (
+          <RadioButtonUnchecked {...radioInputProps} />
+        ) : (
+          <RadioButtonChecked {...radioInputProps} />
+        )}
+      </>
       <Label htmlFor={id} onClick={toggleCheck}>
         {label}
       </Label>
     </RadioButtonContainer>
   );
+};
+
+RadioButton.propTypes = {
+  checked: PropTypes.bool,
+  toggleCheck: PropTypes.func,
+  label: PropTypes.string,
+  id: PropTypes.string,
 };
 
 export default RadioButton;
