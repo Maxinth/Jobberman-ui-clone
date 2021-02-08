@@ -8,7 +8,7 @@ const Inputs = ({ data }) => {
     <InputContainer>
       {data.map((item) => {
         const { type, placeholder } = item;
-        return <InputBox type={type} placeholder={placeholder} />;
+        return <InputBox type={type} placeholder={placeholder} key={type} />;
       })}
     </InputContainer>
   );
