@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { data } from "./linksData";
+import { linksData } from "./linksData";
 
 const FooterLink = styled(Link)`
   color: #fff;
@@ -17,7 +17,7 @@ const FooterLink = styled(Link)`
 const FooterLinks = () => {
   return (
     <>
-      {data.map((item) => {
+      {linksData.map((item) => {
         const { goTo, linkText } = item;
         return (
           <FooterLink to={`/${goTo}`} key={goTo}>

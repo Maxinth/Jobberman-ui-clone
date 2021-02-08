@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 import FooterLinks from "./FooterLinks";
-const Container = styled.footer`
+import FooterSocialIcons from "./FooterSocialIcons";
+const FooterContainer = styled.footer`
   background-color: rgb(0, 0, 0);
   padding: 1rem 2rem;
 `;
@@ -13,14 +14,19 @@ const FooterLinksContainer = styled.section`
   margin: 2rem 0;
 `;
 
+const Container = styled.div``;
+
 // styled.``
 const Footer = () => {
   return (
-    <Container>
+    <FooterContainer>
       <FooterLinksContainer>
         <FooterLinks />
+        <Container>
+          <FooterSocialIcons />
+        </Container>
       </FooterLinksContainer>
-    </Container>
+    </FooterContainer>
   );
 };
 
