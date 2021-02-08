@@ -75,7 +75,15 @@ const Label = styled.label`
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   margin-left: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 `;
+
+const LabelText = styled.span`
+  margin-left: 0.5rem;
+`;
+
 const RadioButtonChecked = styled(RadioButtonCheckedIcon)``;
 const RadioButtonContainer = styled.div`
   display: flex;
@@ -150,4 +158,5 @@ export {
   FormContainer,
   InputContainer,
   TopSectionContainer,
+  LabelText,
 };

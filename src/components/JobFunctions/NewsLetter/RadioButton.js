@@ -4,6 +4,7 @@ import {
   RadioButtonChecked,
   Label,
   RadioButtonContainer,
+  LabelText,
 } from "./styled";
 
 const RadioButton = ({ checked, toggleCheck, label, id }) => {
@@ -16,15 +17,16 @@ const RadioButton = ({ checked, toggleCheck, label, id }) => {
 
   return (
     <RadioButtonContainer>
-      <>
-        {!checked ? (
-          <RadioButtonUnchecked {...radioInputProps} />
-        ) : (
-          <RadioButtonChecked {...radioInputProps} />
-        )}
-      </>
       <Label htmlFor={id} onClick={toggleCheck}>
-        {label}
+        <>
+          {!checked ? (
+            <RadioButtonUnchecked {...radioInputProps} />
+          ) : (
+            <RadioButtonChecked {...radioInputProps} />
+          )}
+        </>
+        {/* <Label htmlFor={id} onClick={toggleCheck}> */}
+        <LabelText> {label}</LabelText>
       </Label>
     </RadioButtonContainer>
   );
