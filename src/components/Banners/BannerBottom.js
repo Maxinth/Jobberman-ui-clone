@@ -7,21 +7,8 @@ import {
   VideoContainer,
   BannerVideo,
   BannerBtn,
+  Container,
 } from "./banner.elements";
-
-const Container = styled.section`
-  text-align: center;
-  transition: padding-left 0.3s;
-  @media (min-width: 642px) {
-    text-align: left;
-    max-width: 500px;
-    padding-left: 3rem;
-  }
-
-  @media (min-width: 900px) {
-    padding-left: 5rem;
-  }
-`;
 
 const Text = styled.span`
   text-transform: capitalize;
@@ -30,6 +17,9 @@ const Text = styled.span`
 const BannerBottom = () => {
   return (
     <Container>
+      <Heading as="h1" bg>
+        Get the Right Job Vacancies & Careers in Nigeria{" "}
+      </Heading>
       <Heading>
         We will boost your skills and profile, provide you with personalised
         career guidance and match you with the right opportunities, so that you

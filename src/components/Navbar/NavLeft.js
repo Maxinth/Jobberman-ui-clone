@@ -3,6 +3,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import logo from "../../assets/logo.png";
 import { NavLogo, NavLeftContainer } from "./NavSideBar/navSideBar.elements";
 import { useGlobalContext } from "../context";
+import { Link } from "react-router-dom";
 
 const NavLeft = () => {
   const { toggleSideBar } = useGlobalContext();
@@ -11,7 +12,9 @@ const NavLeft = () => {
       <IconButton onClick={toggleSideBar}>
         <MenuIcon />
       </IconButton>
-      <NavLogo src={logo} alt="jobber-man logo" />
+      <Link to="/">
+        <NavLogo src={logo} alt="jobber-man logo" />
+      </Link>
     </NavLeftContainer>
   );
 };

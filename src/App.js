@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import BackDrops from "./components/BackDrops/BackDrops";
 import Footer from "./components/Footer";
 import Home from "./sitePages/Home";
+import JobSeekers from "./sitePages/JobSeekers";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <Home />
+        </Route>
+        <Route path="/job-seeker">
+          <JobSeekers />
         </Route>
       </Switch>
       <Footer />

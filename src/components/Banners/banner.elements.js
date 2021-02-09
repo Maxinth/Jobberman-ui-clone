@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import bgOnSmallScreen from "../../assets/sm-jobseeker-hero.jpg";
 import bgOnLargeScreen from "../../assets/jm-jobseeker-hero.jpg";
 import { global } from "../../globalStyles";
@@ -203,11 +203,11 @@ const BannerLink = styled(Link)`
 const Heading = styled.h3`
   font-weight: 400;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: ${({ bg }) => (bg ? "2rem" : "1rem")};
   padding: 1rem;
 
   @media (min-width: 642px) {
-    font-size: 1rem;
+    font-size: ${({ bg }) => (bg ? "2rem" : "1rem")};
   }
 `;
 
@@ -292,6 +292,24 @@ const BannerForm = styled.form`
   }
 `;
 
+// BannerBottom
+const Container = styled.section`
+  text-align: center;
+  transition: padding-left 0.3s;
+  h1 {
+    display: none;
+  }
+  @media (min-width: 642px) {
+    text-align: left;
+    max-width: 500px;
+    padding-left: 3rem;
+  }
+
+  @media (min-width: 900px) {
+    padding-left: 5rem;
+  }
+`;
+
 export {
   SelectBoxItem,
   SelectBoxOption,
@@ -311,4 +329,5 @@ export {
   SelectBoxContainer,
   SearchButton,
   SearchText,
+  Container,
 };
