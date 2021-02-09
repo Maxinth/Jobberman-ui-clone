@@ -6,6 +6,7 @@ import {
   MainBannerImg,
   Container,
 } from "../Banners/banner.elements";
+import WhyJobberMan from "./WhyJobberMan";
 
 const JobSeekerContainer = styled.section`
   font-family: "Open Sans", sans-serif;
@@ -48,6 +49,7 @@ const index = () => {
   return (
     <JobSeekerContainer>
       <MainBannerSection />
+      <WhyJobberMan />
     </JobSeekerContainer>
   );
 };

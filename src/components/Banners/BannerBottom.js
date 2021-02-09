@@ -17,9 +17,11 @@ const Text = styled.span`
 const BannerBottom = () => {
   return (
     <Container>
+      {/* hidden on index page - shown on Jobseeker banner */}
       <Heading as="h1" bg>
         Get the Right Job Vacancies & Careers in Nigeria{" "}
       </Heading>
+      {/* hidden on index page - shown on Jobseeker banner */}
       <Heading>
         We will boost your skills and profile, provide you with personalised
         career guidance and match you with the right opportunities, so that you
@@ -27,9 +29,7 @@ const BannerBottom = () => {
       </Heading>
       <VideoContainer>
         <BannerVideo>
-          <PlayCircleOutlineOutlinedIcon
-          // className="mainBanner__videoIcon"
-          />
+          <PlayCircleOutlineOutlinedIcon />
           <Text>Watch the Video</Text>
         </BannerVideo>
         <BannerBtn>
