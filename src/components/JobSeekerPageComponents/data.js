@@ -33,5 +33,13 @@ export const data = [
   },
 ];
 
+// custom function to match the current item and make an item current when the circleControls are clicked
+export const matchAndMakeCurrent = (currentIndex, setCurrentIndex) => {
+  const makeCurrentItem = (itemIndex) => setCurrentIndex(itemIndex);
 
-const 
+  // custom function to style control box
+  const matchCurrentItem = (itemIndex) =>
+    itemIndex === currentIndex ? "current" : "";
+
+  return { makeCurrentItem, matchCurrentItem };
+};

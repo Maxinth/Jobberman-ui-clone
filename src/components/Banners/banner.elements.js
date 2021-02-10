@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import bgOnSmallScreen from "../../assets/sm-jobseeker-hero.jpg";
 import bgOnLargeScreen from "../../assets/jm-jobseeker-hero.jpg";
 import { global } from "../../globalStyles";
