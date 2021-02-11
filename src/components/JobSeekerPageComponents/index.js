@@ -1,13 +1,13 @@
 import MainBannerSection from "../Banners/MainBannerSection";
 import { JobSeekerContainer } from "./styled";
 import WhyJobberMan from "./WhyJobberMan";
-import Profile from "./Profile";
+import Profiles from "./Profiles";
 const JobSeekers = () => {
   return (
     <JobSeekerContainer>
       <MainBannerSection />
       <WhyJobberMan />
-      <Profile />
+      <Profiles />
     </JobSeekerContainer>
   );
 };
