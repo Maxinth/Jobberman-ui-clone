@@ -13,6 +13,7 @@ const JobSeekerContainer = styled.section`
     margin-top: 4.7rem;
   }
 
+  // hide the form when used in this component.
   ${FormContainer} {
     display: none;
   }
@@ -28,7 +29,6 @@ const JobSeekerContainer = styled.section`
       padding-left: unset;
     }
     h1 {
-      display: block;
       font-family: "Raleway", sans-serif;
     }
   }
