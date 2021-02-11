@@ -1,4 +1,4 @@
-import JobSeekersSection from "../components/JobSeekerPageComponents";
+import JobSeekersSection from "../components/JobSeekerPageComponents/JobSeekers";
 
 const JobSeekers = () => {
   return <JobSeekersSection />;

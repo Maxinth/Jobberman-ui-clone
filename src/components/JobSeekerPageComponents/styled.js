@@ -29,6 +29,7 @@ const JobSeekerContainer = styled.section`
       padding-left: unset;
     }
     h1 {
+      display: block;
       font-family: "Raleway", sans-serif;
     }
   }

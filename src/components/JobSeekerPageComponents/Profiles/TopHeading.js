@@ -1,16 +1,6 @@
-import styled from "styled-components";
+import { HeadingContainer, Text } from "./styled";
 import { Title } from "../styled";
-const Text = styled.p`
-  color: rgb(78, 85, 89);
-  font-size: 0.9rem;
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  line-height: 1.7;
-`;
 
-const HeadingContainer = styled.section`
-  margin-bottom: 1rem;
-`;
 const TopHeading = () => {
   return (
     <HeadingContainer>
