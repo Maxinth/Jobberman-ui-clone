@@ -1,6 +1,10 @@
 import styled from "styled-components";
-import testImg from "../../../assets/profiles/seeker-notifications.png";
-const ProfileBox = styled.div``;
+
+import PropTypes from "prop-types";
+
+const ProfileBox = styled.div`
+  margin-bottom: 4rem;
+`;
 const ProfileImage = styled.img`
   display: block;
   width: 100%;
@@ -24,20 +28,22 @@ const Text = styled.p`
   text-align: center;
   line-height: 1.7;
 `;
-const Profile = () => {
+const Profile = ({ img, detail, heading }) => {
   return (
     <ProfileBox>
-      <ProfileImage src={testImg} alt="test pic" />
+      <ProfileImage src={img} alt="test pic" />
       <ProfileDetails>
-        <Heading>Boosted Job Application</Heading>
-        <Text>
-          Your job application will be highlighted and your Career Profile will
-          be recommended to employers whenever they post a job relevant to your
-          skills.
-        </Text>
+        <Heading>{heading}</Heading>
+        <Text>{detail}</Text>
       </ProfileDetails>
     </ProfileBox>
   );
+};
+
+Profile.propTypes = {
+  img: PropTypes.string,
+  heading: PropTypes.string,
+  detail: PropTypes.string,
 };
 
 export default Profile;

@@ -4,6 +4,7 @@ import { Title } from "../styled";
 import testImg from "../../../assets/profiles/seeker-notifications.png";
 import TopHeading from "./TopHeading";
 import Profile from "./Profile";
+import GenerateProfile from "./GenerateProfile";
 const ProfileContainer = styled.section`
   padding: 1rem 2rem;
   ${Title} {
@@ -20,7 +21,7 @@ const Profiles = () => {
     <ProfileContainer>
       <TopHeading />
       <Container>
-        <Profile />
+        <GenerateProfile />
       </Container>
     </ProfileContainer>
   );
