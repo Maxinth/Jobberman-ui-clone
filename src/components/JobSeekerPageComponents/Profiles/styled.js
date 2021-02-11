@@ -54,7 +54,7 @@ const ProfileImage = styled.img`
   }
 `;
 
-const Heading = styled.h5`
+const Heading = styled.h3`
   font-size: 1rem;
   margin: 0.5rem 0;
 `;

@@ -9,6 +9,8 @@ const NewsLetterContainer = styled(JobBox)`
   font-size: 1.5rem;
   --color: rgb(78, 85, 89);
   padding: 2rem 1rem;
+  /* margin: 2rem 2rem; */
+
   button {
     background-color: #333;
     width: 100%;

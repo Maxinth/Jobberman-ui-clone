@@ -5,10 +5,15 @@ import {
   MainBannerImg,
   Container,
 } from "../Banners/banner.elements";
+import { NewsLetterContainer } from "../JobFunctions/NewsLetter/styled";
 
 // index.js
 const JobSeekerContainer = styled.section`
+  /* padding-bottom: 3rem; */
   font-family: "Open Sans", sans-serif;
+  ${NewsLetterContainer} {
+    margin: 2rem 2rem;
+  }
   ${BannerMain} {
     margin-top: 4.7rem;
   }

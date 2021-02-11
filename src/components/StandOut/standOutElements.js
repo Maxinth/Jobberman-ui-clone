@@ -39,7 +39,7 @@ const Text = styled.p`
 
 const Btn = styled.button`
   text-transform: uppercase;
-
+  display: block;
   background-color: rgb(255, 98, 0);
   letter-spacing: 0.01rem;
   font-family: "Open Sans", sans-serif;
