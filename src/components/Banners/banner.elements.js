@@ -243,6 +243,7 @@ const BannerBtn = styled.button`
   background-color: #fff;
   border-radius: 5px;
   margin-right: 1rem;
+  box-shadow: 1px 2px 4px #333;
 
   > a {
     display: block;
