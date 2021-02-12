@@ -3,7 +3,9 @@ import SelectBox from "./FormSelect";
 import { BannerMain, FormContainer, BannerForm } from "./banner.elements";
 import { data } from "./formSelectData";
 import BannerContainer from "./BannerContainer";
-const MainBannerSection = () => {
+import PropTypes from "prop-types";
+
+const MainBannerSection = (props) => {
   // destructuring individual object items from data object
   const { jobFunctions, jobIndustries, jobLocations } = data;
 
@@ -34,7 +36,7 @@ const MainBannerSection = () => {
   ];
   return (
     <BannerMain>
-      <BannerContainer />
+      <BannerContainer {...props} />
 
       <FormContainer>
         <BannerForm>
@@ -55,6 +57,12 @@ const MainBannerSection = () => {
       </FormContainer>
     </BannerMain>
   );
+};
+
+MainBannerSection.propTypes = {
+  lgImg: PropTypes.string,
+  smImg: PropTypes.string,
+  mainText: PropTypes.string,
 };
 
 export default MainBannerSection;

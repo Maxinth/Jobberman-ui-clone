@@ -11,9 +11,11 @@ const bannerData = {
 
 const { mainHeading, smallScreenImg, largerScreenImg } = bannerData;
 
-// custom function to determine if data from props or data supplied directly get used in the MainBannerImg and BannerBottom components
-const checkAndUse = (importedData, propsData) => {
-  return propsData ? propsData : importedData;
+// custom function to change btn text of banner button in the MockVideoSection component based on path.
+const renderByLocation = (location) => {
+  return location.pathname === "/employer"
+    ? "Contact Our Solutions Team"
+    : "Join Now!";
 };
 
-export { mainHeading, smallScreenImg, largerScreenImg, checkAndUse };
+export { mainHeading, smallScreenImg, largerScreenImg, renderByLocation };

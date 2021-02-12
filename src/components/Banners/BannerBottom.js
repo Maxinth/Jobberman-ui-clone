@@ -1,7 +1,4 @@
 import React from "react";
-import PlayCircleOutlineOutlinedIcon from "@material-ui/icons/PlayCircleOutlineOutlined";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
 import { Heading, Container } from "./banner.elements";
 import PropTypes from "prop-types";
 import MockVideoSection from "./MockVideoSection";
@@ -11,7 +8,7 @@ const BannerBottom = ({ mainHeading }) => {
     <Container>
       {/* hidden on index page - shown on Jobseeker banner */}
       <Heading as="h1" bg>
-        Get the Right Job Vacancies & Careers in Nigeria{" "}
+        Get the Right Job Vacancies & Careers in Nigeria
       </Heading>
       {/* hidden on index page - shown on Jobseeker banner */}
       <Heading>{mainHeading}</Heading>

@@ -1,35 +1,25 @@
 import React from "react";
-import {
-  mainHeading,
-  smallScreenImg,
-  largerScreenImg,
-  checkAndUse,
-} from "./bannerData";
-import styled from "styled-components";
-import { MainBannerImg } from "./banner.elements";
-
+import { MainBannerImg, MainContainer } from "./banner.elements";
+import PropTypes from "prop-types";
 import BannerBottom from "./BannerBottom";
 
-const MainBannerContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-`;
-
-const BannerContainer = ({ lgImg, smImg, mainText }) => {
+const BannerContainer = ({ lgImg = "", smImg = "", mainText = "" }) => {
   return (
-    <MainBannerContainer>
+    <MainContainer>
       {/* show on small screens */}
-      <MainBannerImg src={checkAndUse(smallScreenImg, smImg)} alt="banner" />
+      {/* <MainBannerImg src={checkAndUse(smallScreenImg, smImg)} alt="banner" /> */}
+      <MainBannerImg src={smImg} alt="banner" />
       {/* show on small screens */}
-      <MainBannerImg
-        src={checkAndUse(largerScreenImg, lgImg)}
-        alt="banner"
-        lg={true}
-      />
-      <BannerBottom mainHeading={checkAndUse(mainHeading, mainText)} />
-    </MainBannerContainer>
+      <MainBannerImg src={lgImg} alt="banner" lg={true} />
+      <BannerBottom mainHeading={mainText} />
+    </MainContainer>
   );
+};
+
+BannerContainer.propTypes = {
+  lgImg: PropTypes.string,
+  smImg: PropTypes.string,
+  mainText: PropTypes.string,
 };
 
 export default BannerContainer;

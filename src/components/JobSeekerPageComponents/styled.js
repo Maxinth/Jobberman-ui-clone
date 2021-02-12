@@ -14,6 +14,7 @@ const JobSeekerContainer = styled.section`
   ${NewsLetterContainer} {
     margin: 2rem 2rem;
   }
+
   ${BannerMain} {
     margin-top: 4.7rem;
   }
@@ -172,4 +173,5 @@ export {
   WhySection,
   Title,
   WhyContainer,
+  BannerMain,
 };

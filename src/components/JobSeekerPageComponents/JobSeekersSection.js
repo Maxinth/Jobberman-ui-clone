@@ -5,11 +5,19 @@ import Profiles from "./Profiles/Profiles";
 import Connect from "../Connect/Connect";
 import GetStarted from "./GetStarted/GetStarted";
 import NewsLetter from "../JobFunctions/NewsLetter/NewsLetter";
-
+import {
+  mainHeading,
+  smallScreenImg,
+  largerScreenImg,
+} from "../Banners/bannerData";
 const JobSeekersSection = () => {
   return (
     <JobSeekerContainer>
-      <MainBannerSection />
+      <MainBannerSection
+        lgImg={largerScreenImg}
+        smImg={smallScreenImg}
+        mainText={mainHeading}
+      />
       <WhyJobberMan />
       <Profiles />
       <GetStarted />

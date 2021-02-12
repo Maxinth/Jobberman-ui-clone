@@ -310,6 +310,13 @@ const Container = styled.section`
   }
 `;
 
+// BannerContainer
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+`;
+
 export {
   SelectBoxItem,
   SelectBoxOption,
@@ -330,4 +337,5 @@ export {
   SearchButton,
   SearchText,
   Container,
+  MainContainer,
 };
