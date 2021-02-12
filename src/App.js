@@ -5,7 +5,7 @@ import BackDrops from "./components/BackDrops/BackDrops";
 import Footer from "./components/Footer";
 import Home from "./sitePages/Home";
 import JobSeekers from "./sitePages/JobSeekers";
-
+import Employers from "./sitePages/Employers";
 function App() {
   return (
     <div className="App">
@@ -17,6 +17,9 @@ function App() {
         </Route>
         <Route path="/job-seeker">
           <JobSeekers />
+        </Route>
+        <Route path="/employer">
+          <Employers />
         </Route>
       </Switch>
       <Footer />
