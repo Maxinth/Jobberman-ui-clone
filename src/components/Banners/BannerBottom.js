@@ -2,19 +2,11 @@ import React from "react";
 import PlayCircleOutlineOutlinedIcon from "@material-ui/icons/PlayCircleOutlineOutlined";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import {
-  Heading,
-  VideoContainer,
-  BannerVideo,
-  BannerBtn,
-  Container,
-} from "./banner.elements";
+import { Heading, Container } from "./banner.elements";
+import PropTypes from "prop-types";
+import MockVideoSection from "./MockVideoSection";
 
-const Text = styled.span`
-  text-transform: capitalize;
-`;
-
-const BannerBottom = () => {
+const BannerBottom = ({ mainHeading }) => {
   return (
     <Container>
       {/* hidden on index page - shown on Jobseeker banner */}
@@ -22,22 +14,13 @@ const BannerBottom = () => {
         Get the Right Job Vacancies & Careers in Nigeria{" "}
       </Heading>
       {/* hidden on index page - shown on Jobseeker banner */}
-      <Heading>
-        We will boost your skills and profile, provide you with personalised
-        career guidance and match you with the right opportunities, so that you
-        can be the Best and the Brightest.
-      </Heading>
-      <VideoContainer>
-        <BannerVideo>
-          <PlayCircleOutlineOutlinedIcon />
-          <Text>Watch the Video</Text>
-        </BannerVideo>
-        <BannerBtn>
-          <Link to="/sign-up">Join Now!</Link>
-        </BannerBtn>
-      </VideoContainer>
+      <Heading>{mainHeading}</Heading>
+      <MockVideoSection />
     </Container>
   );
 };
 
+BannerBottom.propTypes = {
+  mainHeading: PropTypes.string,
+};
 export default BannerBottom;

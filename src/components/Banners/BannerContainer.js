@@ -1,6 +1,10 @@
 import React from "react";
-import bannerImg from "../../assets/jobseeker-hero-bold.png";
-import bannerImg2 from "../../assets/jobseeker-hero2.png";
+import {
+  mainHeading,
+  smallScreenImg,
+  largerScreenImg,
+  checkAndUse,
+} from "./bannerData";
 import styled from "styled-components";
 import { MainBannerImg } from "./banner.elements";
 
@@ -12,14 +16,18 @@ const MainBannerContainer = styled.div`
   padding: 1rem;
 `;
 
-const BannerContainer = () => {
+const BannerContainer = ({ lgImg, smImg, mainText }) => {
   return (
     <MainBannerContainer>
       {/* show on small screens */}
-      <MainBannerImg src={bannerImg} alt="banner" />
+      <MainBannerImg src={checkAndUse(smallScreenImg, smImg)} alt="banner" />
       {/* show on small screens */}
-      <MainBannerImg src={bannerImg2} alt="banner" lg={true} />
-      <BannerBottom />
+      <MainBannerImg
+        src={checkAndUse(largerScreenImg, lgImg)}
+        alt="banner"
+        lg={true}
+      />
+      <BannerBottom mainHeading={checkAndUse(mainHeading, mainText)} />
     </MainBannerContainer>
   );
 };
