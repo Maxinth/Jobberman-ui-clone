@@ -7,6 +7,7 @@ import { ConnectBox as ProductBox } from "../../Connect/styled";
 import styled from "styled-components";
 import Assessments from "./Assessments";
 import OfferSection from "./OfferSection";
+import AssessJobSeekers from "./AssessJobSeekers";
 const FeaturedContainer = styled(HowTosContainer)`
   display: block;
   background-color: rgb(250, 250, 250);
@@ -18,7 +19,7 @@ const FeaturedContainer = styled(HowTosContainer)`
 
   ${ProductBox} {
     padding: 1rem 2rem;
-    max-width: 900px;
+    max-width: 600px;
     h4 {
       font-size: 1.7rem;
     }
@@ -30,7 +31,7 @@ const FeaturedContainer = styled(HowTosContainer)`
   ${Text} {
     max-width: 600px;
     line-height: 1.8;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     /* text-align: left; */
   }
 `;
@@ -43,6 +44,7 @@ const FeaturedProducts = () => {
         <OfferSection />
         <Assessments />
       </ProductBox>
+      <AssessJobSeekers />
     </FeaturedContainer>
   );
 };
