@@ -1,0 +1,15 @@
+export const data = [
+  "finance",
+  "IT & Software",
+  "admin & office",
+  "marketing & Comms",
+  "human resources",
+  "customer service & support",
+  "product & project management",
+  "engineering & technology",
+  "transport & logistics",
+  "supply chain & procurement",
+  "sales",
+  "management & business development",
+  "And more",
+];

@@ -5,6 +5,7 @@ import {
 } from "../../StandOut/standOutElements";
 import { ConnectBox as ProductBox } from "../../Connect/styled";
 import styled from "styled-components";
+import GenerateCategories from "./GenerateCategories";
 const FeaturedContainer = styled(HowTosContainer)`
   display: block;
   background-color: rgb(250, 250, 250);
@@ -32,6 +33,10 @@ const FeaturedContainer = styled(HowTosContainer)`
     /* text-align: left; */
   }
 `;
+
+const Categories = styled.ul`
+  width: 100%;
+`;
 const FeaturedProducts = () => {
   return (
     <FeaturedContainer>
@@ -53,6 +58,9 @@ const FeaturedProducts = () => {
           that can be applied to all your applicants.
         </Text>
         <Heading as="h4">Assessments available for these categories </Heading>
+        <Categories>
+          <GenerateCategories />
+        </Categories>
       </ProductBox>
     </FeaturedContainer>
   );
