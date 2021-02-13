@@ -5,7 +5,8 @@ import {
 } from "../../StandOut/standOutElements";
 import { ConnectBox as ProductBox } from "../../Connect/styled";
 import styled from "styled-components";
-import GenerateCategories from "./GenerateCategories";
+import Assessments from "./Assessments";
+import OfferSection from "./OfferSection";
 const FeaturedContainer = styled(HowTosContainer)`
   display: block;
   background-color: rgb(250, 250, 250);
@@ -34,33 +35,13 @@ const FeaturedContainer = styled(HowTosContainer)`
   }
 `;
 
-const Categories = styled.ul`
-  width: 100%;
-`;
 const FeaturedProducts = () => {
   return (
     <FeaturedContainer>
       <Heading>Featured Product</Heading>
       <ProductBox>
-        <Heading as="h4">
-          We now offer skills assessments when creating a job listing
-        </Heading>
-        <Text>
-          You decrease the time spent on sorting through the huge volume of
-          applications from jobseekers. You can sort through job seekers based
-          on test scores they achieve
-        </Text>
-        <Text>
-          An assessment will not only help you identify candidates that will be
-          a good fit for jobs at your company, but it will also help predict a
-          new hire’s on-the-job performance. It Introduces an element of
-          objectivity into the hiring process by providing standardised results
-          that can be applied to all your applicants.
-        </Text>
-        <Heading as="h4">Assessments available for these categories </Heading>
-        <Categories>
-          <GenerateCategories />
-        </Categories>
+        <OfferSection />
+        <Assessments />
       </ProductBox>
     </FeaturedContainer>
   );
