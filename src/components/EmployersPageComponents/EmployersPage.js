@@ -1,5 +1,6 @@
 import React from "react";
 import Advertise from "./Advertise";
+import FeaturedProducts from "./FeaturedProduct";
 import HelpSection from "./HelpSection";
 import EmployersMainBanner from "./MainBanner";
 import SmallBanner from "./SmallBanner";
@@ -11,6 +12,7 @@ const EmployersPage = () => {
       <EmployersMainBanner />
       <Advertise />
       <HelpSection />
+      <FeaturedProducts />
     </>
   );
 };
