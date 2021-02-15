@@ -1,11 +1,10 @@
-import ArrowForwardIosRoundedIcon from "@material-ui/icons/ArrowForwardIosRounded";
 import { ListItem, ItemText } from "./styled";
 import PropTypes from "prop-types";
 
-const CategoryItem = ({ item }) => {
+const CategoryItem = ({ item, icon }) => {
   return (
     <ListItem>
-      <ArrowForwardIosRoundedIcon />
+      {icon}
       <ItemText bold={item === "And more"}>{item}</ItemText>
     </ListItem>
   );
@@ -13,6 +12,7 @@ const CategoryItem = ({ item }) => {
 
 CategoryItem.propTypes = {
   item: PropTypes.string,
+  icon: PropTypes.object,
 };
 
 export default CategoryItem;

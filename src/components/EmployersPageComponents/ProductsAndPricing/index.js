@@ -7,6 +7,9 @@ import {
 import { HelpContainer } from "../HelpSection/styled";
 import styled from "styled-components";
 import InfoRoundedIcon from "@material-ui/icons/InfoRounded";
+import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
+import GenerateCategories from "../FeaturedProduct/GenerateCategories";
+import { bestMatch } from "./data";
 
 const Container = styled(HelpContainer)`
   /* margin: unset; */
@@ -38,6 +41,8 @@ const PriceText = styled.p``;
 const ItemsContainer = styled.section`
   background-color: rgb(249, 250, 251);
 `;
+
+const ListContainer = styled.ul``;
 const ProductsAndPricing = () => {
   return (
     <Container>
@@ -48,11 +53,13 @@ const ProductsAndPricing = () => {
         <PriceText> Hire the right fit, faster!</PriceText>
 
         <PriceText>
-          Our HR Experts & Technology match you with the best Candidates.{" "}
+          Our HR Experts & Technology match you with the best Candidates.
         </PriceText>
         <ItemsContainer>
           <InfoRoundedIcon />
-          gwewe
+          <ListContainer>
+            <GenerateCategories data={bestMatch} icon={<CheckRoundedIcon />} />
+          </ListContainer>
         </ItemsContainer>
       </PricingContainer>
     </Container>
