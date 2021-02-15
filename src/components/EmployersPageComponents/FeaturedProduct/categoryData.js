@@ -25,3 +25,11 @@ export const productTexts = [
    objectivity into the hiring process by providing standardised results
    that can be applied to all your applicants.`,
 ];
+
+const assessJobSeekersData = {
+  mainTexts: ["Assess Your", "JobSeekers"],
+  pricingTexts: ["NGN 54,000", "NGN 48,600", "Per listing"],
+};
+
+const { mainTexts, pricingTexts } = assessJobSeekersData;
+export { mainTexts, pricingTexts };

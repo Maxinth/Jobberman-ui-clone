@@ -1,14 +1,18 @@
 import { Text } from "../../StandOut/standOutElements";
-import { productTexts } from "./categoryData";
+import PropTypes from "prop-types";
 
-const GenerateTexts = () => {
+const GenerateTexts = ({ data = [] }) => {
   return (
     <>
-      {productTexts.map((item, index) => (
+      {data.map((item, index) => (
         <Text key={index}>{item}</Text>
       ))}
     </>
   );
+};
+
+GenerateTexts.propTypes = {
+  data: PropTypes.array,
 };
 
 export default GenerateTexts;

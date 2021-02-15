@@ -1,15 +1,5 @@
-import { Heading } from "../../StandOut/standOutElements";
-import styled from "styled-components";
+import { Heading, Categories } from "./styled";
 import GenerateCategories from "./GenerateCategories";
-
-const Categories = styled.ul`
-  width: 100%;
-
-  @media (min-width: 1024px) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-`;
 
 const Assessments = () => {
   return (
