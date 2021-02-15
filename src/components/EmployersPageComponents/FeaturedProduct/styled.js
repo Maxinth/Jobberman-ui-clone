@@ -41,11 +41,13 @@ const FeaturedContainer = styled(HowTosContainer)`
 `;
 
 const MainContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @media (min-width: 1024px) {
-    display: flex;
     width: 100%;
-    justify-content: center;
 
+    flex-direction: row;
     > * {
       margin: unset;
     }
@@ -162,4 +164,5 @@ export {
   ListItem,
   ItemText,
   Categories,
+  ProductBox,
 };

@@ -4,6 +4,7 @@ import FeaturedProducts from "./FeaturedProduct";
 import HelpSection from "./HelpSection";
 import EmployersMainBanner from "./MainBanner";
 import SmallBanner from "./SmallBanner";
+import ProductsAndPricing from "./ProductsAndPricing";
 
 const EmployersPage = () => {
   return (
@@ -13,6 +14,7 @@ const EmployersPage = () => {
       <Advertise />
       <HelpSection />
       <FeaturedProducts />
+      <ProductsAndPricing />
     </>
   );
 };

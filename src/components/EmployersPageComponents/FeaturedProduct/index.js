@@ -1,5 +1,5 @@
 import { MainContainer, FeaturedContainer, Heading } from "./styled";
-import AssessmentsSections from "./AssessmentsSection";
+import AssessmentsSections from "./AssessmentsSections";
 
 const FeaturedProducts = () => {
   return (
