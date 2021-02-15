@@ -20,19 +20,37 @@ const FeaturedContainer = styled(HowTosContainer)`
   ${ProductBox} {
     padding: 1rem 2rem;
     max-width: 600px;
+    box-shadow: unset;
+    transition: all 0.2s;
     h4 {
       font-size: 1.7rem;
     }
     p + p {
       margin-top: 3rem;
     }
+    @media (min-width: 1024px) {
+      max-width: 900px;
+      > * {
+        text-align: left !important;
+      }
+    }
   }
 
   ${Text} {
     max-width: 600px;
     line-height: 1.8;
-    /* font-size: 1.2rem; */
-    /* text-align: left; */
+  }
+`;
+
+const MainContainer = styled.section`
+  @media (min-width: 1024px) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    > * {
+      margin: unset;
+    }
   }
 `;
 
@@ -40,11 +58,13 @@ const FeaturedProducts = () => {
   return (
     <FeaturedContainer>
       <Heading>Featured Product</Heading>
-      <ProductBox>
-        <OfferSection />
-        <Assessments />
-      </ProductBox>
-      <AssessJobSeekers />
+      <MainContainer>
+        <ProductBox>
+          <OfferSection />
+          <Assessments />
+        </ProductBox>
+        <AssessJobSeekers />
+      </MainContainer>
     </FeaturedContainer>
   );
 };

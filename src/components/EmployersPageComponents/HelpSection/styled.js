@@ -6,7 +6,7 @@ import styled from "styled-components";
 const HelpContainer = styled(ConnectContainer)`
   max-width: 1250px;
   padding: 1rem;
-  margin: 0rem auto 2rem;
+  margin: 0rem auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -28,5 +28,8 @@ const HelpContainer = styled(ConnectContainer)`
 `;
 
 const Container = styled.div``;
+const MainContainer = styled.section`
+  background-color: rgb(250, 250, 250);
+`;
 
-export { HelpContainer, Container, Heading, Text };
+export { HelpContainer, Container, Heading, Text, MainContainer };

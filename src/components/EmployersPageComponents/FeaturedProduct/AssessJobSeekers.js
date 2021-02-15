@@ -18,13 +18,21 @@ const AssessContainer = styled(HowTosContainer)`
   max-width: 600px;
   margin: 0 auto;
   width: 100%;
-  box-shadow: 1px 2px 2px grey;
+  border: 1px solid ghostwhite;
+  transition: all 0.2s;
+  /* box-shadow: 1px 1px 2px grey; */
   > p {
     font-family: "Raleway", sans-serif;
     font-size: 1.6rem !important;
     + p {
       font-weight: 700;
     }
+  }
+
+  @media (min-width: 1024px) {
+    flex: 1;
+    max-width: 300px;
+    margin: unset;
   }
 `;
 
@@ -33,10 +41,11 @@ const PriceBox = styled.div`
     width: 100%;
     font-family: "Open Sans", sans-serif;
     color: rgb(255, 98, 0);
-
-    :last-child {
+    line-height: 1.2;
+    :nth-child(3) {
       font-size: 2.2rem !important;
     }
+
     :first-child {
       text-decoration: line-through;
       text-decoration-color: rgb(255, 98, 0);
@@ -49,11 +58,10 @@ const PriceBox = styled.div`
   }
   button {
     width: 100%;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    height: 40px;
     a {
       margin-bottom: unset;
+      padding: unset;
     }
   }
 `;
@@ -76,7 +84,7 @@ const AssessJobSeekers = () => {
         <Text>NGN 54,000</Text>
         <Text>NGN 48,600</Text>
         <Text>Per Listing </Text>
-        <Span>(save 10%)</Span>
+        <Span>(Save 10%)</Span>
         <CTA text="find out more" goTo="/skills-assessment" />
       </PriceBox>
     </AssessContainer>

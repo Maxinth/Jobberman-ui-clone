@@ -1,13 +1,15 @@
-import { HelpContainer, Container } from "./styled";
+import { HelpContainer, Container, MainContainer } from "./styled";
 import HelpMain from "./HelpMain";
 
 const HelpSection = () => {
   return (
-    <HelpContainer>
-      <Container>
-        <HelpMain />
-      </Container>
-    </HelpContainer>
+    <MainContainer>
+      <HelpContainer>
+        <Container>
+          <HelpMain />
+        </Container>
+      </HelpContainer>
+    </MainContainer>
   );
 };
 

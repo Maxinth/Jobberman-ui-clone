@@ -4,7 +4,7 @@ import { useVariants } from "../components/useVariants";
 const TransitionBox = ({ children }) => {
   const { pageVariant, variantProps } = useVariants();
   return (
-    <motion.div variants={pageVariant()} {...variantProps}>
+    <motion.div variants={pageVariant(0.5, 0)} {...variantProps}>
       {children}
     </motion.div>
   );
