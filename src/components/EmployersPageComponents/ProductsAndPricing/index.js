@@ -6,18 +6,24 @@ import {
 } from "../FeaturedProduct/styled";
 import { HelpContainer } from "../HelpSection/styled";
 import styled from "styled-components";
-import InfoRoundedIcon from "@material-ui/icons/InfoRounded";
-import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
-import GenerateCategories from "../FeaturedProduct/GenerateCategories";
-import { bestMatch } from "./data";
+
+import PricingCard from "./PricingCard";
 
 const Container = styled(HelpContainer)`
-  /* margin: unset; */
+  font-family: "Roboto", sans-serif;
+  flex-direction: column;
+  > ${Heading} {
+    text-align: center;
+    color: #333;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
   ${PricingContainer} {
     max-width: 600px;
     margin: unset;
     width: 100%;
     font-family: "Open Sans", sans-serif;
+    padding: unset;
   }
 
   ${Heading} {
@@ -34,34 +40,19 @@ const Container = styled(HelpContainer)`
 
   ${Span} {
     font-style: unset;
+    + p {
+      padding-bottom: unset;
+    }
   }
 `;
-
-const PriceText = styled.p``;
-const ItemsContainer = styled.section`
-  background-color: rgb(249, 250, 251);
-`;
-
-const ListContainer = styled.ul``;
+const CardsContainer = styled.section``;
 const ProductsAndPricing = () => {
   return (
     <Container>
-      <PricingContainer>
-        <Heading>Best Match</Heading>
-        <Text>NGN 52,000</Text>
-        <Span>Including VAT</Span>
-        <PriceText> Hire the right fit, faster!</PriceText>
-
-        <PriceText>
-          Our HR Experts & Technology match you with the best Candidates.
-        </PriceText>
-        <ItemsContainer>
-          <InfoRoundedIcon />
-          <ListContainer>
-            <GenerateCategories data={bestMatch} icon={<CheckRoundedIcon />} />
-          </ListContainer>
-        </ItemsContainer>
-      </PricingContainer>
+      <Heading>Products & Pricing </Heading>
+      <CardsContainer>
+        <PricingCard />
+      </CardsContainer>
     </Container>
   );
 };
