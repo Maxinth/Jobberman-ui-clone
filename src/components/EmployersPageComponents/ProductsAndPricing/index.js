@@ -6,7 +6,7 @@ import {
 } from "../FeaturedProduct/styled";
 import { HelpContainer } from "../HelpSection/styled";
 import styled from "styled-components";
-
+import { pricingData } from "./data";
 import PricingCard from "./PricingCard";
 
 const Container = styled(HelpContainer)`
@@ -51,7 +51,9 @@ const ProductsAndPricing = () => {
     <Container>
       <Heading>Products & Pricing </Heading>
       <CardsContainer>
-        <PricingCard />
+        {pricingData.map((item, index) => (
+          <PricingCard key={index} {...item} />
+        ))}
       </CardsContainer>
     </Container>
   );

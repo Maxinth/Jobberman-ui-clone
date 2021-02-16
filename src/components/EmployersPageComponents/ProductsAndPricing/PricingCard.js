@@ -1,13 +1,15 @@
 import PricesDetails from "./PricesDetails";
-import { bestMatch } from "./data";
+
 import PricingTop from "./PricingTop";
 import { ProductBox as PricingContainer } from "../FeaturedProduct/styled";
 
-const PricingCard = () => {
+const PricingCard = (props) => {
+  const { details, btnText, goTo, ...pricingTopProps } = props;
+
   return (
     <PricingContainer>
-      <PricingTop />
-      <PricesDetails data={bestMatch} />
+      <PricingTop {...pricingTopProps} />
+      <PricesDetails data={details} btnText={btnText} goTo={goTo} />
     </PricingContainer>
   );
 };

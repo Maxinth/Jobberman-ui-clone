@@ -40,13 +40,13 @@ const ItemsContainer = styled.section`
   }
 `;
 
-const PricesDetails = ({ data = [] }) => {
+const PricesDetails = ({ data = [], btnText, goTo }) => {
   return (
     <ItemsContainer>
       <InfoRoundedIcon />
       <ListContainer>
         <GenerateCategories data={data} />
-        <CTA text="buy now" goTo="/create" />
+        <CTA text={btnText} goTo={goTo} />
       </ListContainer>
     </ItemsContainer>
   );

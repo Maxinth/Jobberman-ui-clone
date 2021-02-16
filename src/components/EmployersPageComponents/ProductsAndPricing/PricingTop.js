@@ -9,17 +9,15 @@ const PriceText = styled.p`
   color: rgb(78, 85, 89);
   font-size: 1.1rem;
 `;
-const PricingTop = () => {
+const PricingTop = ({ heading, coloredText, spanText, texts = [] }) => {
   return (
     <>
-      <Heading>Best Match</Heading>
-      <Text>NGN 52,000</Text>
-      <Span>Including VAT</Span>
-      <PriceText> Hire the right fit, faster!</PriceText>
-
-      <PriceText>
-        Our HR Experts & Technology match you with the best Candidates.
-      </PriceText>
+      <Heading>{heading}</Heading>
+      <Text>{coloredText}</Text>
+      <Span>{spanText}</Span>
+      {texts.map((item, index) => (
+        <PriceText key={index}>{item}</PriceText>
+      ))}
     </>
   );
 };
