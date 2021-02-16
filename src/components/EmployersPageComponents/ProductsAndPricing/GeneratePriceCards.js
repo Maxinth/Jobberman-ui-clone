@@ -5,7 +5,7 @@ const GeneratePriceCards = () => {
   return (
     <>
       {pricingData.map((item, index) => (
-        <PricingCard key={index} {...item} />
+        <PricingCard key={index} {...item} index={index}/>
       ))}
     </>
   );

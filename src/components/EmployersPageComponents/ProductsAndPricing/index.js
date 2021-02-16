@@ -19,7 +19,7 @@ const Container = styled(HelpContainer)`
     text-align: center;
     color: #333;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
   ${PricingContainer} {
     max-width: 500px;
@@ -30,6 +30,7 @@ const Container = styled(HelpContainer)`
     padding: unset;
     :nth-child(2) {
       border: 3px solid rgb(255, 98, 0);
+      box-shadow: unset;
     }
   }
 
