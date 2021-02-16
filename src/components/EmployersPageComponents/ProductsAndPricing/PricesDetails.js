@@ -30,6 +30,7 @@ const ItemsContainer = styled.section`
   background-color: rgb(249, 250, 251);
   width: 100%;
   display: flex;
+  margin-top: 1rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -54,6 +55,8 @@ const PricesDetails = ({ data = [], btnText, goTo }) => {
 
 PricesDetails.propTypes = {
   data: PropTypes.array,
+  btnText: PropTypes.string,
+  goTo: PropTypes.string,
 };
 
 export default PricesDetails;

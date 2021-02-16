@@ -6,12 +6,15 @@ import {
 } from "../FeaturedProduct/styled";
 import { HelpContainer } from "../HelpSection/styled";
 import styled from "styled-components";
-import { pricingData } from "./data";
-import PricingCard from "./PricingCard";
+import GeneratePriceCards from "./GeneratePriceCards";
 
 const Container = styled(HelpContainer)`
   font-family: "Roboto", sans-serif;
   flex-direction: column;
+  max-width: unset;
+  margin: unset;
+  padding: 2rem;
+  width: 100%;
   > ${Heading} {
     text-align: center;
     color: #333;
@@ -19,11 +22,15 @@ const Container = styled(HelpContainer)`
     margin-bottom: 2rem;
   }
   ${PricingContainer} {
-    max-width: 600px;
+    max-width: 500px;
     margin: unset;
+    margin-bottom: 2rem;
     width: 100%;
     font-family: "Open Sans", sans-serif;
     padding: unset;
+    :nth-child(2) {
+      border: 3px solid rgb(255, 98, 0);
+    }
   }
 
   ${Heading} {
@@ -45,15 +52,22 @@ const Container = styled(HelpContainer)`
     }
   }
 `;
-const CardsContainer = styled.section``;
+const CardsContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+`;
 const ProductsAndPricing = () => {
   return (
     <Container>
       <Heading>Products & Pricing </Heading>
       <CardsContainer>
-        {pricingData.map((item, index) => (
-          <PricingCard key={index} {...item} />
-        ))}
+        <GeneratePriceCards />
       </CardsContainer>
     </Container>
   );
