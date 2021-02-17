@@ -60,6 +60,7 @@ const CardsContainer = styled.section`
   align-items: center;
   flex-direction: column;
   width: 100%;
+  
   @media (min-width: 1024px) {
     flex-direction: row;
   }

@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { ControlsContainer } from "../StandOut/standOutElements";
+
 
 const ConnectContainer = styled.section`
   background-color: rgb(242, 242, 242);

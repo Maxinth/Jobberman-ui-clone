@@ -11,13 +11,14 @@ const FeaturedContainer = styled(HowTosContainer)`
   background-color: rgb(250, 250, 250);
   padding: 1rem 2rem;
   ${Heading} {
-    text-align: center;
+    /* text-align: center; */
     margin: 2rem 0;
+    max-width: 500px;
   }
 
   ${ProductBox} {
     padding: 1rem 2rem;
-    max-width: 600px;
+    /* max-width: 600px; */
     box-shadow: unset;
     transition: all 0.2s;
     h4 {
@@ -26,12 +27,12 @@ const FeaturedContainer = styled(HowTosContainer)`
     p + p {
       margin-top: 3rem;
     }
-    @media (min-width: 1024px) {
+    /* @media (min-width: 1024px) {
       max-width: 900px;
       > * {
         text-align: left !important;
       }
-    }
+    } */
   }
 
   ${Text} {
@@ -59,6 +60,7 @@ const MainContainer = styled.section`
 const AssessContainer = styled(HowTosContainer)`
   > * {
     width: 100%;
+    /* text-align: inherit; */
   }
   display: flex;
   flex-direction: column;
@@ -70,6 +72,7 @@ const AssessContainer = styled(HowTosContainer)`
   width: 100%;
   border: 1px solid ghostwhite;
   transition: all 0.2s;
+  /* text-align: center; */
   /* box-shadow: 1px 1px 2px grey; */
   > p {
     font-family: "Raleway", sans-serif;

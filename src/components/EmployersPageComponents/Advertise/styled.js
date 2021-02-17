@@ -4,7 +4,7 @@ import {
   Heading,
   HowTosContainer,
 } from "../../StandOut/standOutElements";
-import React from "react";
+
 
 const AdContainer = styled(Container)`
   ${Heading} {

@@ -2,6 +2,8 @@ import StarIcon from "@material-ui/icons/Star";
 import EcoIcon from "@material-ui/icons/Eco";
 import TrendingUpIcon from "@material-ui/icons/TrendingUp";
 import React from "react";
+
+
 export const data = {
   featuredJobs: {
     title: "Featured Jobs",

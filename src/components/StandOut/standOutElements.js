@@ -40,8 +40,7 @@ const Text = styled.p`
 const Btn = styled.button`
   text-transform: uppercase;
   display: block;
-  background-color: ${({ editBtn }) =>
-    !editBtn ? "rgb(255, 98, 0)" : "rgb(238,238,238)"};
+  background-color: ${({ editBtn }) => (!editBtn ? "rgb(255, 98, 0)" : "#333")};
   letter-spacing: 0.01rem;
   font-family: "Open Sans", sans-serif;
   outline: none;
@@ -54,15 +53,8 @@ const Btn = styled.button`
   transition: padding 0.2s, font-size 0.2s ease-in-out;
 
   //when the editBtn prop is true
-  /* ${({ editBtn }) =>
-    editBtn &&
-    css`
-      a {
-        color: #ff6200 !important;
-      }
-    `} */
+
   a {
-    /* color: ${({ editBtn }) => (!editBtn ? "#fff" : " #ff6200")}; */
     color: #fff;
     display: block;
     width: 100%;
