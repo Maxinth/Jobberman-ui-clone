@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import React from "react";
+
 const PriceText = styled.p`
   padding: 1rem 2rem;
   max-width: 400px;

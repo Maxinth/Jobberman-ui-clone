@@ -1,4 +1,5 @@
 import MainBannerSection from "../Banners/MainBannerSection";
+import React from "react";
 import { JobSeekerContainer } from "./styled";
 import WhyJobberMan from "./WhyJobberMan";
 import Profiles from "./Profiles/Profiles";

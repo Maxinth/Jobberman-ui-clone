@@ -1,6 +1,7 @@
 import { PlayStoreImg, FooterSocialContainer } from "./styled";
 import FooterSocialIcons from "./FooterSocialIcons";
 import googlePlay from "../../assets/playStore.png";
+import React from "react";
 
 const FooterSocial = () => {
   return (

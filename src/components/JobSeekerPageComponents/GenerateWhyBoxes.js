@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import Why from "./Why";
-
+import React from "react";
 const GenerateWhyBoxes = ({ data, currentIndex, matchCurrentItem }) => {
   return (
     <>

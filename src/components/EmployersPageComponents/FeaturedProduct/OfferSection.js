@@ -1,6 +1,8 @@
 import GenerateTexts from "./GenerateTexts";
 import { Heading } from "./styled";
 import { productTexts } from "./categoryData";
+import React from "react";
+
 const OfferSection = () => {
   return (
     <>

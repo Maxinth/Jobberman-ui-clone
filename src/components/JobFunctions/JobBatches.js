@@ -1,5 +1,6 @@
 import { batches } from "./data";
 import JobBatch from "./JobBatch";
+import React from "react";
 
 const JobBatches = () => {
   return (

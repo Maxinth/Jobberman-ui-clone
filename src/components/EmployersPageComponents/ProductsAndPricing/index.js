@@ -7,6 +7,7 @@ import {
 import { HelpContainer } from "../HelpSection/styled";
 import styled from "styled-components";
 import GeneratePriceCards from "./GeneratePriceCards";
+import React from "react";
 
 const Container = styled(HelpContainer)`
   font-family: "Roboto", sans-serif;

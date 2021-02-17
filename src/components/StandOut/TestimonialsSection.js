@@ -3,6 +3,7 @@ import CircleControls from "../../components/CircleControls";
 import useSliderAndGetCurrentValues from "../useSliderAndGetCurrentValues";
 import { data as testimonials } from "./testimonialData";
 import { Testimonials } from "./standOutElements";
+import React from "react";
 
 const TestimonialsSection = () => {
   const {

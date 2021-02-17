@@ -1,6 +1,6 @@
 import { ListItem, ItemText } from "./styled";
 import PropTypes from "prop-types";
-
+import React from "react";
 const CategoryItem = ({ item, icon }) => {
   return (
     <ListItem>

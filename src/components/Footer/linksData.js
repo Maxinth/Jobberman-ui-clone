@@ -1,4 +1,4 @@
-// import FavoriteIcon from "@material-ui/icons/Favorite";
+import React from "react";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { IconContainer, Title, Text } from "./standOutElements";
 import PropTypes from "prop-types";
+import React from "react";
 
 const StandOutCard = ({ icon, title, howTo, optionalText = "" }) => {
   return (

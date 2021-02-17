@@ -1,5 +1,4 @@
-// import { Link } from "react-router-dom";
-// import "./smallBanner.css";
+import React from "react";
 import {
   SmallBannerBox,
   SmallBannerContainer,

@@ -1,6 +1,7 @@
 import JobFunctions from "../JobFunctions";
 import { Container, Heading, JobBox } from "./styled";
 import CTA from "../CTA";
+import React from "react";
 
 const JobCount = () => {
   return (

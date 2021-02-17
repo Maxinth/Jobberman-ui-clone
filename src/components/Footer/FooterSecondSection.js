@@ -1,5 +1,6 @@
 import { Container, CopyRight, Span } from "./styled";
 import FooterSocial from "./FooterSocial";
+import React from "react";
 
 const FooterSecondSection = () => {
   return (

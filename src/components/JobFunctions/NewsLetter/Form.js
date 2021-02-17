@@ -3,6 +3,7 @@ import { inputs } from "./formData";
 import RadioButtons from "./RadioButtons";
 import CTA from "../../CTA";
 import { Container, FormContainer } from "./styled";
+import React from "react";
 
 const Form = () => {
   return (

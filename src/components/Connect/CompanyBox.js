@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { CoyLogo, CompaniesLogos } from "./styled";
+import React from "react";
 
 const CompanyBox = ({ items, position }) => {
   return (

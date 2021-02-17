@@ -1,5 +1,6 @@
 import { WhyBox, Heading, Text, Item, Image } from "./styled";
 import PropTypes from "prop-types";
+import React from "react";
 
 const Why = ({ title, mainText, image, matchItem }) => {
   return (

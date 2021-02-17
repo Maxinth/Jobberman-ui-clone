@@ -1,6 +1,7 @@
 import { HowTosContainer } from "./styled";
 import PropTypes from "prop-types";
 import StandOutCard from "../../StandOut/StandOutCard";
+import React from "react";
 
 const GenerateAdCards = ({ data = [] }) => {
   return (

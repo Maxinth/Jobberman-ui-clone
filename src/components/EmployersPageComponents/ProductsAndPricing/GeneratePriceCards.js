@@ -1,5 +1,6 @@
 import { pricingData } from "./data";
 import PricingCard from "./PricingCard";
+import React from "react";
 
 const GeneratePriceCards = () => {
   return (

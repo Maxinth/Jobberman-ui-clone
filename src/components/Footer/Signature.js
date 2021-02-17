@@ -5,7 +5,7 @@ import {
   Contact,
 } from "./styled";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-
+import React from "react";
 const Signature = () => {
   return (
     <SignatureContainer>

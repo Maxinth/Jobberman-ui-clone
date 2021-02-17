@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import CategoryItem from "./CategoryItem";
 import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
-
+import React from "react";
 const GenerateCategories = ({ data, icon = <CheckRoundedIcon /> }) => {
   return (
     <>

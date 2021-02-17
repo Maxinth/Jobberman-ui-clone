@@ -1,6 +1,7 @@
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import PropTypes from "prop-types";
 import { ControlsContainer } from "./StandOut/standOutElements";
+import React from "react";
 
 const CircleControls = ({ data, setIndex, currentItem }) => {
   return (

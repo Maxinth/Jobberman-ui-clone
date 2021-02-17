@@ -1,6 +1,6 @@
 import { AdContainer, Heading } from "./styled";
 import { data } from "./data";
-
+import React from "react";
 import GenerateAdCards from "./GenerateAdCards";
 
 const Advertise = () => {

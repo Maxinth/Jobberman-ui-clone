@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Container = styled.section`
   ${Heading} {
     margin-bottom: 1rem;
+    margin-top: 3rem;
   }
 
   @media (min-width: 900px) {
@@ -58,6 +59,7 @@ const SegmentContainer = styled.div`
 
   @media (min-width: 1200px) {
     font-size: 0.9rem;
+    /* line-height: 2; */
   }
 `;
 

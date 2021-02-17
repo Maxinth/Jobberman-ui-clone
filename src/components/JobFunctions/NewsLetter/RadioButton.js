@@ -6,6 +6,7 @@ import {
   RadioButtonContainer,
   LabelText,
 } from "./styled";
+import React from "react";
 
 const RadioButton = ({ checked, toggleCheck, label, id }) => {
   // so I don;t have to write same props twice, once for each button state.

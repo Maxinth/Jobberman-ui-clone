@@ -5,6 +5,7 @@ import {
   SmallBannerContainer,
   Text,
 } from "./styled";
+import React from "react";
 
 const SmallBanner = () => {
   return (

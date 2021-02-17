@@ -1,7 +1,7 @@
 import GroupAddIcon from "@material-ui/icons/GroupAdd";
 import AllInclusiveIcon from "@material-ui/icons/AllInclusive";
 import PresentToAllRoundedIcon from "@material-ui/icons/PresentToAllRounded";
-
+import React from "react";
 export const data = [
   {
     icon: <GroupAddIcon />,

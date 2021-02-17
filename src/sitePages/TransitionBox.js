@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useVariants } from "../components/useVariants";
+import React from "react";
 
 const TransitionBox = ({ children }) => {
   const { pageVariant, variantProps } = useVariants();

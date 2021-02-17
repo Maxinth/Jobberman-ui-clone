@@ -1,5 +1,6 @@
 import { SocialIconsContainer, IconContainer } from "./styled";
 import { iconsData } from "./linksData";
+import React from "react";
 
 const FooterSocialIcons = () => {
   return (

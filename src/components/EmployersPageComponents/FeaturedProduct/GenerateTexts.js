@@ -1,5 +1,6 @@
 import { Text } from "../../StandOut/standOutElements";
 import PropTypes from "prop-types";
+import React from "react";
 
 const GenerateTexts = ({ data = [] }) => {
   return (

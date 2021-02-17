@@ -3,6 +3,7 @@ import Headings from "./Headings";
 import HowToBlock from "./HowToBlock";
 import { Container, HowTo } from "./standOutElements";
 import TestimonialsSection from "./TestimonialsSection";
+import React from "react";
 
 const StandOut = () => {
   return (

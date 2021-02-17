@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Text, Heading } from "../Profiles/styled";
 import searchBackgroundImage from "../../../assets/main-image-gradient.png";
+import React from "react";
+
 const SearchSection = styled.section`
   padding: 1rem;
   background-image: url(${searchBackgroundImage});

@@ -1,4 +1,5 @@
 import { Heading, Text } from "./styled";
+import React from "react";
 
 const HelpMain = () => {
   return (

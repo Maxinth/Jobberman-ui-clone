@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { WhySection, Title, WhyContainer } from "./styled";
 import { data, matchAndMakeCurrent } from "./data";
 import CircleControls from "../CircleControls";

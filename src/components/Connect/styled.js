@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-// Connect
+import { ControlsContainer } from "../StandOut/standOutElements";
 
 const ConnectContainer = styled.section`
   background-color: rgb(242, 242, 242);
@@ -29,6 +29,7 @@ const CompaniesLogosContainer = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
+  /* margin-bottom: 1rem; */
 `;
 
 // CompaniesLogo

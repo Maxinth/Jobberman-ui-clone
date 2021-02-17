@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useVariants } from "../useVariants";
 import { useGlobalContext } from "../context";
 import { Nav, NavHeader, NavRight, NavBackDrop } from "./nav.elements";
+import React from "react";
 
 const Navbar = () => {
   const { variantProps, animateOpacity } = useVariants();

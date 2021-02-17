@@ -1,4 +1,5 @@
 import { Title, Text, TopSectionContainer } from "./styled";
+import React from "react";
 
 const TopSection = () => {
   return (

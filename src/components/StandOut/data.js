@@ -1,7 +1,7 @@
 import SearchIcon from "@material-ui/icons/Search";
 import StarIcon from "@material-ui/icons/Star";
 import PersonIcon from "@material-ui/icons/Person";
-
+import React from "react";
 export const data = [
   {
     icon: <SearchIcon />,

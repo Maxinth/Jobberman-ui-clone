@@ -6,6 +6,7 @@ import {
   Container,
 } from "../Banners/banner.elements";
 import { NewsLetterContainer } from "../JobFunctions/NewsLetter/styled";
+import { ControlsContainer } from "../StandOut/standOutElements";
 
 // index.js
 const JobSeekerContainer = styled.section`
@@ -13,6 +14,7 @@ const JobSeekerContainer = styled.section`
   font-family: "Open Sans", sans-serif;
   ${NewsLetterContainer} {
     margin: 2rem 2rem;
+    transition: margin 0.2s;
   }
 
   ${BannerMain} {
@@ -49,6 +51,12 @@ const JobSeekerContainer = styled.section`
     ${Container} {
       max-width: 700px;
     }
+    ${NewsLetterContainer} {
+      margin: 3rem auto;
+    }
+  }
+  ${ControlsContainer} {
+    margin-top: -2rem;
   }
 `;
 
@@ -85,12 +93,16 @@ const Text = styled.p`
   padding: 1rem;
   font-size: calc(0.4rem + 2vw);
   text-align: center;
-
+  font-weight: 300;
   @media (min-width: 600px) {
     font-size: 1.2rem;
   }
   @media (min-width: 960px) {
     font-size: 1rem;
+    text-align: left;
+  }
+  @media (min-width: 1200px) {
+    font-size: 1.2rem;
     text-align: left;
   }
 `;

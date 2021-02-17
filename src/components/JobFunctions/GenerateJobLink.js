@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { JobLink } from "./styled";
+import React from "react";
 
 const GenerateJobLink = ({ items }) => {
   return (

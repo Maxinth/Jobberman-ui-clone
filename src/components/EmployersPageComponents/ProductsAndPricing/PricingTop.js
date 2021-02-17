@@ -1,6 +1,7 @@
 import { Heading, Text, Span } from "../FeaturedProduct/styled";
 import GeneratePriceTexts from "./GeneratePriceTexts";
 import PropTypes from "prop-types";
+import React from "react";
 
 const PricingTop = ({ heading, coloredText, spanText, texts = [], index }) => {
   return (

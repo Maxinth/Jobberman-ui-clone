@@ -2,6 +2,8 @@ import { getSlidePosition } from "../useSlider";
 import { getItems } from "./data";
 import CompanyBox from "./CompanyBox";
 import { Container } from "./styled";
+import React from "react";
+
 
 const CompaniesLogo = ({ items, index }) => {
   const slidePosition = (itemIndex) => {

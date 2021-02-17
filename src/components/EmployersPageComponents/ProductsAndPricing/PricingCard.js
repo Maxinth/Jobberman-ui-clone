@@ -2,6 +2,7 @@ import PricesDetails from "./PricesDetails";
 import styled from "styled-components";
 import PricingTop from "./PricingTop";
 import { ProductBox } from "../FeaturedProduct/styled";
+import React from "react";
 
 const PricingContainer = styled(ProductBox)`
   :nth-child(2) > p:first-child {

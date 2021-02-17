@@ -1,5 +1,6 @@
 import Profile from "./Profile";
 import { data } from "./data";
+import React from "react";
 
 const GenerateProfile = () => {
   return (

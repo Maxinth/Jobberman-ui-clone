@@ -5,7 +5,7 @@ import {
   Heading,
   Text,
 } from "./styled";
-
+import React from "react";
 import PropTypes from "prop-types";
 
 const Profile = ({ img, detail, heading }) => {

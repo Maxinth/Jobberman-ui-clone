@@ -1,5 +1,6 @@
 import { HeadingContainer, Text } from "./styled";
 import { Title } from "../styled";
+import React from "react";
 
 const TopHeading = () => {
   return (

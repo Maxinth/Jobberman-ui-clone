@@ -3,6 +3,7 @@ import CTA from "../../CTA";
 import GenerateCategories from "../FeaturedProduct/GenerateCategories";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import React from "react";
 
 const ListContainer = styled.ul`
   width: 100%;

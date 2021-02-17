@@ -40,7 +40,8 @@ const Text = styled.p`
 const Btn = styled.button`
   text-transform: uppercase;
   display: block;
-  background-color: rgb(255, 98, 0);
+  background-color: ${({ editBtn }) =>
+    !editBtn ? "rgb(255, 98, 0)" : "rgb(238,238,238)"};
   letter-spacing: 0.01rem;
   font-family: "Open Sans", sans-serif;
   outline: none;
@@ -56,12 +57,12 @@ const Btn = styled.button`
   /* ${({ editBtn }) =>
     editBtn &&
     css`
-      background-color: rgb(238, 238, 238);
-      > a {
+      a {
         color: #ff6200 !important;
       }
     `} */
   a {
+    /* color: ${({ editBtn }) => (!editBtn ? "#fff" : " #ff6200")}; */
     color: #fff;
     display: block;
     width: 100%;
@@ -146,9 +147,9 @@ const ControlsContainer = styled.section`
   margin-top: 2rem;
   transition: margin-top 0.2s;
 
-  @media (min-width: 1200px) {
-    margin-top: 0.5rem;
-  }
+  // @media (min-width: 1200px) {
+  //   margin-top: 0.5rem;
+  // }
 
   svg {
     color: #333;

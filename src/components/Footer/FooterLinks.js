@@ -1,5 +1,6 @@
 import { FooterLink, LinksContainer } from "./styled";
 import { linksData } from "./linksData";
+import React from "react";
 
 const FooterLinks = () => {
   return (

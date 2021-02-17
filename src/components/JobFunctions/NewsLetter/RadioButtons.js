@@ -2,6 +2,7 @@ import { useState } from "react";
 import { RadioContainer } from "./styled";
 import { radiosList } from "./formData";
 import RadioButton from "./RadioButton";
+import React from "react";
 
 const RadioButtons = () => {
   // state to decide which radio button is clicked

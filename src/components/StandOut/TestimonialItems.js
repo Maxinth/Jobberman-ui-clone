@@ -2,6 +2,7 @@ import { TestimonialsContainer } from "./standOutElements";
 import Testimonial from "./Testimonial";
 import { getSlidePosition } from "../useSlider";
 import PropTypes from "prop-types";
+import React from "react";
 
 const TestimonialItems = ({ items, index }) => {
   return (

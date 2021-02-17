@@ -2,6 +2,7 @@ import { SegmentContainer, Letter, JobsStartingWithLetter } from "./styled";
 import PropTypes from "prop-types";
 import { checkItemName } from "./data";
 import GenerateJobLink from "./GenerateJobLink";
+import React from "react";
 
 const JobSegment = ({ text, items }) => {
   const { value, id } = checkItemName(text);

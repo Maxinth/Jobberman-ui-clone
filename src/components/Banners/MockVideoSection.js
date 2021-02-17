@@ -3,6 +3,7 @@ import { VideoContainer, BannerVideo, BannerBtn } from "./banner.elements";
 import PlayCircleOutlineOutlinedIcon from "@material-ui/icons/PlayCircleOutlineOutlined";
 import { Link, useLocation } from "react-router-dom";
 import { renderByLocation } from "./bannerData";
+import React from "react";
 
 const Text = styled.span`
   text-transform: capitalize;
