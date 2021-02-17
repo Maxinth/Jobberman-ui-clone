@@ -108,7 +108,7 @@ const PriceBox = styled.div`
       font-size: 2.2rem !important;
     }
     :nth-child(2) {
-      font-size: 2.8rem !important;
+      font-size: 2.5rem !important;
     }
   }
   button {

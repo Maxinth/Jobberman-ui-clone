@@ -1,15 +1,7 @@
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import {PriceText} from './styled'
 import React from "react";
 
-const PriceText = styled.p`
-  padding: 1rem 2rem;
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: center;
-  color: rgb(78, 85, 89);
-  font-size: 1.1rem;
-`;
 
 const GeneratePriceTexts = ({ data }) => {
   return (

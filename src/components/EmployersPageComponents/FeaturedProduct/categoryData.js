@@ -37,4 +37,5 @@ const { mainTexts, pricingTexts } = assessJobSeekersData;
 const colorIconByCardIndex = (index) => {
   return index === 1;
 };
+
 export { mainTexts, pricingTexts, colorIconByCardIndex };
