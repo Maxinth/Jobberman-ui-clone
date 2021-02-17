@@ -5,6 +5,7 @@ import HelpSection from "./HelpSection";
 import EmployersMainBanner from "./MainBanner";
 import SmallBanner from "./SmallBanner";
 import ProductsAndPricing from "./ProductsAndPricing";
+import HrSolutions from "./HR-Solutions";
 
 const EmployersPage = () => {
   return (
@@ -15,6 +16,7 @@ const EmployersPage = () => {
       <HelpSection />
       <FeaturedProducts />
       <ProductsAndPricing />
+      <HrSolutions />
     </>
   );
 };
