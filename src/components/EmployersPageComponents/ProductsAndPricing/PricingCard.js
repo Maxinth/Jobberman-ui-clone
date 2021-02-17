@@ -17,12 +17,17 @@ const PricingContainer = styled(ProductBox)`
 `;
 
 const PricingCard = (props) => {
-  const { details, btnText, goTo, ...pricingTopProps } = props;
+  const { details, btnText, goTo, index, ...pricingTopProps } = props;
 
   return (
     <PricingContainer>
-      <PricingTop {...pricingTopProps} />
-      <PricesDetails data={details} btnText={btnText} goTo={goTo} />
+      <PricingTop {...pricingTopProps} index={index} />
+      <PricesDetails
+        data={details}
+        btnText={btnText}
+        goTo={goTo}
+        index={index}
+      />
     </PricingContainer>
   );
 };

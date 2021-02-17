@@ -52,6 +52,15 @@ const Btn = styled.button`
   cursor: pointer;
   transition: padding 0.2s, font-size 0.2s ease-in-out;
 
+  //when the editBtn prop is true
+  /* ${({ editBtn }) =>
+    editBtn &&
+    css`
+      background-color: rgb(238, 238, 238);
+      > a {
+        color: #ff6200 !important;
+      }
+    `} */
   a {
     color: #fff;
     display: block;

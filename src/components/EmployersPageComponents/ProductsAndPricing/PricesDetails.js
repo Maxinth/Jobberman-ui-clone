@@ -41,13 +41,13 @@ const ItemsContainer = styled.section`
   }
 `;
 
-const PricesDetails = ({ data = [], btnText, goTo }) => {
+const PricesDetails = ({ data = [], btnText, goTo, index }) => {
   return (
     <ItemsContainer>
       <InfoRoundedIcon />
       <ListContainer>
         <GenerateCategories data={data} />
-        <CTA text={btnText} goTo={goTo} />
+        <CTA text={btnText} goTo={goTo} index={index} />
       </ListContainer>
     </ItemsContainer>
   );
@@ -57,6 +57,7 @@ PricesDetails.propTypes = {
   data: PropTypes.array,
   btnText: PropTypes.string,
   goTo: PropTypes.string,
+  index: PropTypes.number,
 };
 
 export default PricesDetails;
