@@ -32,4 +32,9 @@ const assessJobSeekersData = {
 };
 
 const { mainTexts, pricingTexts } = assessJobSeekersData;
-export { mainTexts, pricingTexts };
+
+// custom function to color list item icons based on the index of the parent card
+const colorIconByCardIndex = (index) => {
+  return index === 1;
+};
+export { mainTexts, pricingTexts, colorIconByCardIndex };

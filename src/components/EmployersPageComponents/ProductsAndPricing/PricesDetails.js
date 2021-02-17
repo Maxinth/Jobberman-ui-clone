@@ -47,7 +47,7 @@ const PricesDetails = ({ data = [], btnText, goTo, index }) => {
     <ItemsContainer>
       <InfoRoundedIcon />
       <ListContainer>
-        <GenerateCategories data={data} />
+        <GenerateCategories data={data} itemIndex={index} />
         <CTA text={btnText} goTo={goTo} index={index} />
       </ListContainer>
     </ItemsContainer>

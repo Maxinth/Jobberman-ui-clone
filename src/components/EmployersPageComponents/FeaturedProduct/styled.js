@@ -4,15 +4,16 @@ import {
   Text,
 } from "../../StandOut/standOutElements";
 import { ConnectBox as ProductBox } from "../../Connect/styled";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const FeaturedContainer = styled(HowTosContainer)`
   display: block;
   background-color: rgb(250, 250, 250);
   padding: 1rem 2rem;
+  width: 100%;
   ${Heading} {
     /* text-align: center; */
-    margin: 2rem 0;
+    margin: 2rem auto;
     max-width: 500px;
   }
 
@@ -45,6 +46,7 @@ const MainContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 2rem 1rem 6rem;
   @media (min-width: 1024px) {
     width: 100%;
 
@@ -73,7 +75,7 @@ const AssessContainer = styled(HowTosContainer)`
   border: 1px solid ghostwhite;
   transition: all 0.2s;
   /* text-align: center; */
-  /* box-shadow: 1px 1px 2px grey; */
+  box-shadow: 1px 1px 7px grey;
   > p {
     font-family: "Raleway", sans-serif;
     font-size: 1.6rem !important;
@@ -136,10 +138,22 @@ const ListItem = styled.li`
   font-family: "Open Sans", sans-serif;
   margin-bottom: 0.5rem;
   svg {
-    font-size: 0.8rem;
-    color: rgb(255, 98, 0);
+    font-size: 0.9rem;
+    color: rgb(78, 85, 89);
     margin-right: 0.5rem;
   }
+
+  ${({ match }) =>
+    match &&
+    css`
+      :first-child,
+      :first-child > * {
+        color: rgb(78, 85, 89);
+      }
+      svg {
+        color: rgb(255, 98, 0);
+      }
+    `}
 `;
 const ItemText = styled.span`
   font-weight: ${({ bold }) => (bold ? "700" : "400")};
@@ -153,7 +167,18 @@ const Categories = styled.ul`
 
   @media (min-width: 1024px) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+`;
+
+const Box = styled.div`
+  ${Heading} {
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+  ${Text} {
+    text-align: left;
   }
 `;
 export {
@@ -168,4 +193,5 @@ export {
   ItemText,
   Categories,
   ProductBox,
+  Box,
 };

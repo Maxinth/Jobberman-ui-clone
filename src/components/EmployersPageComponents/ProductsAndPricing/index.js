@@ -37,7 +37,7 @@ const Container = styled(HelpContainer)`
 
   ${Heading} {
     font-size: 2rem;
-    font-weight: normal;
+    /* font-weight: normal; */
   }
 
   ${Text} {
@@ -60,7 +60,7 @@ const CardsContainer = styled.section`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  
+
   @media (min-width: 1024px) {
     flex-direction: row;
   }

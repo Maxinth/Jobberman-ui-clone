@@ -1,9 +1,10 @@
 import { ListItem, ItemText } from "./styled";
 import PropTypes from "prop-types";
 import React from "react";
-const CategoryItem = ({ item, icon }) => {
+import { colorIconByCardIndex } from "./categoryData";
+const CategoryItem = ({ item, icon, index }) => {
   return (
-    <ListItem>
+    <ListItem match={colorIconByCardIndex(index)}>
       {icon}
       <ItemText bold={item === "And more"}>{item}</ItemText>
     </ListItem>
@@ -13,6 +14,7 @@ const CategoryItem = ({ item, icon }) => {
 CategoryItem.propTypes = {
   item: PropTypes.string,
   icon: PropTypes.object,
+  index: PropTypes.number,
 };
 
 export default CategoryItem;
