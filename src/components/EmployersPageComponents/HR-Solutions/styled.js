@@ -25,6 +25,7 @@ const HrContainer = styled(FeaturedContainer)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 7rem;
   ${MainContainer} {
     box-shadow: 1px 2px 7px grey;
     justify-content: unset;

@@ -6,6 +6,7 @@ import EmployersMainBanner from "./MainBanner";
 import SmallBanner from "./SmallBanner";
 import ProductsAndPricing from "./ProductsAndPricing";
 import HrSolutions from "./HR-Solutions";
+import GetStarted from "./GetStarted";
 
 const EmployersPage = () => {
   return (
@@ -17,6 +18,7 @@ const EmployersPage = () => {
       <FeaturedProducts />
       <ProductsAndPricing />
       <HrSolutions />
+      <GetStarted />
     </>
   );
 };
