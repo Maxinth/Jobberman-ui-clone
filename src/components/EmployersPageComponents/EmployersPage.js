@@ -7,6 +7,7 @@ import SmallBanner from "./SmallBanner";
 import ProductsAndPricing from "./ProductsAndPricing";
 import HrSolutions from "./HR-Solutions";
 import GetStarted from "./GetStarted";
+import NewsLetterSection from "./NewsLetter";
 
 const EmployersPage = () => {
   return (
@@ -19,6 +20,7 @@ const EmployersPage = () => {
       <ProductsAndPricing />
       <HrSolutions />
       <GetStarted />
+      <NewsLetterSection />
     </>
   );
 };
