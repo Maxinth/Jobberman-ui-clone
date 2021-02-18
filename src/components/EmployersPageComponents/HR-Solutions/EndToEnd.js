@@ -1,5 +1,4 @@
 import React from "react";
-// import { } from "../FeaturedProduct/styled";
 import { Heading, Text, Box } from "./styled";
 import EndToEndBottomSection from "./EndToEndBottomSection";
 

@@ -1,15 +1,13 @@
 import React from "react";
 import { HrContainer, Heading, MainContainer } from "./styled";
-import EndToEndMain from "./EndToEndMain";
-import ContactMain from "./ContactMain";
+import HrMain from "./HrMain";
 
 const HrSolutions = () => {
   return (
     <HrContainer>
       <Heading>Personalised HR solutions </Heading>
       <MainContainer>
-        <EndToEndMain />
-        <ContactMain />
+        <HrMain />
       </MainContainer>
     </HrContainer>
   );
