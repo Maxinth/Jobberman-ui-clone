@@ -10,7 +10,7 @@ const NavRightMain = () => {
         </NavLink>
       </LinkContainer>
       <LinkContainer>
-        <NavLink to="/" className="nav__link">
+        <NavLink to="/sign-up" className="nav__link">
           sign up
         </NavLink>
       </LinkContainer>
