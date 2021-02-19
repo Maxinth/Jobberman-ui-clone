@@ -1,5 +1,5 @@
 import React from "react";
-import { NLContainer } from "./styled";
+import { JobSeekerContainer as NLContainer } from "../../JobSeekerPageComponents/styled";
 import NewsLetter from "../../JobFunctions/NewsLetter/NewsLetter";
 
 const NewsLetterSection = () => {
