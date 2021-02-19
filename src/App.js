@@ -7,21 +7,17 @@ import Footer from "./components/Footer";
 import Home from "./sitePages/Home";
 import JobSeekers from "./sitePages/JobSeekers";
 import Employers from "./sitePages/Employers";
+import SignUp from "./sitePages/SignUp";
 function App() {
   return (
     <div className="App">
       <BackDrops />
       <Navbar />
       <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/job-seeker">
-          <JobSeekers />
-        </Route>
-        <Route path="/employer">
-          <Employers />
-        </Route>
+        <Route path="/" exact component={Home} />
+        <Route path="/job-seeker" component={JobSeekers} />
+        <Route path="/employer" component={Employers} />
+        <Route path="/sign-up" component={SignUp} />
       </Switch>
       <Footer />
     </div>

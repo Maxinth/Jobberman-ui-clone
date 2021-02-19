@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import StandOutCard from "../../StandOut/StandOutCard";
 import React from "react";
 
-const GenerateAdCards = ({ data = [] }) => {
+const GenerateAdCards = ({ data = [], withBtn }) => {
   return (
     <HowTosContainer>
       {data.map((item, index) => (
-        <StandOutCard key={index} {...item} />
+        <StandOutCard key={index} {...item} withBtn={withBtn} />
       ))}
     </HowTosContainer>
   );
@@ -15,6 +15,7 @@ const GenerateAdCards = ({ data = [] }) => {
 
 GenerateAdCards.propTypes = {
   data: PropTypes.array,
+  withBtn: PropTypes.bool,
 };
 
 export default GenerateAdCards;
