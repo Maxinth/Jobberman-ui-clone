@@ -19,7 +19,7 @@ const ContactContainer = styled(Container)`
   } */
   ${ContactBox} {
     display: block;
-    padding: 2rem 4rem;
+    padding: 4rem 4rem;
   }
 `;
 

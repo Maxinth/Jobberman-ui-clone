@@ -1,37 +1,30 @@
 import { Link } from "react-router-dom";
-import { IconContainer, Title, Text } from "./standOutElements";
-import PropTypes from "prop-types";
 import React from "react";
-import CTA from "../CTA";
-const StandOutCard = ({
-  icon,
-  title,
-  howTo,
-  optionalText = "",
-  withBtn,
-  text,
-  goTo,
-}) => {
+import { Box } from "./standOutElements";
+import CardContents from "./CardContents";
+
+const StandOutCard = (props) => {
+  const { withBtn } = props;
+
   return (
-    <Link to="/">
-      <IconContainer>{icon}</IconContainer>
-      <Title>{title}</Title>
-      <Text>{howTo}</Text>
-      {/* render only when optionalText isn't an empty string/falsy */}
-      {optionalText && <Text>{optionalText}</Text>}
-      {withBtn && <CTA text={text} goTo={goTo} />}
-    </Link>
+    <>
+      {withBtn ? (
+        <Box>
+          <CardContents {...props} />
+        </Box>
+      ) : (
+        <Link to="/">
+          <CardContents {...props} />
+        </Link>
+      )}
+    </>
   );
 };
 
-StandOutCard.propTypes = {
-  icon: PropTypes.object,
-  title: PropTypes.string,
-  howTo: PropTypes.string,
-  text: PropTypes.string,
-  goTo: PropTypes.string,
-  optionalText: PropTypes.string,
-  withBtn: PropTypes.bool,
-};
-
 export default StandOutCard;
+
+/* The container element for the cardContents 
+
+component is changed based on if the withBtn is passed in 
+
+*/

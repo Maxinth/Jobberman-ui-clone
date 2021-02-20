@@ -35,6 +35,8 @@ const Text = styled.p`
   }
 `;
 
+export const Box = styled.div``;
+
 // HowToBlock
 
 const Btn = styled.button`
@@ -72,10 +74,11 @@ const Btn = styled.button`
   }
 `;
 
-const HowTosContainer = styled.div`
+const HowTosContainer = styled.section`
   font-family: "Roboto", sans-serif;
 
-  a {
+  a,
+  div {
     display: flex;
     justify-content: center;
     align-items: center;
