@@ -77,6 +77,8 @@ const Btn = styled.button`
 const HowTosContainer = styled.section`
   font-family: "Roboto", sans-serif;
 
+  /* link and div sharing the same styles as each can be the child element of HowTosContainer 
+based on the prop withBtn - see StandOutCard */
   a,
   div {
     display: flex;

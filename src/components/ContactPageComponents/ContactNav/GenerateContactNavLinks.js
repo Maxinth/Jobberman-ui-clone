@@ -1,5 +1,5 @@
 import React from "react";
-import { navLinks } from "../data";
+import { navLinks } from "./data";
 import ContactNavLink from "./ContactNavLink";
 
 const GenerateContactNavLinks = () => {

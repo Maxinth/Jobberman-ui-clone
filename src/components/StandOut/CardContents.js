@@ -1,8 +1,8 @@
 import React from "react";
 import CTA from "../CTA";
 import PropTypes from "prop-types";
-
 import { IconContainer, Title, Text } from "./standOutElements";
+
 const CardContents = ({
   icon,
   title,

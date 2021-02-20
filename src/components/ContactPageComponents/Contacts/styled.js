@@ -24,6 +24,7 @@ const ContactBox = styled.div`
 const Container = styled.section`
   margin-top: 2rem;
   font-family: "Open Sans", sans-serif;
+  margin-bottom: 4rem;
 `;
 
 export { Heading, Mail, ContactBox, Container };
