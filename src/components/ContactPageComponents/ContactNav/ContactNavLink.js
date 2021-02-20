@@ -26,7 +26,7 @@ const ContactLink = styled(Link)`
 const ContactNavLink = ({ item }) => {
   return (
     <ListItem>
-      <ContactLink>{item}</ContactLink>
+      <ContactLink to="/">{item}</ContactLink>
     </ListItem>
   );
 };
