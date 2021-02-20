@@ -8,6 +8,8 @@ import Home from "./sitePages/Home";
 import JobSeekers from "./sitePages/JobSeekers";
 import Employers from "./sitePages/Employers";
 import SignUp from "./sitePages/SignUp";
+import Contact from "./sitePages/Contact";
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,7 @@ function App() {
         <Route path="/job-seeker" component={JobSeekers} />
         <Route path="/employer" component={Employers} />
         <Route path="/sign-up" component={SignUp} />
+        <Route path="/contact-us" component={Contact} />
       </Switch>
       <Footer />
     </div>
