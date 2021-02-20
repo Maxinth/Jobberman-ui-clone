@@ -8,6 +8,7 @@ import {
 } from "../FindHelp/findHelp.elements";
 import AddressSection from "./AddressBox";
 import ContactNav from "./ContactNav";
+import Contacts from "./Contacts";
 
 const ContactContainer = styled(Container)`
   color: rgb(78, 85, 89);
@@ -27,6 +28,7 @@ export const Text = styled.p`
   color: inherit;
   font-size: 1rem;
   line-height: 1.7;
+  font-weight: 300;
 `;
 
 const ContactPage = () => {
@@ -36,6 +38,7 @@ const ContactPage = () => {
       <Heading>Contact Us</Heading>
       <ContactBox>
         <AddressSection />
+        <Contacts />
       </ContactBox>
     </ContactContainer>
   );
