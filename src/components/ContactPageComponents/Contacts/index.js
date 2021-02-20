@@ -1,12 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import { Container } from "./styled";
 import { contactsData } from "./data";
 import Contact from "./Contact";
 
-const Container = styled.section`
-  margin-top: 2rem;
-  font-family: "Open Sans", sans-serif;
-`;
 const Contacts = () => {
   return (
     <Container>

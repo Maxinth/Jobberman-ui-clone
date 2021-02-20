@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Text } from "../index";
+import { Text } from "../styled";
 import { details } from "./data";
 
 const AddressBox = styled.div``;
