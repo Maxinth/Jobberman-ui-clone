@@ -49,7 +49,7 @@ const MainBannerSection = (props) => {
                 currentChoice={currentChoice}
                 onChange={onChange}
                 id={id}
-                choice={choice}
+                // choice={choice}
               />
             );
           })}

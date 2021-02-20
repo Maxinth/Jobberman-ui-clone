@@ -24,6 +24,7 @@ const ContactContainer = styled(Container)`
     max-width: 1000px;
     margin: 0 auto;
     box-shadow: unset;
+    padding: 2rem;
     transition: all 0.2s;
     @media (min-width: 1024px) {
       box-shadow: 1px 1px 6px grey;
