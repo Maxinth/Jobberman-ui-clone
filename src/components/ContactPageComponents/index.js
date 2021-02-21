@@ -6,8 +6,8 @@ import { pageHeading, pageContent } from "./PagesByClick/data";
 
 const ContactPage = () => {
   const [pageNo, setPageNo] = useState(3);
-
   const changePage = (id) => setPageNo(id);
+
   return (
     <ContactContainer>
       <ContactNav id={pageNo} changePage={changePage} />
