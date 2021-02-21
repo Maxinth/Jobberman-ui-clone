@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const ContactNavLink = ({ item, index, id, changePage }) => {
   return (
     <ListItem onClick={() => changePage(index)} currentItem={id === index}>
-      <ContactLink href="#">{item}</ContactLink>
+      <ContactLink href={`#${item.toLowerCase()}`}>{item}</ContactLink>
     </ListItem>
   );
 };

@@ -24,6 +24,10 @@ const ContactContainer = styled(Container)`
   @media (min-width: 1024px) {
     background: rgb(242, 242, 242);
   }
+
+  ${Heading} {
+    margin: 3rem 0;
+  }
   ${ContactPageBox} {
     display: block;
     max-width: 900px;

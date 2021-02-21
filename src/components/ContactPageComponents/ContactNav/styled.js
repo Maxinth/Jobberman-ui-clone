@@ -30,7 +30,11 @@ const ContactLink = styled.a`
   font-weight: bolder;
   border-bottom: 6px solid transparent;
   border-top: 6px solid transparent;
-  transition: border-bottom 0.2s;
+  transition: all 0.2s;
+
+  @media (max-width: 320px) {
+    font-size: 0.7rem;
+  }
 `;
 
 const ListItem = styled.li`
