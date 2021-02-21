@@ -13,6 +13,7 @@ const TipContainer = styled.ul`
 const BoldText = styled(Text)`
   font-weight: 500;
 `;
+
 const TipItem = styled.li`
   list-style-type: initial;
   > ${BoldText} {
@@ -31,6 +32,17 @@ const Box = styled.div`
   }
 `;
 
+// FinalSection
+const Section = styled.section`
+  ${BoldText} {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  ${BoldText} + ${Text} {
+    margin-bottom: unset;
+  }
+`;
+
 export {
   Text,
   SafetyContainer,
@@ -39,4 +51,5 @@ export {
   TipItem,
   Box,
   ItalicText,
+  Section,
 };

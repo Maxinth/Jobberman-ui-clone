@@ -1,6 +1,7 @@
 import React from "react";
 import Tip from "./Tip";
 import { TipContainer } from "./styled";
+import PropTypes from "prop-types";
 
 const GenerateTips = ({ data }) => {
   return (
@@ -10,6 +11,10 @@ const GenerateTips = ({ data }) => {
       ))}
     </TipContainer>
   );
+};
+
+GenerateTips.propTypes = {
+  data: PropTypes.array,
 };
 
 export default GenerateTips;
