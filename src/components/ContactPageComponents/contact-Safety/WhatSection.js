@@ -1,16 +1,6 @@
 import React from "react";
-import { Text } from "./styled";
-import styled from "styled-components";
+import { Text, Box, ItalicText } from "./styled";
 
-const ItalicText = styled(Text)`
-  font-style: italic;
-`;
-
-const Box = styled.div`
-  > ${Text} {
-    margin-bottom: unset;
-  }
-`;
 const WhatSection = () => {
   return (
     <Box>

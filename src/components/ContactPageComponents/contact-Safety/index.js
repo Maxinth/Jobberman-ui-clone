@@ -1,18 +1,9 @@
 import React from "react";
-import { Text, Container } from "../contact-About/styled";
-import styled from "styled-components";
-import WhatSection from "./WhatSection";
+import { Text, SafetyContainer } from "./styled";
 
-const SafetyContainer = styled(Container)``;
-const TipContainer = styled.ul`
-  padding: 1rem 2rem;
-`;
-const BoldText = styled(Text)`
-  font-weight: 500;
-`;
-const TipItem = styled.li`
-  list-style-type: initial;
-`;
+import WhatSection from "./WhatSection";
+import { fraudExamples, tips } from "./data";
+import GenerateTips from "./GenerateTips";
 
 const ContactSafetyContents = () => {
   return (
@@ -26,15 +17,7 @@ const ContactSafetyContents = () => {
         fraudulent activities during the course of your job search.
       </Text>
       <WhatSection />
-      <TipContainer>
-        <TipItem>
-          <BoldText>
-            Scam artists wanting to throw you off your game will prey on your
-            anxiety by provoking you, a job seeker with a false sense of urgency
-            by saying things like, you have to act now or time is running out.
-          </BoldText>
-        </TipItem>
-      </TipContainer>
+      <GenerateTips data={fraudExamples} />
     </SafetyContainer>
   );
 };
