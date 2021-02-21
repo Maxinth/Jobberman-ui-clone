@@ -1,7 +1,7 @@
 import React from "react";
 import { ContactContainer, ContactPageBox, Heading } from "./styled";
 import ContactNav from "./ContactNav";
-import ContactPageContents from "./ContactPageContents";
+// import ContactPageContents from "./ContactPageContents";
 import ContactAboutContents from "./contact-About";
 
 const ContactPage = () => {
