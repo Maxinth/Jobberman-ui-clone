@@ -1,12 +1,9 @@
 import React from "react";
-import styled from "styled-components";
+import { Form } from "./styled";
 import FirstSection from "./FirstSection";
 import SelectAndNumber from "./SelectAndNumber";
 import FinalSection from "./FinalSection";
-
-const Form = styled.form`
-  margin-top: 1rem;
-`;
+import CTA from "../../CTA";
 
 const ContactForm = () => {
   return (
@@ -14,6 +11,7 @@ const ContactForm = () => {
       <FirstSection />
       <SelectAndNumber />
       <FinalSection />
+      <CTA text="send message" goTo="/" />
     </Form>
   );
 };
