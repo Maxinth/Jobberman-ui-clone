@@ -7,4 +7,5 @@ const Container = styled.section`
     margin-bottom: 2rem;
   }
 `;
+
 export { Mail, Text, Container };

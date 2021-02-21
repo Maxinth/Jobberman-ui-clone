@@ -32,6 +32,9 @@ export const data = [
   },
 ];
 
+// custom function to modify the div housing questions when the template deviates at the third item of the
+// data
+
 export const singleHeading = (id) => {
   return id === "Applications";
 };
