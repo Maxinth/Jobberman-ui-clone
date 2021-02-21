@@ -1,11 +1,12 @@
 import React from "react";
 import ContactPageContents from "../ContactPageContents";
 import ContactAboutContents from "../contact-About";
+import FAQPageContents from "../contact-FAQ";
 
 export const pagesData = [
   { heading: "About us", content: <ContactAboutContents />, page: "aboutPage" },
 
-  { heading: "", content: "", page: "" },
+  { heading: "FAQ", content: <FAQPageContents />, page: "FAQ" },
   { heading: "", content: "", page: "" },
   {
     heading: "Contact us",
