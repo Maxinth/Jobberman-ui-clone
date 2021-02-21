@@ -75,7 +75,7 @@ const ContactBox = styled.div`
   }
   ${Btn} {
     @media (min-width: 1024px) {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
   }
 `;
@@ -88,12 +88,22 @@ const DetailText = styled.p`
   font-size: 0.9rem;
   line-height: 1.7;
   transition: max-width 0.2s;
+
   @media (min-width: 1024px) {
     max-width: 300px;
   }
 `;
 
-const DetailBox = styled.div`
+const Title = styled.p`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  + ${DetailText} {
+    margin-top: 1rem !important;
+  }
+`;
+
+const DetailBox = styled.section`
   font-family: "Open Sans", sans-serif;
   margin-bottom: 1rem;
   transition: all 0.2;
@@ -121,12 +131,7 @@ const DetailSpan = styled.span`
   font-weight: 600;
   color: #333;
   font-size: 1.1rem;
-`;
-
-const Title = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
+  /* display: block; */
 `;
 
 const Icon = styled(ArrowForwardIosIcon)`
@@ -152,7 +157,7 @@ const Box = styled.div`
 `;
 
 // EndToEndBottomSection
-const InnerBox = styled.div`
+const InnerBox = styled.section`
   @media (min-width: 1024px) {
     display: flex;
   }

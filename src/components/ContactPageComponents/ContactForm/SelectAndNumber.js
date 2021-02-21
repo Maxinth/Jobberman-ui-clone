@@ -19,9 +19,13 @@ const Container = styled(Section)`
       /* flex: 1; */
     }
     ${Box} {
-      margin-right: 2rem;
+      /* margin-right: 2rem; */
+      :first-child {
+        margin-right: 1rem;
+      }
       text-align: center;
       ${SelectBoxItem} {
+        width: 100%;
       }
     }
   }

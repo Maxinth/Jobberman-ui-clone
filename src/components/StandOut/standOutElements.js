@@ -20,7 +20,7 @@ const Title = styled.h5`
   font-size: 1.5rem;
   text-align: center;
   font-weight: 300;
-  margin: 0.5rem 0 2rem;
+  margin: 1rem 0 2rem 0.5rem;
 `;
 
 const Text = styled.p`
@@ -29,6 +29,7 @@ const Text = styled.p`
   text-align: center;
   font-size: 1rem;
   color: rgb(78, 85, 89);
+  line-height: 1.7;
 
   @media (min-width: 879px) {
     max-width: 250px;
