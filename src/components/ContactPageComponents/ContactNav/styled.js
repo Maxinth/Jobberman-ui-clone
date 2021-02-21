@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled, { css } from "styled-components";
+
 // index
 const ContactNavSection = styled.section`
   background-color: rgb(65, 104, 198);
@@ -18,12 +18,7 @@ const NavContainer = styled.ul`
 `;
 
 // ContactNavLink
-const ListItem = styled.li`
-  flex: 1;
-  width: 100%;
-`;
-
-const ContactLink = styled(Link)`
+const ContactLink = styled.a`
   width: 100%;
   display: block;
   padding: 1rem;
@@ -33,8 +28,22 @@ const ContactLink = styled(Link)`
   font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
   font-weight: bolder;
-  :first-child {
-    /* border-bottom: 6px solid #fff; */
-  }
+  border-bottom: 6px solid transparent;
+  border-top: 6px solid transparent;
+  transition: border-bottom 0.2s;
 `;
+
+const ListItem = styled.li`
+  flex: 1;
+  width: 100%;
+
+  ${({ currentItem }) =>
+    currentItem &&
+    css`
+      > ${ContactLink} {
+        border-bottom: 6px solid #fff;
+      }
+    `}
+`;
+
 export { ContactNavSection, NavContainer, ListItem, ContactLink };

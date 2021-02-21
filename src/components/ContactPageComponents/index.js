@@ -1,18 +1,20 @@
-import React from "react";
-import { ContactContainer, ContactPageBox, Heading } from "./styled";
+import React, { useState } from "react";
+import { ContactContainer } from "./styled";
 import ContactNav from "./ContactNav";
-// import ContactPageContents from "./ContactPageContents";
-import ContactAboutContents from "./contact-About";
+import AllContactPages from "./PagesByClick";
+import { pageHeading, pageContent } from "./PagesByClick/data";
 
 const ContactPage = () => {
+  const [pageNo, setPageNo] = useState(3);
+
+  const changePage = (id) => setPageNo(id);
   return (
     <ContactContainer>
-      <ContactNav />
-      <Heading>Contact Us</Heading>
-      <ContactPageBox>
-        {/* <ContactPageContents /> */}
-        <ContactAboutContents />
-      </ContactPageBox>
+      <ContactNav id={pageNo} changePage={changePage} />
+      <AllContactPages
+        heading={pageHeading(pageNo)}
+        content={pageContent(pageNo)}
+      />
     </ContactContainer>
   );
 };

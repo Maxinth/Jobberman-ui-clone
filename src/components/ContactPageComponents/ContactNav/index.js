@@ -2,11 +2,11 @@ import React from "react";
 import { ContactNavSection, NavContainer } from "./styled";
 import GenerateContactNavLinks from "./GenerateContactNavLinks";
 
-const ContactNav = () => {
+const ContactNav = (props) => {
   return (
     <ContactNavSection>
       <NavContainer>
-        <GenerateContactNavLinks />
+        <GenerateContactNavLinks {...props} />
       </NavContainer>
     </ContactNavSection>
   );
