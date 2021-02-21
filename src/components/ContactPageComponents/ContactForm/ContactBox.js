@@ -4,8 +4,12 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const TextArea = styled.textarea`
-  width: 100%;
   height: 180px;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgb(238, 238, 238);
+  outline: none;
 `;
 const ContactBox = ({ label, type = "text" }) => {
   return (
@@ -25,3 +29,10 @@ ContactBox.propTypes = {
 };
 
 export default ContactBox;
+
+/*
+the input box is rendered based on if the type is text or email
+
+while the textarea is rendered when the type is comments
+
+*/

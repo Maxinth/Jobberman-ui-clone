@@ -1,14 +1,12 @@
 import React from "react";
-import ContactBox from "./ContactBox";
 import { Section } from "./styled";
 import { firstSection } from "./data";
+import GenerateInputs from "./GenerateInputs";
 
 const FirstSection = () => {
   return (
     <Section>
-      {firstSection.map((item) => (
-        <ContactBox key={item.label} {...item} />
-      ))}
+      <GenerateInputs data={firstSection} />
     </Section>
   );
 };

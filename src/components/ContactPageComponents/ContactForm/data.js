@@ -34,10 +34,18 @@ export const data = {
       { itemName: "Nigeria (+234)", itemValue: "nigeria" },
     ],
   },
-  // selectBox:
-  //     { items: jobItems, currentChoice: jobs, id: jobId },
+  finalSection: [
+    {
+      label: "email",
+      type: "email",
+    },
+    {
+      label: "message",
+      type: "comments",
+    },
+  ],
 };
 
-const { firstSection, selectBox } = data;
+const { firstSection, selectBox, finalSection } = data;
 const { selectId, noItems } = selectBox;
-export { firstSection, selectId, noItems };
+export { firstSection, selectId, noItems, finalSection };
