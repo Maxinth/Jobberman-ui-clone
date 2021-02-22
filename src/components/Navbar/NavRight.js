@@ -5,7 +5,7 @@ const NavRightMain = () => {
   return (
     <>
       <LinkContainer>
-        <NavLink to="/" className="nav__link">
+        <NavLink to="/login" className="nav__link">
           log in
         </NavLink>
       </LinkContainer>
