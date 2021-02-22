@@ -1,13 +1,13 @@
 import React from "react";
-import { Container, Image } from "./styled";
-import loginImage from "../../assets/img-login.jpg";
+import { Container } from "./styled";
 import LoginMain from "./LoginMain";
+import ImagesMain from "./ImagesMain";
 
 const LoginPage = () => {
   return (
     <Container>
       <LoginMain />
-      <Image src={loginImage} alt="login" />
+      <ImagesMain />
     </Container>
   );
 };

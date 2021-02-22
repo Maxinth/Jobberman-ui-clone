@@ -3,7 +3,6 @@ import { sidebarItems } from "./data";
 import SideBarMainItem from "./SideBarMainItem";
 
 const GenerateSideBarMain = () => {
-  console.log(sidebarItems);
   return (
     <>
       {sidebarItems.map((item, index) => (
