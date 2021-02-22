@@ -38,9 +38,8 @@ const Input = styled.input`
 
 // index
 const Container = styled.section`
-  /* margin: 5rem 1rem 4rem; */
   background: #fff;
-  /* padding: 1rem 2rem; */
+
   font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
@@ -60,9 +59,7 @@ const Container = styled.section`
 
 const LoginBox = styled.div`
   max-width: 600px;
-  /* border: 1px solid black; */
   padding: 0.5rem 3rem;
-  /* margin: 4rem auto 0.5rem; */
 
   display: flex;
   flex-direction: column;
@@ -80,9 +77,17 @@ const LoginBox = styled.div`
 
   @media (min-width: 900px) {
     margin-left: 4rem;
-    ${Heading} {
-      /* margin-top: -4rem; */
-    }
+  }
+`;
+
+const Image = styled.img`
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  display: none;
+
+  @media (min-width: 900px) {
+    display: block;
   }
 `;
 
@@ -214,4 +219,5 @@ export {
   CheckContainer,
   Form,
   IconsBox,
+  Image,
 };

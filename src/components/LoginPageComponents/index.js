@@ -1,25 +1,12 @@
 import React from "react";
-import LoginContents from "./LoginContents";
-import { Container, LoginBox } from "./styled";
+import { Container, Image } from "./styled";
 import loginImage from "../../assets/img-login.jpg";
-import styled from "styled-components";
-const Image = styled.img`
-  object-fit: cover;
-  width: 100%;
-  height: 100vh;
-  display: none;
-
-  @media (min-width: 900px) {
-    display: block;
-  }
-`;
+import LoginMain from "./LoginMain";
 
 const LoginPage = () => {
   return (
     <Container>
-      <LoginBox>
-        <LoginContents />
-      </LoginBox>
+      <LoginMain />
       <Image src={loginImage} alt="login" />
     </Container>
   );
