@@ -1,7 +1,9 @@
 import React from "react";
 import { Heading } from "../ContactPageComponents/styled";
 import styled from "styled-components";
-import SocialIcon from "./SocialIcon";
+import LoginViaSocial from "./LoginViaSocial";
+import { SpanText } from "./styled";
+import ContinueBlock from "./ContinueBlock";
 
 const Container = styled.section`
   margin: 5rem 1rem 4rem;
@@ -24,18 +26,14 @@ const LoginBox = styled.div`
   }
 `;
 
-const SpanText = styled.span`
-  color: rgb(78, 85, 89);
-  font-size: 0.9rem;
-`;
-
 const LoginPage = () => {
   return (
     <Container>
       <LoginBox>
         <Heading>Log in and get productive</Heading>
         <SpanText>Use your social account to log in as a Seeker. </SpanText>
-        <SocialIcon />
+        <LoginViaSocial />
+        <ContinueBlock />
       </LoginBox>
     </Container>
   );
