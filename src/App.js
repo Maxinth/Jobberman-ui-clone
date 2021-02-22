@@ -9,6 +9,7 @@ import JobSeekers from "./sitePages/JobSeekers";
 import Employers from "./sitePages/Employers";
 import SignUp from "./sitePages/SignUp";
 import Contact from "./sitePages/Contact";
+import Login from "./sitePages/Login";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/employer" component={Employers} />
         <Route path="/sign-up" component={SignUp} />
         <Route path="/contact-us" component={Contact} />
+        <Route path="/login" component={Login} />
       </Switch>
       <Footer />
     </div>

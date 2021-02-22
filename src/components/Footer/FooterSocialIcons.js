@@ -1,11 +1,11 @@
 import { SocialIconsContainer, IconContainer } from "./styled";
-import { iconsData } from "./linksData";
 import React from "react";
+import PropTypes from "prop-types";
 
-const FooterSocialIcons = () => {
+const FooterSocialIcons = ({ data }) => {
   return (
     <SocialIconsContainer>
-      {iconsData.map((item) => {
+      {data.map((item) => {
         const { icon, id, color } = item;
         return (
           <IconContainer key={id} color={color}>
@@ -17,4 +17,7 @@ const FooterSocialIcons = () => {
   );
 };
 
+FooterSocialIcons.propTypes = {
+  data: PropTypes.array,
+};
 export default FooterSocialIcons;
