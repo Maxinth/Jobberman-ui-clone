@@ -205,6 +205,35 @@ const IconsBox = styled.div`
   }
 `;
 
+// ImageMain
+const ImageItem = styled(Image)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+
+  // make visible ONLY when the position is "activeSlide"
+  ${(props) =>
+    props.position === "activeSlide" &&
+    css`
+      opacity: 1;
+    `}
+`;
+
+const ImagesContainer = styled.section`
+  display: none;
+  width: 100%;
+  height: 100vh;
+
+  @media (min-width: 900px) {
+    display: block;
+    position: relative;
+  }
+`;
+
 export {
   SpanText,
   Input,
@@ -220,4 +249,6 @@ export {
   Form,
   IconsBox,
   Image,
+  ImagesContainer,
+  ImageItem,
 };
