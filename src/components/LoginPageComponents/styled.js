@@ -21,7 +21,7 @@ const SpanText = styled.span`
 
 const Input = styled.input`
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   border: 1px solid rgb(226, 232, 240);
   outline: none;
   font-family: "Open Sans", sans-serif;
@@ -38,17 +38,32 @@ const Input = styled.input`
 
 // index
 const Container = styled.section`
-  margin: 5rem 1rem 4rem;
+  /* margin: 5rem 1rem 4rem; */
   background: #fff;
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
   font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+    justify-content: unset;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: -0.2rem;
+  }
 `;
 
 const LoginBox = styled.div`
   max-width: 600px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 0.5rem 3rem;
-  margin: 0 auto;
+  /* margin: 4rem auto 0.5rem; */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,10 +71,18 @@ const LoginBox = styled.div`
 
   ${Heading} {
     margin-bottom: 1rem;
+    margin-top: 7rem;
   }
 
   > ${Heading} + ${SpanText} {
     text-align: center;
+  }
+
+  @media (min-width: 900px) {
+    margin-left: 4rem;
+    ${Heading} {
+      /* margin-top: -4rem; */
+    }
   }
 `;
 
@@ -67,8 +90,13 @@ const LoginBox = styled.div`
 const BtnContainer = styled.div`
   margin-top: 2rem;
   width: 100%;
+  transition: margin-top 0.2s;
   ${Btn} {
     width: 100%;
+  }
+
+  @media (min-width: 900px) {
+    margin-top: 0.2rem;
   }
 `;
 
@@ -82,6 +110,12 @@ const BtnBox = styled.div`
   align-items: center;
   > ${SpanText} {
     margin-bottom: 1rem;
+  }
+  @media (min-width: 900px) {
+    margin-top: 1rem;
+    > ${SpanText} {
+      margin-bottom: 0.5rem;
+    }
   }
 `;
 
@@ -122,6 +156,10 @@ const Box = styled.div`
     margin-right: 0.5rem;
     margin-top: 0.5rem;
     width: unset;
+  }
+
+  & + ${SpanText} {
+    cursor: pointer;
   }
 
   @media (min-width: 500px) {

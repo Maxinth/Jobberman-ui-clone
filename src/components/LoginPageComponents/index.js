@@ -1,19 +1,26 @@
 import React from "react";
+import LoginContents from "./LoginContents";
 import { Container, LoginBox } from "./styled";
-import LoginViaSocial from "./LoginViaSocial";
-import ContinueBlock from "./ContinueBlock";
-import LoginForm from "./LoginForm";
-import TopHeading from "./TopHeading";
+import loginImage from "../../assets/img-login.jpg";
+import styled from "styled-components";
+const Image = styled.img`
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  display: none;
+
+  @media (min-width: 900px) {
+    display: block;
+  }
+`;
 
 const LoginPage = () => {
   return (
     <Container>
       <LoginBox>
-        <TopHeading />
-        <LoginViaSocial />
-        <ContinueBlock />
-        <LoginForm />
+        <LoginContents />
       </LoginBox>
+      <Image src={loginImage} alt="login" />
     </Container>
   );
 };
