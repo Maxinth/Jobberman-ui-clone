@@ -4,6 +4,7 @@ import styled from "styled-components";
 import LoginViaSocial from "./LoginViaSocial";
 import { SpanText } from "./styled";
 import ContinueBlock from "./ContinueBlock";
+import LoginForm from "./LoginForm";
 
 const Container = styled.section`
   margin: 5rem 1rem 4rem;
@@ -11,10 +12,11 @@ const Container = styled.section`
   padding: 1rem 2rem;
   font-family: "Open Sans", sans-serif;
 `;
-const LoginForm = styled.form``;
+
 const LoginBox = styled.div`
   max-width: 600px;
   border: 1px solid black;
+  padding: 0.5rem 3rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -34,6 +36,7 @@ const LoginPage = () => {
         <SpanText>Use your social account to log in as a Seeker. </SpanText>
         <LoginViaSocial />
         <ContinueBlock />
+        <LoginForm />
       </LoginBox>
     </Container>
   );
