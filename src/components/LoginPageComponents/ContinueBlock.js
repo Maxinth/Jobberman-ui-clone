@@ -7,6 +7,7 @@ const BlockContainer = styled.section`
   align-items: center;
   justify-content: center;
   width: 100%;
+
   /* padding: 0.5rem 5rem; */
   /* ${SpanText} {
     font-size: 1.2rem;

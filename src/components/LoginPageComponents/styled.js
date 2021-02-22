@@ -1,8 +1,18 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const SpanText = styled.span`
-  color: rgb(78, 85, 89);
+  color: ${({ colored }) => (colored ? "rgb(255, 98, 0)" : " rgb(78, 85, 89)")};
   font-size: 0.9rem;
+
+  /* when lg prop is passed in */
+  ${({ lg }) =>
+    lg &&
+    css`
+      font-size: 1rem;
+      font-weight: 600;
+    `}
+  /* when lg prop is passed in */
+
   font-weight: 500;
 `;
 
@@ -16,7 +26,7 @@ const Input = styled.input`
   color: #333;
   background-color: rgb(238, 238, 238);
   transition: background-color 0.2;
-  font-size: 1rem;
+  font-size: calc(clamp(0.5rem, 0.9rem, 1rem));
   margin-bottom: 0.5rem;
   :focus {
     background-color: #fff;

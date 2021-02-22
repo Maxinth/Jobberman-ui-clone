@@ -26,6 +26,10 @@ const LoginBox = styled.div`
   ${Heading} {
     margin-bottom: 1rem;
   }
+
+  > ${Heading} + ${SpanText} {
+    text-align: center;
+  }
 `;
 
 const LoginPage = () => {
