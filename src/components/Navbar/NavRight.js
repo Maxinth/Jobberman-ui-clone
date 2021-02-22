@@ -1,23 +1,13 @@
 import React from "react";
-// import { NavLink } from "react-router-dom";
-import { LinkContainer, NavBtn, NavRightLink as NavLink } from "./nav.elements";
+import { NavBtn, NavRightLink as NavLink } from "./nav.elements";
+import GenerateNavLinks from "./GenerateNavLinks";
+
 const NavRightMain = () => {
   return (
     <>
-      <LinkContainer>
-        <NavLink to="/login" className="nav__link">
-          log in
-        </NavLink>
-      </LinkContainer>
-      <LinkContainer>
-        <NavLink to="/sign-up" className="nav__link">
-          sign up
-        </NavLink>
-      </LinkContainer>
+      <GenerateNavLinks />
       <NavBtn>
-        <NavLink to="/" className="nav__link">
-          post a free job
-        </NavLink>
+        <NavLink to="/">post a free job</NavLink>
       </NavBtn>
     </>
   );
