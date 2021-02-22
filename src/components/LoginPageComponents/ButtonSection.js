@@ -1,29 +1,6 @@
 import React from "react";
 import CTA from "../CTA";
-import styled from "styled-components";
-import { Btn } from "../StandOut/standOutElements";
-import { SpanText } from "./styled";
-
-const BtnContainer = styled.div`
-  margin-top: 2rem;
-  width: 100%;
-  ${Btn} {
-    width: 100%;
-  }
-`;
-
-const BtnBox = styled.div`
-  margin-top: 3rem;
-  text-align: center;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  > ${SpanText} {
-    margin-bottom: 1rem;
-  }
-`;
+import { SpanText, BtnContainer, BtnBox } from "./styled";
 
 const ButtonSection = () => {
   return (
