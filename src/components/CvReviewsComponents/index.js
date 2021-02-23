@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Container } from "./styled";
-import BannerMain from "./BannerMain";
+import { Container } from "./Banner/styled";
+import BannerMain from "./Banner/BannerMain";
 
 const CvReviewsPage = () => {
   return (
