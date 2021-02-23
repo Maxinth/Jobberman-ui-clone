@@ -101,7 +101,7 @@ const BtnContainer = styled.div`
   }
 
   @media (min-width: 900px) {
-    margin-top: 0.2rem;
+    margin-top: 2.5rem;
   }
 `;
 
@@ -213,7 +213,7 @@ const ImageItem = styled(Image)`
   right: 0;
   bottom: 0;
   opacity: 0;
-  transition: all 0.6s ease-in-out;
+  transition: all 1s ease-in;
 
   // make visible ONLY when the position is "activeSlide"
   ${(props) =>
