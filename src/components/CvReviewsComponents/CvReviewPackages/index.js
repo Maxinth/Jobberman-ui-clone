@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Container as PlanBox } from "../../JobsOverview/jobsElements";
-
+import PriceSection from "./PriceSection";
+import PlanDetailsSection from "./PlanDetailsSection";
 const PlansContainer = styled.section`
   padding-top: 1rem;
   background-color: #fff;
@@ -10,6 +11,8 @@ const PlansContainer = styled.section`
     max-width: 600px;
     display: block;
     padding: unset;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 2px 0px,
+      rgba(0, 0, 0, 0.1) 0px 3px 1px -2px, rgba(0, 0, 0, 0.06) 0px 1px 5px 0px;
   }
 `;
 
@@ -19,29 +22,9 @@ const PlanHeader = styled.h3`
   width: 100%;
   color: #fff;
   text-align: center;
-  font-family: "Raleway", sans-serif;
+  font-family: "Open Sans", sans-serif;
   letter-spacing: 2.5px;
   font-size: 1.5rem;
-`;
-
-const PriceBox = styled.div`
-  padding: 2rem;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  color: rgb(78, 85, 89);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-const Currency = styled.sup`
-  font-size: 1rem;
-  font-weight: 500;
-  transform: translateY(-6px);
-  margin-right: 0.2rem;
-`;
-const Price = styled.span`
-  font-size: 2.5rem;
-  font-weight: 700;
 `;
 
 const CvReviewPlans = () => {
@@ -50,10 +33,8 @@ const CvReviewPlans = () => {
       <PlanBox>
         <PlanHeader bgColor="grey">Bronze</PlanHeader>
         {/* price section */}
-        <PriceBox>
-          <Currency>NGN</Currency>
-          <Price>12,900</Price>
-        </PriceBox>
+        <PriceSection />
+        <PlanDetailsSection />
       </PlanBox>
     </PlansContainer>
   );
