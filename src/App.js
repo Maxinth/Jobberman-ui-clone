@@ -10,6 +10,7 @@ import Employers from "./sitePages/Employers";
 import SignUp from "./sitePages/SignUp";
 import Contact from "./sitePages/Contact";
 import Login from "./sitePages/Login";
+import CvReviews from "./sitePages/CvReviews";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/sign-up" component={SignUp} />
         <Route path="/contact-us" component={Contact} />
         <Route path="/login" component={Login} />
+        <Route path="/cv-services" component={CvReviews} />
       </Switch>
       <Footer />
     </div>
