@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const PriceBox = styled.div`
   padding: 2rem;
@@ -36,16 +37,21 @@ const Details = styled.span`
   transform: translate(20px, -35px);
 `;
 
-const PriceSection = () => {
+const PriceSection = ({ price, cvIncluded }) => {
   return (
     <PriceContainer>
       <PriceBox>
         <Currency>NGN</Currency>
-        <Price>12,900</Price>
+        <Price>{price}</Price>
       </PriceBox>
-      <Details>Cover Letter Included</Details>
+      {cvIncluded && <Details>Cover Letter Included</Details>}
     </PriceContainer>
   );
+};
+
+PriceSection.propTypes = {
+  price: PropTypes.string,
+  cvIncluded: PropTypes.bool,
 };
 
 export default PriceSection;

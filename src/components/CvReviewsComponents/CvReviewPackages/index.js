@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Container as PlanBox } from "../../JobsOverview/jobsElements";
-import PriceSection from "./PriceSection";
-import PlanDetailsSection from "./PlanDetailsSection";
+import PlanMain from "./PlanMain";
+import { dataPlans } from "./data";
 const PlansContainer = styled.section`
   padding-top: 1rem;
   background-color: #fff;
@@ -16,26 +16,12 @@ const PlansContainer = styled.section`
   }
 `;
 
-const PlanHeader = styled.h3`
-  background-color: ${({ bgColor }) => bgColor};
-  padding: 1rem;
-  width: 100%;
-  color: #fff;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 2.5px;
-  font-size: 1.5rem;
-`;
-
 const CvReviewPlans = () => {
   return (
     <PlansContainer>
-      <PlanBox>
-        <PlanHeader bgColor="grey">Bronze</PlanHeader>
-        {/* price section */}
-        <PriceSection />
-        <PlanDetailsSection />
-      </PlanBox>
+      {dataPlans.map((item, index) => (
+        <PlanMain key={index} plan={item.plan} />
+      ))}
     </PlansContainer>
   );
 };
