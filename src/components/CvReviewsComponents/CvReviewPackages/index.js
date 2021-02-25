@@ -8,7 +8,7 @@ const PlansContainer = styled.section`
   background-color: #fff;
   ${PlanBox} {
     margin: 3rem auto;
-    max-width: 600px;
+    max-width: 400px;
     display: block;
     padding: unset;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 2px 0px,
