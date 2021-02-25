@@ -89,12 +89,3 @@ export const dataPlans = [
     },
   },
 ];
-
-// const { bronzePlan } = dataPlans;
-// const data = [
-//   {
-//     plan: bronzePlan,
-//   },
-// ];
-
-// export { data };

@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Container as PlanBox } from "../../JobsOverview/jobsElements";
-import PlanMain from "./PlanMain";
-import { dataPlans } from "./data";
+import GeneratePlans from "./GeneratePlans";
+
 const PlansContainer = styled.section`
-  padding-top: 1rem;
+  padding: 1rem 2rem;
+
   background-color: #fff;
   ${PlanBox} {
     margin: 3rem auto;
@@ -19,9 +20,7 @@ const PlansContainer = styled.section`
 const CvReviewPlans = () => {
   return (
     <PlansContainer>
-      {dataPlans.map((item, index) => (
-        <PlanMain key={index} plan={item.plan} />
-      ))}
+      <GeneratePlans />
     </PlansContainer>
   );
 };

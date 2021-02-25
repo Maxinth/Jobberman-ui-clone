@@ -1,9 +1,8 @@
 import React from "react";
 import PlanDetails from "./PlanDetails";
-import styled from "styled-components";
+import { Section } from "./styled";
 import PropTypes from "prop-types";
 
-const Section = styled.section``;
 const PlanDetailsSection = ({ details }) => {
   return (
     <Section>
