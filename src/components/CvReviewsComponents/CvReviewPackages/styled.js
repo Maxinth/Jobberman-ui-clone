@@ -20,6 +20,7 @@ const PlanDetailsContainer = styled.section`
 `;
 const Details = styled.ul`
   max-width: 400px;
+  width: 100%;
   margin: 0 auto;
   padding: 1rem;
 `;
@@ -57,7 +58,9 @@ const PlanHeader = styled.h3`
   background-color: ${({ bgColor }) => bgColor};
   padding: 1rem;
   width: 100%;
-  color: #fff;
+  color: ${({ bgColor }) => (bgColor === "#cd7f32" ? "#fff" : "#333")};
+  /* color: #333; */
+  text-transform: capitalize;
   text-align: center;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 2.5px;
@@ -100,6 +103,41 @@ const Span = styled.span`
   transform: translate(20px, -35px);
 `;
 
+// index
+const PlansContainer = styled.section`
+  padding: 1rem 2rem;
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  background-color: #fff;
+  ${PlanBox} {
+    margin: 3rem auto;
+    max-width: 600px;
+    display: block;
+    padding: unset;
+    transition: max-width 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 2px 0px,
+      rgba(0, 0, 0, 0.1) 0px 3px 1px -2px, rgba(0, 0, 0, 0.06) 0px 1px 5px 0px;
+
+    &:first-child {
+      ${PriceBox} {
+        margin-bottom: 1rem;
+      }
+    }
+    @media (min-width: 1024px) {
+      max-width: 400px;
+      &:first-child {
+        ${Details} {
+          margin-bottom: 6rem;
+        }
+      }
+    }
+  }
+`;
+
 export {
   PlanDetailsContainer,
   Details,
@@ -114,4 +152,5 @@ export {
   Price,
   PriceContainer,
   Span,
+  PlansContainer,
 };

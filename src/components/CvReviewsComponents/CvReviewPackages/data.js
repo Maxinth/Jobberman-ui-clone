@@ -2,6 +2,7 @@ export const dataPlans = [
   {
     plan: {
       title: "bronze",
+      bgColor: "#cd7f32",
       price: "12, 900",
       cvIncluded: false,
       details: [
@@ -29,6 +30,7 @@ export const dataPlans = [
   {
     plan: {
       title: "silver",
+      bgColor: "#c0c0c0",
       price: "20, 900",
       cvIncluded: true,
       details: [
@@ -60,6 +62,7 @@ export const dataPlans = [
   {
     plan: {
       title: "gold",
+      bgColor: "#ffd700",
       price: "33, 900",
       cvIncluded: true,
       details: [
