@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 const Text = styled.p`
   line-height: 1.7;
   transform: translateY(-10px);
+  font-weight: 300;
 `;
 
 const BoldText = styled.span`
