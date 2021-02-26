@@ -1,4 +1,4 @@
-import MainBannerSection from "../Banners/MainBannerSection";
+import JobSeekerBanner from "./JobSeekerBanner";
 import React from "react";
 import { JobSeekerContainer } from "./styled";
 import WhyJobberMan from "./WhyJobberMan";
@@ -6,19 +6,11 @@ import Profiles from "./Profiles/Profiles";
 import Connect from "../Connect/Connect";
 import GetStarted from "./GetStarted/GetStarted";
 import NewsLetter from "../JobFunctions/NewsLetter/NewsLetter";
-import {
-  mainHeading,
-  smallScreenImg,
-  largerScreenImg,
-} from "../Banners/bannerData";
+
 const JobSeekersSection = () => {
   return (
     <JobSeekerContainer>
-      <MainBannerSection
-        lgImg={largerScreenImg}
-        smImg={smallScreenImg}
-        mainText={mainHeading}
-      />
+      <JobSeekerBanner />
       <WhyJobberMan />
       <Profiles />
       <GetStarted />

@@ -1,16 +1,12 @@
-import { EmployersContainer } from "./styled";
-import MainBannerSection from "../../Banners/MainBannerSection";
-import { largerScreenImg, smallScreenImg, mainHeading } from "./data";
 import React from "react";
+import DropChildFromTop from "../../DropFromTop";
+import EmployerBanner from "./EmployerBanner";
+
 const EmployersMainBanner = () => {
   return (
-    <EmployersContainer>
-      <MainBannerSection
-        lgImg={largerScreenImg}
-        smImg={smallScreenImg}
-        mainText={mainHeading}
-      />
-    </EmployersContainer>
+    <DropChildFromTop>
+      <EmployerBanner />
+    </DropChildFromTop>
   );
 };
 
