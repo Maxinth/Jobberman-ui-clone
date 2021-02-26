@@ -5,7 +5,7 @@ import bannerImg from "../../../assets/jm-cv-services-banner-d.jpg";
 const Container = styled.section`
   margin-top: 4.5rem;
   font-family: "Open Sans", sans-serif;
-  background-image: url(${mainBg});
+  /* background-image: url(${mainBg}); */
   object-fit: contain;
   width: 100%;
   background-position: 90% 50%;
@@ -25,13 +25,33 @@ const Heading = styled.h2`
 `;
 
 const HeroContainer = styled.section`
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
   transition: padding 0.2;
   width: 100%;
-  background-image: url(${bannerImg});
+  /* background-image: url(${bannerImg}); */
+  background-image: url(${mainBg});
   object-fit: contain;
   width: 100%;
   background-position: 0% 50%;
+  /* @media (max-width: 300px) {
+    padding: unset;
+  }
+  @media (min-width: 600px) {
+    padding: 6rem 1rem;
+  }
+  @media (min-width: 1200px) {
+    padding: 5rem 1rem;
+  } */
+`;
+
+const HeroBox = styled.div`
+  background-image: url(${bannerImg});
+  padding: 1rem 2rem;
+  ${Heading} {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.8;
+  }
+
   @media (max-width: 300px) {
     padding: unset;
   }
@@ -40,13 +60,6 @@ const HeroContainer = styled.section`
   }
   @media (min-width: 1200px) {
     padding: 5rem 1rem;
-  }
-`;
-
-const HeroBox = styled.div`
-  ${Heading} {
-    font-family: "Roboto", sans-serif;
-    line-height: 1.8;
   }
 `;
 
