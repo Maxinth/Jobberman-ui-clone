@@ -6,7 +6,7 @@ const GeneratePlans = () => {
   return (
     <>
       {dataPlans.map((item, index) => (
-        <PlanMain key={index} plan={item.plan} />
+        <PlanMain key={index} plan={item.plan} index={index} />
       ))}
     </>
   );

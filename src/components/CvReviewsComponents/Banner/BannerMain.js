@@ -1,14 +1,15 @@
 import React from "react";
-import { HeroContainer, HeroBox } from "./styled";
-import BannerHeadings from "./BannerHeadings";
+import { HeroContainer } from "./styled";
+import BannerContents from "./BannerContents";
+import DropChildFromTop from "../../DropFromTop";
 
 const BannerMain = () => {
   return (
-    <HeroContainer>
-      <HeroBox>
-        <BannerHeadings />
-      </HeroBox>
-    </HeroContainer>
+    <DropChildFromTop>
+      <HeroContainer>
+        <BannerContents />
+      </HeroContainer>
+    </DropChildFromTop>
   );
 };
 

@@ -52,6 +52,21 @@ const pageVariant = (duration = 2, delay = 0) => {
   };
 };
 
+const slideFromTop = {
+  hidden: {
+    y: "-50vh",
+  },
+
+  visible: {
+    y: 0,
+    transition: {
+      type: "tween",
+      duration: 1,
+      // delay: 1,
+    },
+  },
+};
+
 const cardHover = {
   hover: {
     scale: 1.03,
@@ -70,5 +85,6 @@ export const useVariants = () => {
     landRVariant,
     aboutBlockContainer,
     pageVariant,
+    slideFromTop,
   };
 };
