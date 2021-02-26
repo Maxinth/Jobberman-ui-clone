@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import {
   BannerMain,
   FormContainer,
@@ -67,8 +67,16 @@ const WhyBox = styled.section`
   position: absolute;
   left: 0;
   top: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.7s ease-in;
+  /* opacity: 0; */
   opacity: ${({ match }) => (match === "current" ? 1 : 0)};
+
+  // make visible ONLY when the position is "activeSlide"
+  ${(props) =>
+    props.position === "activeSlide" &&
+    css`
+      opacity: 1;
+    `}
 
   @media (min-width: 960px) {
     display: flex;

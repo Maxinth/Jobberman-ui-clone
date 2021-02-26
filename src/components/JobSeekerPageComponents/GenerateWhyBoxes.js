@@ -1,16 +1,24 @@
 import PropTypes from "prop-types";
 import Why from "./Why";
 import React from "react";
-const GenerateWhyBoxes = ({ data, currentIndex, matchCurrentItem }) => {
+
+const GenerateWhyBoxes = ({
+  index,
+  data,
+  currentIndex,
+  matchCurrentItem,
+  itemPosition,
+}) => {
   return (
     <>
-      {data.map((item, index) => (
+      {data.map((item, itemIndex) => (
         <Why
-          key={index}
+          key={itemIndex}
           {...item}
-          itemIndex={index}
+          itemIndex={itemIndex}
           currentIndex={currentIndex}
-          matchItem={matchCurrentItem(index)}
+          matchItem={matchCurrentItem(itemIndex)}
+          position={itemPosition(index, itemIndex, data)}
         />
       ))}
     </>
