@@ -1,16 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import { Box, Text } from "./styled";
 import { data } from "./data";
 
-const Box = styled.div`
-  margin-top: 2rem;
-`;
-
-const Text = styled.p`
-  line-height: 1.7;
-  font-weight: 400;
-  margin-bottom: 1rem;
-`;
 const GenerateRequests = () => {
   return (
     <Box>

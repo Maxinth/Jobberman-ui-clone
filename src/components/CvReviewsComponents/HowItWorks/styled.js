@@ -16,9 +16,13 @@ const HowContainer = styled(SignUpContainer)`
         transition: margin 0.2s;
       }
       a > span {
-        padding: 2.5rem;
+        transition: padding 0.2s;
       }
+
       @media (min-width: 960px) {
+        a > span {
+          padding: 2.5rem;
+        }
         a:first-child {
           margin-top: 6.5rem;
         }
