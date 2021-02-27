@@ -1,7 +1,5 @@
 import styled, { css } from "styled-components";
 
-
-
 const ConnectContainer = styled.section`
   background-color: rgb(242, 242, 242);
   font-family: "Open Sans", sans-serif;
@@ -13,7 +11,9 @@ const ConnectBox = styled.section`
   max-width: 1200px;
   margin: 0 auto;
   background-color: #fff;
-  box-shadow: 1px 1px 5px grey;
+  /* box-shadow: 1px 1px 5px grey; */
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.1) 0px 3px 1px -2px, rgba(0, 0, 0, 0.06) 0px 1px 5px 0px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;

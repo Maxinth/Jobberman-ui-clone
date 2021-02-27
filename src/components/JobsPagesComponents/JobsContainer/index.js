@@ -1,14 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import HeaderMain from "./Header";
+import CTA from "../../CTA";
+import { Btn } from "../../StandOut/standOutElements";
+import JobCount from "./JobCount";
+
 const Container = styled.section`
-  margin-top: 1rem;
+  padding: 1rem 0;
+  ${Btn} {
+    width: 100%;
+  }
 `;
 
 const JobsContainer = () => {
   return (
     <Container>
-      <HeaderMain text="Jobs In Nigeria" el="h1" />
+      <CTA text="search filter" goTo="/" />
+      <JobCount />
     </Container>
   );
 };

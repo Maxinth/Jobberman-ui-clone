@@ -8,7 +8,7 @@ const Header = styled.header`
   padding: 0 20px;
   height: 50px;
   min-height: 50px;
-  /* border-radius: 3px 3px 0 0; */
+
   background: linear-gradient(0deg, #1a4d98, #4168c6);
 `;
 
@@ -17,7 +17,7 @@ const Title = styled.h1`
   font-weight: 300;
   display: flex;
   align-items: center;
-  /* padding: 2rem; */
+  font-size: 1.2rem;
   height: 100%;
   width: 100%;
 `;

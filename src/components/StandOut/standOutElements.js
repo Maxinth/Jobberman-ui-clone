@@ -127,7 +127,9 @@ const HowTo = styled.section`
   justify-content: center;
   align-items: center;
   margin: 1rem 2rem;
-  box-shadow: 1px 1px 8px grey;
+  /* box-shadow: 1px 1px 8px grey; */
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.1) 0px 3px 1px -2px, rgba(0, 0, 0, 0.06) 0px 1px 5px 0px;
   border-radius: 10px;
   padding: 2rem 0;
 `;
@@ -303,7 +305,9 @@ const TestimonialsContainer = styled.section`
   z-index: 10;
   padding: 2rem;
   transition: min-height 0.3s;
-  box-shadow: 1px 1px 9px grey;
+  /* box-shadow: 1px 1px 9px grey; */
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.1) 0px 3px 1px -2px, rgba(0, 0, 0, 0.06) 0px 1px 5px 0px;
   width: 100%;
 
   @media (min-width: 500px) {

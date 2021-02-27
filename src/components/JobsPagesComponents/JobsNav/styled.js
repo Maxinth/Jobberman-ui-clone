@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Container = styled.div`
   font-size: 0.8rem;
+  margin-top: 1rem;
 `;
 
 const HomeLink = styled(Link)`
