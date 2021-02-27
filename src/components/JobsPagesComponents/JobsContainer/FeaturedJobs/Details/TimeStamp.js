@@ -18,12 +18,12 @@ const TimeBox = styled.div`
     margin-right: 0.2rem;
   }
 `;
-const TimeStamp = () => {
+const TimeStamp = ({ iconOne, iconTwo, time, iconOneColor, iconTwoColor }) => {
   return (
     <TimeBox>
-      <StarIcon />
-      <EcoIcon />
-      <Span>4w</Span>
+      <Span clr={iconOneColor}> {iconOne}</Span>
+      {iconTwo && <Span clr={iconTwoColor}>{iconTwo}</Span>}
+      <Span>{time}</Span>
     </TimeBox>
   );
 };

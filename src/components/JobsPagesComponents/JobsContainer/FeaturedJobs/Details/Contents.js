@@ -11,25 +11,30 @@ const ContentBox = styled.section`
   font-size: 0.9rem;
 `;
 const Heading = styled.h3``;
-export const Span = styled.span``;
+export const Span = styled.span`
+  font-size: 0.9rem;
+  color: ${({ clr }) => clr};
+  > svg {
+    color: inherit;
+    margin-top: 0.2rem;
+  }
+`;
 const Location = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-const Contents = () => {
+const Contents = ({ position, company, location, jobType, jobModule }) => {
   return (
-    <>
-      <ContentBox>
-        <Heading>IT Sales Manager</Heading>
-        <Span>Anonymous Employer</Span>
-        <Location>
-          <Span>Lagos</Span>
-          <Span>Full Time</Span>
-        </Location>
-        <Span> Sales</Span>
-      </ContentBox>
-    </>
+    <ContentBox>
+      <Heading>{position}</Heading>
+      <Span>{company}</Span>
+      <Location>
+        <Span>{location}</Span>
+        <Span>{jobType}</Span>
+      </Location>
+      <Span>{jobModule}</Span>
+    </ContentBox>
   );
 };
 
