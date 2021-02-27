@@ -34,3 +34,7 @@ export const useJobs = () => {
 
   return { selectBoxList, onChange };
 };
+
+/*
+custom hook for the MainBannerSection exporting needed items
+*/

@@ -1,17 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { BannerMain } from "./banner.elements";
 import BannerContainer from "./BannerContainer";
 import PropTypes from "prop-types";
-import MainBannerForm from "./MainBannerForm";
-import { useJobs } from "./useJobs";
+import FormMain from "./FormMain";
 
 const MainBannerSection = (props) => {
-  const { onChange, selectBoxList } = useJobs();
-
   return (
     <BannerMain>
       <BannerContainer {...props} />
-      <MainBannerForm selectBoxList={selectBoxList} onChange={onChange} />
+      <FormMain />
     </BannerMain>
   );
 };

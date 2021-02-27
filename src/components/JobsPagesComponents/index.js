@@ -1,7 +1,13 @@
 import React from "react";
+import FindAJob from "./FindAJob";
+import { JobsContainer } from "./FindAJob/styled";
 
 const JobsPage = () => {
-  return <div>jobs page</div>;
+  return (
+    <JobsContainer>
+      <FindAJob />
+    </JobsContainer>
+  );
 };
 
 export default JobsPage;
