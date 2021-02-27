@@ -9,8 +9,14 @@ const Icon = styled(PlayArrowIcon)`
   outline: none;
 `;
 const LabelBox = styled.div`
-  position: relative;
+  /* position: relative; */
   width: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 120px;
+  max-height: 23px;
+  /* padding-top: 1rem; */
 `;
 
 const Box = styled.div`
@@ -22,10 +28,13 @@ const Box = styled.div`
   height: 50px;
   text-transform: uppercase;
   width: unset;
-  max-width: 120px;
-  max-height: 23px;
+  /* max-width: 120px;
+  max-height: 23px; */
+  height: 100%;
+  width: 100%;
   transform: rotate(-90deg);
   margin-left: -1rem;
+  /* width: 100%; */
 `;
 
 const Span = styled.span`

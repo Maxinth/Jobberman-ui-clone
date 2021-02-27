@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Span, LabelBox, Icon } from "./styled";
+
 const FeaturedLabel = () => {
   return (
     <LabelBox>
