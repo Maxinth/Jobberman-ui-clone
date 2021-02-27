@@ -1,60 +1,17 @@
 import React, { useState } from "react";
-import SelectBox from "./FormSelect";
-import { BannerMain, FormContainer, BannerForm } from "./banner.elements";
-import { data } from "./formSelectData";
+import { BannerMain } from "./banner.elements";
 import BannerContainer from "./BannerContainer";
 import PropTypes from "prop-types";
+import MainBannerForm from "./MainBannerForm";
+import { useJobs } from "./useJobs";
 
 const MainBannerSection = (props) => {
-  // destructuring individual object items from data object
-  const { jobFunctions, jobIndustries, jobLocations } = data;
+  const { onChange, selectBoxList } = useJobs();
 
-  // destructuring needed properties from the objects from 12 - SEE COMMENTS FOR id naming
-  const { jobId, jobItems } = jobFunctions;
-  const { industryId, industryItems } = jobIndustries;
-  const { locationId, locationItems } = jobLocations;
-
-  const [choice, setChoice] = useState({
-    jobs: jobItems[0].itemValue,
-    industries: industryItems[0].itemValue,
-    locations: locationItems[0].itemValue,
-  });
-
-  const { jobs, industries, locations } = choice;
-
-  const onChange = (e) => {
-    setChoice({
-      ...choice,
-      [e.target.id]: e.target.value,
-    });
-  };
-
-  const selectBoxList = [
-    { items: jobItems, currentChoice: jobs, id: jobId },
-    { items: industryItems, currentChoice: industries, id: industryId },
-    { items: locationItems, currentChoice: locations, id: locationId },
-  ];
   return (
     <BannerMain>
       <BannerContainer {...props} />
-
-      <FormContainer>
-        <BannerForm>
-          {selectBoxList.map((item) => {
-            const { items, currentChoice, id } = item;
-            return (
-              <SelectBox
-                key={id}
-                items={items}
-                currentChoice={currentChoice}
-                onChange={onChange}
-                id={id}
-                // choice={choice}
-              />
-            );
-          })}
-        </BannerForm>
-      </FormContainer>
+      <MainBannerForm selectBoxList={selectBoxList} onChange={onChange} />
     </BannerMain>
   );
 };
