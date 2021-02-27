@@ -6,7 +6,7 @@ import CountAndBtn from "./CountAndBtn";
 const JobCount = () => {
   return (
     <Container>
-      <HeaderMain text="Jobs In Nigeria" el="h1" />
+      <HeaderMain text="Jobs in Nigeria" el="h1" />
       <CountAndBtn />
     </Container>
   );
