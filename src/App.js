@@ -11,7 +11,7 @@ import SignUp from "./sitePages/SignUp";
 import Contact from "./sitePages/Contact";
 import Login from "./sitePages/Login";
 import CvReviews from "./sitePages/CvReviews";
-
+import Jobs from "./sitePages/Jobs";
 function App() {
   return (
     <div className="App">
@@ -25,6 +25,7 @@ function App() {
         <Route path="/contact-us" component={Contact} />
         <Route path="/login" component={Login} />
         <Route path="/cv-services" component={CvReviews} />
+        <Route path="/jobs" component={Jobs} />
       </Switch>
       <Footer />
     </div>
