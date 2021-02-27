@@ -1,23 +1,7 @@
 import React from "react";
-import StarIcon from "@material-ui/icons/Star";
-import EcoIcon from "@material-ui/icons/Eco";
+import { Span, TimeBox } from "./styled";
+import PropTypes from "prop-types";
 
-import styled from "styled-components";
-import { Span } from "./Contents";
-
-const TimeBox = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  border-top: 1px solid rgb(218, 218, 218);
-  border-bottom: 1px solid rgb(218, 218, 218);
-  width: 100%;
-  transform: translateY(1px);
-  padding: 0.5rem;
-  > * {
-    margin-right: 0.2rem;
-  }
-`;
 const TimeStamp = ({ iconOne, iconTwo, time, iconOneColor, iconTwoColor }) => {
   return (
     <TimeBox>
@@ -28,4 +12,11 @@ const TimeStamp = ({ iconOne, iconTwo, time, iconOneColor, iconTwoColor }) => {
   );
 };
 
+TimeStamp.propTypes = {
+  iconOne: PropTypes.object,
+  iconOneColor: PropTypes.string,
+  iconTwo: PropTypes.object,
+  iconTwoColor: PropTypes.string,
+  time: PropTypes.string,
+};
 export default TimeStamp;

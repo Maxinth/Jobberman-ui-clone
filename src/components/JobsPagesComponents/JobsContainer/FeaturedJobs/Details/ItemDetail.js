@@ -1,12 +1,7 @@
 import React from "react";
 import Detail from "./Detail";
-import styled from "styled-components";
+import { DetailsSection } from "./styled";
 import TimeStamp from "./TimeStamp";
-
-const DetailsSection = styled.section`
-  display: flex;
-  flex-direction: column;
-`;
 
 const ItemDetail = (props) => {
   const { timeStamp, ...remainingProps } = props;
@@ -19,3 +14,5 @@ const ItemDetail = (props) => {
 };
 
 export default ItemDetail;
+
+/* timeStamps object property is destructured in line 7 and it is spread in line 11 */

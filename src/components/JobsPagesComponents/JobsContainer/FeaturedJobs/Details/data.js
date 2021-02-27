@@ -13,7 +13,6 @@ export const data = [
     timeStamp: {
       iconOne: <StarIcon />,
       iconOneColor: "rgb(213, 44, 61)",
-      iconTwo: "",
       time: "4w",
     },
   },
@@ -40,7 +39,6 @@ export const data = [
     timeStamp: {
       iconOne: <StarIcon />,
       iconOneColor: "rgb(213, 44, 61)",
-      iconTwo: "",
       time: "1mo",
     },
   },
