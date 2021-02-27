@@ -30,7 +30,7 @@ const FindJobContainer = styled.div`
   background-image: linear-gradient(0deg, #1a4d98, #4168c6);
 `;
 
-const JobsContainer = styled.section`
+const JobsSection = styled.section`
   margin-top: 4.5rem;
 `;
-export { FindJobContainer, Title, BgBox, JobsContainer };
+export { FindJobContainer, Title, BgBox, JobsSection };
