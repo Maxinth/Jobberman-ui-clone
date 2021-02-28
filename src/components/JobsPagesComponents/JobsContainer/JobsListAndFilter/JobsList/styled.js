@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Container } from "../JobCount/styled";
+import { Container } from "../../JobCount/styled";
 
 const JobContainer = styled(Container)`
   padding: 2rem 1rem;
@@ -24,6 +24,10 @@ const Box = styled.div`
     css`
       display: flex;
       align-items: center;
+
+      > svg {
+        color: rgb(92, 184, 92);
+      }
     `}
 
   ${({ flexTwo }) =>
