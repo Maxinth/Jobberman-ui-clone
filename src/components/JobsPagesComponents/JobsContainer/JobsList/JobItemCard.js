@@ -4,15 +4,16 @@ import DetailsTopSection from "./DetailsTopSection";
 import DetailsBottomSection from "./DetailsBottomSection";
 import FinalSection from "./FinalSection";
 
-const JobItemCard = () => {
+const JobItemCard = (props) => {
+  const { jobTitle, jobModule, time, requirement, ...detailsTopProps } = props;
   return (
     <JobContainer>
-      <Post>Web/Social Media Associate</Post>
+      <Post>{jobTitle}</Post>
       <DetailsBox>
-        <DetailsTopSection />
-        <DetailsBottomSection />
+        <DetailsTopSection {...detailsTopProps} />
+        <DetailsBottomSection jobModule={jobModule} time={time} />
       </DetailsBox>
-      <FinalSection />
+      <FinalSection requirements={requirement} />
     </JobContainer>
   );
 };

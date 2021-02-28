@@ -4,6 +4,7 @@ import { Container } from "../JobCount/styled";
 const JobContainer = styled(Container)`
   padding: 2rem 1rem;
   line-height: 1.9;
+  margin-bottom: 1rem;
 `;
 const Box = styled.div`
   margin-top: ${({ main }) => (main ? "1rem" : "unset")};
