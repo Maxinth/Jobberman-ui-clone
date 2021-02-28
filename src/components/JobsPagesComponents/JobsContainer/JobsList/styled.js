@@ -1,9 +1,6 @@
-import React from "react";
 import styled, { css } from "styled-components";
 import { Container } from "../JobCount/styled";
 
-import DetailsTopSection from "./DetailsTopSection";
-import DetailsBottomSection from "./DetailsBottomSection";
 const JobContainer = styled(Container)`
   padding: 2rem 1rem;
 `;
@@ -41,18 +38,4 @@ const Span = styled.span`
   font-weight: ${({ bold }) => (bold ? "bold" : "unset")};
 `;
 
-const JobsList = () => {
-  return (
-    <Box main>
-      <JobContainer>
-        <Post>Web/Social Media Associate</Post>
-        <DetailsBox>
-          <DetailsTopSection />
-          <DetailsBottomSection />
-        </DetailsBox>
-      </JobContainer>
-    </Box>
-  );
-};
-
-export default JobsList;
+export { Span, DetailsBox, Text, Post, InnerBox, Box, JobContainer };
