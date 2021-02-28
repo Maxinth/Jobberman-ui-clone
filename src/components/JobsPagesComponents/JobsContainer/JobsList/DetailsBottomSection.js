@@ -1,6 +1,6 @@
 import React from "react";
 import { InnerBox, Text, Span, Box } from "./styled";
-// import StarIcon from "@material-ui/icons/Star";
+import PropTypes from "prop-types";
 import EcoIcon from "@material-ui/icons/Eco";
 
 const DetailsBottomSection = ({ jobModule, time }) => {
@@ -15,6 +15,11 @@ const DetailsBottomSection = ({ jobModule, time }) => {
       </Box>
     </InnerBox>
   );
+};
+
+DetailsBottomSection.propTypes = {
+  jobModule: PropTypes.string,
+  time: PropTypes.string,
 };
 
 export default DetailsBottomSection;

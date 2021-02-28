@@ -1,18 +1,19 @@
 import React from "react";
-import { JobContainer, DetailsBox, Post } from "./styled";
-import DetailsTopSection from "./DetailsTopSection";
-import DetailsBottomSection from "./DetailsBottomSection";
+import { JobContainer, Post } from "./styled";
+
 import FinalSection from "./FinalSection";
+import DetailsMain from "./DetailsMain";
 
 const JobItemCard = (props) => {
   const { jobTitle, jobModule, time, requirement, ...detailsTopProps } = props;
   return (
     <JobContainer>
       <Post>{jobTitle}</Post>
-      <DetailsBox>
-        <DetailsTopSection {...detailsTopProps} />
-        <DetailsBottomSection jobModule={jobModule} time={time} />
-      </DetailsBox>
+      <DetailsMain
+        detailsTopProps={detailsTopProps}
+        jobModule={jobModule}
+        time={time}
+      />
       <FinalSection requirements={requirement} />
     </JobContainer>
   );

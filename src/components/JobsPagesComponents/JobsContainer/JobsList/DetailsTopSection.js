@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, Span } from "./styled";
+import PropTypes from "prop-types";
 
 const DetailsTopSection = ({ company, location, jobType, salary }) => {
   return (
@@ -12,6 +13,13 @@ const DetailsTopSection = ({ company, location, jobType, salary }) => {
       </Text>
     </>
   );
+};
+
+DetailsTopSection.propTypes = {
+  jobType: PropTypes.string,
+  salary: PropTypes.string,
+  location: PropTypes.string,
+  company: PropTypes.string,
 };
 
 export default DetailsTopSection;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Span, Text } from "./styled";
 import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
+import PropTypes from "prop-types";
 
 const FinalSection = ({ requirements }) => {
   return (
@@ -11,6 +12,10 @@ const FinalSection = ({ requirements }) => {
       <Text>{requirements}</Text>
     </Box>
   );
+};
+
+FinalSection.propTypes = {
+  requirements: PropTypes.string,
 };
 
 export default FinalSection;
