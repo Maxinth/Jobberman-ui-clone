@@ -1,18 +1,14 @@
 import React from "react";
-import { InnerBox, Text, Span, Box } from "./styled";
+import { InnerBox } from "./styled";
 import PropTypes from "prop-types";
-import EcoIcon from "@material-ui/icons/Eco";
+import TimeBox from "./TimeBox";
+import InnerTopBox from "./InnerTopBox";
 
 const DetailsBottomSection = ({ jobModule, time }) => {
   return (
     <InnerBox main>
-      <InnerBox>
-        <Text>Job Function:</Text>
-        <Text>{jobModule}</Text>
-      </InnerBox>
-      <Box flex>
-        <EcoIcon /> <Span>{time}</Span>
-      </Box>
+      <InnerTopBox jobModule={jobModule} />
+      <TimeBox time={time} />
     </InnerBox>
   );
 };
