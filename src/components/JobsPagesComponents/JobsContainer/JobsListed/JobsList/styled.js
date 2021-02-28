@@ -12,6 +12,7 @@ const Box = styled.div`
   font-family: "Roboto", sans-serif;
   line-height: 1.7;
 
+  // pad prop
   ${({ pad }) =>
     pad &&
     css`
@@ -19,6 +20,8 @@ const Box = styled.div`
       border-top: 1px solid rgb(238, 238, 238);
       transform: translateY(20px);
     `}
+
+  // flex prop
   ${({ flex }) =>
     flex &&
     css`
@@ -30,7 +33,8 @@ const Box = styled.div`
       }
     `}
 
-  ${({ flexTwo }) =>
+    
+    ${({ flexTwo }) =>
     flexTwo &&
     css`
       display: flex;
@@ -38,7 +42,7 @@ const Box = styled.div`
       @media (min-width: 770px) {
         align-items: center;
       }
-    `}
+    `};
 `;
 
 const InnerBox = styled.div`

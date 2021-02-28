@@ -5,7 +5,7 @@ import { data } from "./data";
 
 const JobsList = () => {
   return (
-    <Box main>
+    <Box main item>
       {data.map((item, index) => (
         <JobItemCard key={index} {...item} />
       ))}

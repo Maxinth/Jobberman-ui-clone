@@ -4,7 +4,7 @@ import JobsList from "./JobsList";
 
 const Container = styled.section``;
 
-const JobsListAndFilter = () => {
+const JobsListed = () => {
   return (
     <Container>
       <JobsList />
@@ -12,4 +12,4 @@ const JobsListAndFilter = () => {
   );
 };
 
-export default JobsListAndFilter;
+export default JobsListed;
