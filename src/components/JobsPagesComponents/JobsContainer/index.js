@@ -4,6 +4,7 @@ import CTA from "../../CTA";
 import { Btn } from "../../StandOut/standOutElements";
 import JobCount from "./JobCount";
 import FeaturedJobs from "./FeaturedJobs";
+import JobsList from "./JobsList";
 
 const Container = styled.section`
   padding: 1rem 0;
@@ -18,6 +19,7 @@ const JobsContainer = () => {
       <CTA text="search filter" goTo="/" />
       <JobCount />
       <FeaturedJobs />
+      <JobsList />
     </Container>
   );
 };
