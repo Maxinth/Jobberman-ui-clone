@@ -1,22 +1,36 @@
 import React from "react";
 import HeaderMain from "../Header";
 import styled from "styled-components";
+import FormInputBox from "../../../Navbar/NavSideBar/NavSideBarForm";
+import FilterName from "./FilterItem";
+import { Container } from "../JobCount/styled";
 
-const Container = styled.section`
+const FilterContainer = styled(Container)`
   margin-top: 1rem;
-  /* grid-column: 9/-1; */
+  color: rgb(78, 85, 89);
   display: none;
+  background-color: #fff;
   @media (min-width: 1140px) {
     display: block;
     width: 35%;
     margin-left: 1rem;
   }
 `;
+
+const Box = styled.div`
+  form {
+    border: 1px solid rgb(231, 228, 228);
+  }
+`;
 const JobsFilter = () => {
   return (
-    <Container>
+    <FilterContainer>
       <HeaderMain text="Filter Results" el="h2" />
-    </Container>
+      <Box>
+        <FormInputBox />
+        <FilterName />
+      </Box>
+    </FilterContainer>
   );
 };
 
