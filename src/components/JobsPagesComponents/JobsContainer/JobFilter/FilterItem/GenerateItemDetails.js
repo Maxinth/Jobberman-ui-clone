@@ -1,13 +1,13 @@
 import React from "react";
 import ItemDetails from "./ItemDetails";
 
-const GenerateItemDetails = ({ data, selected, handleSelect }) => {
+const GenerateItemDetails = ({ data, itemSelected, handleSelect }) => {
   return (
     <>
       {data.map((item, index) => (
         <ItemDetails
-          selected={selected}
-          handleSelect={handleSelect}
+          selected={itemSelected === item.itemName}
+          handleSelect={() => handleSelect(item.itemName)}
           key={index}
           {...item}
         />

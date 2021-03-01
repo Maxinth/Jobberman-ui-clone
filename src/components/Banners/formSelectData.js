@@ -291,3 +291,11 @@ export const data = {
     ],
   },
 };
+
+const { jobFunctions, jobLocations, jobIndustries } = data;
+
+const { jobItems } = jobFunctions;
+const { locationItems } = jobLocations;
+const { industryItems } = jobIndustries;
+
+export { jobItems, locationItems, industryItems };

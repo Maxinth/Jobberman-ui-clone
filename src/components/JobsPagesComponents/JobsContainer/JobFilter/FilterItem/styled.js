@@ -26,6 +26,9 @@ const Box = styled.div`
     `}
 `;
 
+const MainBox = styled.section`
+  border-bottom: 1px solid rgb(231, 228, 228);
+`;
 const FilterOptionsBox = styled.section``;
 
 const SubContainer = styled.section`
@@ -48,4 +51,12 @@ const SubContainer = styled.section`
   }
 `;
 
-export { Container, Span, DropIcon, Box, SubContainer, FilterOptionsBox };
+export {
+  Container,
+  Span,
+  DropIcon,
+  Box,
+  SubContainer,
+  FilterOptionsBox,
+  MainBox,
+};

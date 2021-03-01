@@ -1,21 +1,31 @@
 import React, { useState } from "react";
 import GenerateItemDetails from "./GenerateItemDetails";
 import ItemName from "./ItemName";
+import { MainBox } from "./styled";
 
 const ItemMain = (props) => {
-  const [selected, setIsSelected] = useState(false);
-  const handleSelect = () => setIsSelected(!selected);
   const { filterTypeName, details } = props;
+
+  // state to toggle details
+  const [showDetails, setShowDetails] = useState(false);
+  const toggleDetails = () => setShowDetails(!showDetails);
+
+  // state to select a filter category via radio
+  const [itemSelected, setItemSelected] = useState("");
+  const handleSelect = (item) => setItemSelected(item);
+
   return (
-    <>
-      <ItemName name={filterTypeName} />
+    <MainBox>
+      <ItemName name={filterTypeName} toggleDetails={toggleDetails} />
       {/* drop down select */}
-      <GenerateItemDetails
-        data={details}
-        handleSelect={handleSelect}
-        selected={selected}
-      />
-    </>
+      {showDetails && (
+        <GenerateItemDetails
+          data={details}
+          handleSelect={handleSelect}
+          itemSelected={itemSelected}
+        />
+      )}
+    </MainBox>
   );
 };
 
