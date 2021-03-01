@@ -26,12 +26,7 @@ const Box = styled.div`
     `}
 `;
 
-// const MainBox = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   padding: 1rem 1.5rem;
-// `;
+const FilterOptionsBox = styled.section``;
 
 const SubContainer = styled.section`
   display: flex;
@@ -53,4 +48,4 @@ const SubContainer = styled.section`
   }
 `;
 
-export { Container, Span, DropIcon, Box, SubContainer };
+export { Container, Span, DropIcon, Box, SubContainer, FilterOptionsBox };

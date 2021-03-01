@@ -1,17 +1,12 @@
-import React, { useState } from "react";
-import ItemDetails from "./ItemDetails";
+import React from "react";
 import { Container } from "./styled";
-import ItemName from "./ItemName";
+import {data} from './data'
+import GenerateFilterItem from "./GenerateFilterItem";
 
 const FilterName = () => {
-  const [selected, setIsSelected] = useState(false);
-  const handleSelect = () => setIsSelected(!selected);
-
   return (
     <Container>
-      <ItemName />
-      {/* drop down select */}
-      <ItemDetails selected={selected} handleSelect={handleSelect} />
+          <GenerateFilterItem data={data}/>
     </Container>
   );
 };

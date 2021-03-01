@@ -2,11 +2,11 @@ import React from "react";
 import { Box, Span } from "./styled";
 import ItemRadio from "./ItemRadio";
 
-const ItemSubName = ({ selected }) => {
+const ItemSubName = ({ selected, name }) => {
   return (
     <Box>
       <ItemRadio selected={selected} />
-      <Span>Accounting, Auditing & Finance</Span>
+      <Span>{name}</Span>
     </Box>
   );
 };
