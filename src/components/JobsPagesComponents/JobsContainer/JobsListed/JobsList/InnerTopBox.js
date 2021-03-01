@@ -1,5 +1,5 @@
 import React from "react";
-import { InnerBox, Text, Span, Box } from "./styled";
+import { InnerBox, Text } from "./styled";
 import PropTypes from "prop-types";
 
 const InnerTopBox = ({ jobModule }) => {

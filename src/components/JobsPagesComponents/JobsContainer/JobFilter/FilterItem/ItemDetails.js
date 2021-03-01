@@ -13,7 +13,7 @@ const ItemDetails = ({ selected, handleSelect, count, itemName }) => {
 };
 
 ItemDetails.propTypes = {
-  selected: PropTypes.string,
+  selected: PropTypes.bool,
   handleSelect: PropTypes.func,
   count: PropTypes.number,
   itemName: PropTypes.string,

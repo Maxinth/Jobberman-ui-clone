@@ -51,6 +51,14 @@ const SubContainer = styled.section`
   }
 `;
 
+const ResetBtnContainer = styled.div`
+  padding: 1rem 1rem;
+  > button {
+    margin-top: 1rem;
+    width: 100%;
+  }
+`;
+
 export {
   Container,
   Span,
@@ -59,4 +67,5 @@ export {
   SubContainer,
   FilterOptionsBox,
   MainBox,
+  ResetBtnContainer,
 };
