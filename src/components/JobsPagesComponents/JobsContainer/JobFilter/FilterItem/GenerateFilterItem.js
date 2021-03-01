@@ -1,5 +1,6 @@
 import React from "react";
 import ItemMain from "./ItemMain";
+import PropTypes from "prop-types";
 
 const GenerateFilterItem = ({ data = [] }) => {
   return (
@@ -9,6 +10,10 @@ const GenerateFilterItem = ({ data = [] }) => {
       ))}
     </>
   );
+};
+
+GenerateFilterItem.propTypes = {
+  data: PropTypes.array,
 };
 
 export default GenerateFilterItem;

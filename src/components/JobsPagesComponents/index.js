@@ -7,7 +7,7 @@ import styled from "styled-components";
 import JobsContainer from "./JobsContainer";
 
 const ContentsBox = styled(Container)`
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 3.5rem;
 `;
 
 const JobsPage = () => {

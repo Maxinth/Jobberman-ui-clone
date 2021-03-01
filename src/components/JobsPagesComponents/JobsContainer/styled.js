@@ -19,4 +19,12 @@ const Container = styled.section`
   }
 `;
 
-export { Container };
+const JobsMainContainer = styled.section`
+  @media (min-width: 1140px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+`;
+
+export { Container, JobsMainContainer };

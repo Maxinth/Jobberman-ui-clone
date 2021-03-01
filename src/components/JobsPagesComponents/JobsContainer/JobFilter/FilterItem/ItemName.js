@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Box, DropIcon, Span } from "./styled";
+import PropTypes from "prop-types";
 
 const ItemName = ({ name, toggleDetails }) => {
   const [isClicked, setIsClicked] = useState(false);
@@ -18,4 +19,8 @@ const ItemName = ({ name, toggleDetails }) => {
   );
 };
 
+ItemName.propTypes = {
+  name: PropTypes.string,
+  toggleDetails: PropTypes.func,
+};
 export default ItemName;
