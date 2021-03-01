@@ -7,7 +7,7 @@ const NavRightMain = () => {
     <>
       <GenerateNavLinks />
       <NavBtn>
-        <NavLink to="/">post a free job</NavLink>
+        <NavLink to="/login">post a free job</NavLink>
       </NavBtn>
     </>
   );

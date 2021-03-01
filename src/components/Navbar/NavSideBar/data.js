@@ -17,7 +17,7 @@ const data = {
     { linkText: "sign up", goTo: "/sign-up" },
   ],
   // final section
-  post: [{ linkText: "post a free job", goTo: "/post-job" }],
+  post: [{ linkText: "post a free job", goTo: "/login" }],
 };
 
 // destructuring properties to be used in creating the sidebarItems array
