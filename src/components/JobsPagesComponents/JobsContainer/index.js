@@ -1,26 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import CTA from "../../CTA";
-import { Btn } from "../../StandOut/standOutElements";
-import JobCount from "./JobCount";
-import FeaturedJobs from "./FeaturedJobs";
-import JobsListed from "./JobsListed";
-
-const Container = styled.section`
-  padding: 1rem 0;
-  ${Btn} {
-    width: 100%;
+import JobsFilter from "./JobFilter";
+import JobsDetails from "./JobsDetails";
+const JobsMainContainer = styled.section`
+  @media (min-width: 1140px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 `;
 
 const JobsContainer = () => {
   return (
-    <Container>
-      <CTA text="search filter" goTo="/" />
-      <JobCount />
-      <FeaturedJobs />
-      <JobsListed />
-    </Container>
+    <JobsMainContainer>
+      <JobsDetails />
+      <JobsFilter />
+    </JobsMainContainer>
   );
 };
 

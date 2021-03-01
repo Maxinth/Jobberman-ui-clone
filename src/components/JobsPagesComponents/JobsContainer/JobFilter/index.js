@@ -5,10 +5,12 @@ import styled from "styled-components";
 const Container = styled.section`
   margin-top: 1rem;
   /* grid-column: 9/-1; */
-  /* display: none;
+  display: none;
   @media (min-width: 1140px) {
     display: block;
-  } */
+    width: 35%;
+    margin-left: 1rem;
+  }
 `;
 const JobsFilter = () => {
   return (
