@@ -6,7 +6,7 @@ const ItemDetails = ({ selected, handleSelect, count, itemName }) => {
   return (
     <SubContainer onClick={handleSelect}>
       <ItemSubName selected={selected} name={itemName} />
-      <Span>{count}</Span>
+      {count && <Span>{count}</Span>}
     </SubContainer>
   );
 };
