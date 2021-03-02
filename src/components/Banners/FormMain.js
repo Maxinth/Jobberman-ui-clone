@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import MainBannerForm from "./MainBannerForm";
 import { useJobs } from "./useJobs";
+import { useGlobalContext } from "../context";
 
 const FormMain = () => {
   const { onChange, selectBoxList } = useJobs();
+  const { handleSearch } = useGlobalContext();
   // state to get user's choice
 
   // const [choice, setChoice] = useState(selectBoxList);
@@ -16,6 +18,7 @@ const FormMain = () => {
     });
 
     console.log(filterParameters);
+    handleSearch(e, filterParameters);
   };
 
   return (

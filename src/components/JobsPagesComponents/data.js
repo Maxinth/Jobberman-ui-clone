@@ -6,6 +6,7 @@ export const data = [
     jobType: "Full Time",
     salary: "Confidential",
     jobModule: "Creative & Design ",
+    itemValue: "tech",
     time: "16h",
     requirement: `We are looking to hire an innovative Social Media associate who will be responsible to drive our goals through multiple social media channels and unique profiles. You will work closely with the digital manager to increase brand awareness, drive prospects to brand websites, and 
                     engaging influencers via paid and organic social media presence. 
@@ -18,6 +19,7 @@ export const data = [
     jobType: "Full Time",
     salary: "150,000 - 250,000 Negotiable",
     jobModule: "Accounting, Auditing & Finance",
+    itemValue: "accounting",
     time: "17h",
     requirement: ` 
              Are you a brilliant accountant with pristine accuracy at your Job with?
@@ -31,6 +33,7 @@ export const data = [
     jobType: "Full Time",
     salary: "Less than 75,000 Negotiable",
     jobModule: " Accounting, Auditing & Finance",
+    itemValue: "accounting",
     time: "17h",
     requirement: ` We are looking for a suitable candidate to fill this position.`,
   },
@@ -41,6 +44,7 @@ export const data = [
     jobType: "Full Time ",
     salary: "Less than 75,000",
     jobModule: "Admin & Office",
+    itemValue: "admin",
     time: "17h",
     requirement: `
                 We are looking to employ an Executive Assistant for our client. You will manage mostly business-related tasks for the team such as creating reports, organizing travel and accommodation, taking minutes, and other organizational tasks. 
@@ -53,6 +57,7 @@ export const data = [
     jobType: "Full Time ",
     salary: "75,000 - 150,000 Negotiable",
     jobModule: "Farming & Agriculture",
+    itemValue: "farming",
     time: "17h",
     requirement: `
         My client is an agribusiness company that accelerates the process of farming, supply and ensure enduser access to produce using cutting-edge technlogy, advance farm mechanism and excellent partneships to deliver internal and external customer satisfaction. We are looking for a motivated Purchasing Specialist to ensure we deliver quality service. 

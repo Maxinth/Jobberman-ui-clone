@@ -1,9 +1,9 @@
-
 import React, { useContext, createContext, useState } from "react";
-
+import useJobFilter from "./JobsPagesComponents/useJobFilter";
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
+  const { jobs, handleSearch } = useJobFilter();
   // sidebar state
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const toggleSideBar = () => setIsSideBarOpen(!isSideBarOpen);
@@ -12,6 +12,8 @@ const AppProvider = ({ children }) => {
       value={{
         isSideBarOpen,
         toggleSideBar,
+        jobs,
+        handleSearch,
       }}
     >
       {children}
