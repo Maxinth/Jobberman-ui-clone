@@ -9,5 +9,16 @@ export const filterConditions = (
     industryFilterInput.choice === "allIndustries" &&
     locationFilterInput.choice === "allLocations";
 
-  return { onlyModuleChanged };
+  // only Industry changed
+  const onlyIndustryChanged =
+    moduleFilterInput.choice === "allJobs" &&
+    industryFilterInput.choice !== "allIndustries" &&
+    locationFilterInput.choice === "allLocations";
+
+  const onlyLocationChanged =
+    moduleFilterInput.choice === "allJobs" &&
+    industryFilterInput.choice === "allIndustries" &&
+    locationFilterInput.choice !== "allLocations";
+
+  return { onlyModuleChanged, onlyIndustryChanged, onlyLocationChanged };
 };

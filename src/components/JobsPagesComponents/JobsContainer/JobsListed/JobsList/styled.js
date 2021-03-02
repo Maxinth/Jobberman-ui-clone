@@ -59,6 +59,19 @@ const InnerBox = styled.div`
       justify-content: space-between;
       align-items: flex-start;
     `}
+
+  ${({ inner = ".2rem" }) =>
+    inner &&
+    css`
+      @media (min-width: 1024px) {
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: flex-start;
+        > p:first-child {
+          margin-right: ${inner};
+        }
+      }
+    `}
 `;
 
 const Post = styled.h4`

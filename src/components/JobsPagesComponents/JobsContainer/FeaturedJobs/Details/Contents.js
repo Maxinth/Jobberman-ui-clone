@@ -9,7 +9,7 @@ const Contents = ({ position, company, location, jobType, jobModule }) => {
     <ContentBox>
       <CompanyAndPost position={position} company={company} />
       <JobLocation location={location} jobType={jobType} />
-      <Span>{jobModule}</Span>
+      <Span blue>{jobModule}</Span>
     </ContentBox>
   );
 };

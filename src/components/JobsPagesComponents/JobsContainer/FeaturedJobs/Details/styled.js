@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { LabelBox } from "../Label/styled";
 
 // Contents
@@ -21,6 +21,12 @@ const Span = styled.span`
     color: inherit;
     margin-top: 0.2rem;
   }
+
+  ${({ blue }) =>
+    blue &&
+    css`
+      color: rgb(36, 133, 175);
+    `}
 `;
 
 const Location = styled.div`
@@ -28,6 +34,23 @@ const Location = styled.div`
   flex-direction: column;
   > span {
     text-transform: capitalize;
+    display: block;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: center;
+    > span {
+      margin-right: 0.2rem;
+    }
+
+    > span:first-child::after {
+      content: " |";
+    }
+
+    /* > span + span {
+      margin-right: 0.5rem;
+    } */
   }
 `;
 
