@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { FormContainer, BannerForm } from "./banner.elements";
 import SelectBox from "./FormSelect";
 
-const MainBannerForm = ({ selectBoxList, onChange }) => {
+const MainBannerForm = ({ selectBoxList, onChange, handleSubmit }) => {
   return (
     <FormContainer>
       <BannerForm>
@@ -16,6 +16,7 @@ const MainBannerForm = ({ selectBoxList, onChange }) => {
               currentChoice={currentChoice}
               onChange={onChange}
               id={id}
+              handleSubmit={handleSubmit}
               // choice={choice}
             />
           );
@@ -28,6 +29,7 @@ const MainBannerForm = ({ selectBoxList, onChange }) => {
 MainBannerForm.propTypes = {
   selectBoxList: PropTypes.array,
   onChange: PropTypes.func,
+  handleSubmit: PropTypes.func,
 };
 
 export default MainBannerForm;

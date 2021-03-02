@@ -9,7 +9,7 @@ import {
 import SearchIcon from "@material-ui/icons/Search";
 import PropTypes from "prop-types";
 
-const SelectBox = ({ items, currentChoice, onChange, id }) => {
+const SelectBox = ({ items, currentChoice, onChange, id, handleSubmit }) => {
   return (
     <SelectBoxContainer twoItems={id === "locations"}>
       <SelectBoxItem
@@ -31,7 +31,7 @@ const SelectBox = ({ items, currentChoice, onChange, id }) => {
 
       {/* render only when the id is === 'locations' */}
       {id === "locations" && (
-        <SearchButton>
+        <SearchButton onClick={handleSubmit}>
           <SearchIcon />
           <SearchText>Search</SearchText>
         </SearchButton>
@@ -45,7 +45,7 @@ SelectBox.propTypes = {
   currentChoice: PropTypes.string,
   onChange: PropTypes.func,
   id: PropTypes.string,
-  // choice: PropTypes.object,
+  handleSubmit: PropTypes.func,
 };
 
 export default SelectBox;

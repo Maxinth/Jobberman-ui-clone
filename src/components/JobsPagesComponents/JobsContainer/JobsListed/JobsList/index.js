@@ -1,7 +1,6 @@
 import React from "react";
 import { Box } from "./styled";
 import JobItemCard from "./JobItemCard";
-// import { data } from "./data";
 import PropTypes from "prop-types";
 
 const JobsList = ({ data }) => {
