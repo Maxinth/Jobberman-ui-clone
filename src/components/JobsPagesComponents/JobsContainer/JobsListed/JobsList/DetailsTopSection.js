@@ -1,7 +1,7 @@
 import React from "react";
-import { Text, Span, InnerBox } from "./styled";
 import PropTypes from "prop-types";
 import GenerateTexts from "./GenerateTexts";
+import InnerBoxSection from "./InnerBoxSection";
 
 const DetailsTopSection = ({ company, location, jobType, salary }) => {
   const texts = [location, jobType];
@@ -9,12 +9,7 @@ const DetailsTopSection = ({ company, location, jobType, salary }) => {
   return (
     <>
       <GenerateTexts data={[company]} />
-      <InnerBox inner={".3rem"}>
-        <GenerateTexts data={texts} />
-        <Text shift>
-          <Span bold>NGN</Span> {salary}
-        </Text>
-      </InnerBox>
+      <InnerBoxSection texts={texts} salary={salary} />
     </>
   );
 };
