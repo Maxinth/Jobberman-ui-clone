@@ -2,7 +2,8 @@ import styled, { css } from "styled-components";
 import { Container } from "../../JobCount/styled";
 
 const JobContainer = styled(Container)`
-  padding: 2rem 1rem;
+  /* padding: 2rem 1rem; */
+  padding: 2rem 0;
   line-height: 1.9;
   margin-bottom: 1rem;
 `;
@@ -39,8 +40,13 @@ const Box = styled.div`
     css`
       display: flex;
       align-items: flex-start;
+      text-overflow: ellipsis;
+      overflow: auto;
+      max-height: 150px;
+      transition: max-height 0.2s;
       @media (min-width: 770px) {
         align-items: center;
+        max-height: unset;
       }
     `};
 `;
@@ -57,6 +63,7 @@ const InnerBox = styled.div`
 
 const Post = styled.h4`
   font-size: 1.2rem;
+  padding: 0 2rem;
 `;
 const Text = styled.p`
   text-overflow: ellipsis;
@@ -66,6 +73,7 @@ const Text = styled.p`
 `;
 const DetailsBox = styled.div`
   font-size: 0.9rem;
+  padding: 0 2rem;
 `;
 const Span = styled.span`
   font-weight: ${({ bold }) => (bold ? "bold" : "unset")};

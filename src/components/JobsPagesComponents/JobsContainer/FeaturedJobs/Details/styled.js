@@ -26,6 +26,9 @@ const Span = styled.span`
 const Location = styled.div`
   display: flex;
   flex-direction: column;
+  > span {
+    text-transform: capitalize;
+  }
 `;
 
 // Details

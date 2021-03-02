@@ -1,9 +1,10 @@
 import React from "react";
 import { Box } from "./styled";
 import JobItemCard from "./JobItemCard";
-import { data } from "./data";
+// import { data } from "./data";
+import PropTypes from "prop-types";
 
-const JobsList = () => {
+const JobsList = ({ data }) => {
   return (
     <Box main item>
       {data.map((item, index) => (
@@ -11,6 +12,10 @@ const JobsList = () => {
       ))}
     </Box>
   );
+};
+
+JobsList.propTypes = {
+  data: PropTypes.array,
 };
 
 export default JobsList;
