@@ -6,7 +6,7 @@ export const data = [
     jobType: "Full Time",
     salary: "Confidential",
     jobModule: "Creative & Design ",
-    itemValue: "tech",
+    itemValue: "creative",
     time: "16h",
     requirement: `We are looking to hire an innovative Social Media associate who will be responsible to drive our goals through multiple social media channels and unique profiles. You will work closely with the digital manager to increase brand awareness, drive prospects to brand websites, and 
                     engaging influencers via paid and organic social media presence. 

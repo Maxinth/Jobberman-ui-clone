@@ -1,17 +1,24 @@
 import { useState } from "react";
 import { data } from "./data";
+import { filterConditions } from "./filterConditions";
 
 const useJobFilter = () => {
   const [jobs, setJobs] = useState(data);
   const [filterParameters, setFilterParameters] = useState([]);
 
-  const moduleFilterInput = filterParameters[0];
-  const industryFilterInput = filterParameters[1];
-  const locationFilterInput = filterParameters[2];
-
   const handleSearch = (e, parameters) => {
     e.preventDefault();
     setFilterParameters(parameters);
+
+    const moduleFilterInput = parameters[0];
+    const industryFilterInput = parameters[1];
+    const locationFilterInput = parameters[2];
+
+    const { onlyModuleChanged } = filterConditions(
+      moduleFilterInput,
+      industryFilterInput,
+      locationFilterInput
+    );
 
     // spread out jobs into a new array - don't directly mutate jobs!
     const newJobs = [...jobs];
@@ -21,6 +28,7 @@ const useJobFilter = () => {
         return moduleFilterInput.choice === job.itemValue;
       }
       console.log("Not filtering by module ONLY just yet");
+      return null;
     });
 
     const jobsByLocationOnly = newJobs.filter((job) => {
@@ -29,6 +37,7 @@ const useJobFilter = () => {
         return locationFilterInput.choice === job.location;
       }
       console.log("Not filtering by location ONLY just yet");
+      return null;
     });
 
     const jobsByIndustryOnly = newJobs.filter((job) => {
@@ -37,14 +46,17 @@ const useJobFilter = () => {
         return industryFilterInput.choice === job.itemValue;
       }
       console.log("Not filtering by industries  ONLY just yet");
+      return null;
     });
 
-    if (
-      moduleFilterInput.choice !== "allJobs" &&
-      industryFilterInput.choice === "allIndustries" &&
+    if (onlyModuleChanged) {
+      setJobs(jobsByModuleOnly);
+    } else if (
+      moduleFilterInput.choice === "allJobs" &&
+      industryFilterInput.choice !== "allIndustries" &&
       locationFilterInput.choice === "allLocations"
     ) {
-      setJobs(jobsByModuleOnly);
+      setJobs(jobsByIndustryOnly);
     }
   };
 
