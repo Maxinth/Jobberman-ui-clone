@@ -70,6 +70,23 @@ const InnerBox = styled.div`
         > p:first-child {
           margin-right: ${inner};
         }
+
+        p:not(:last-child)::after {
+          content: " | ";
+        }
+      }
+    `}
+  ${({ noGen }) =>
+    noGen &&
+    css`
+      @media (min-width: 1024px) {
+        p:not(:last-child)::after {
+          content: unset;
+        }
+
+        p:first-child {
+          margin-right: 0.2rem;
+        }
       }
     `}
 `;
@@ -83,6 +100,14 @@ const Text = styled.p`
   @media (min-width: 800px) {
     text-overflow: unset;
   }
+
+  ${({ shift }) =>
+    shift &&
+    css`
+      @media (min-width: 1024px) {
+        margin-left: 0.2rem;
+      }
+    `}
 `;
 const DetailsBox = styled.div`
   font-size: 0.9rem;

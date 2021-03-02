@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const InnerTopBox = ({ jobModule }) => {
   return (
-    <InnerBox inner>
+    <InnerBox inner noGen>
       <Text>Job Function:</Text>
       <Text>{jobModule}</Text>
     </InnerBox>
