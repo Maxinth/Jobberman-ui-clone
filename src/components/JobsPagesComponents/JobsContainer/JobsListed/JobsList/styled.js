@@ -44,6 +44,12 @@ const Box = styled.div`
       overflow: auto;
       max-height: 150px;
       transition: max-height 0.2s;
+      padding: 1rem 2rem;
+
+      p {
+        font-size: 0.9rem;
+        padding-right: 1rem;
+      }
       @media (min-width: 770px) {
         align-items: center;
         max-height: unset;
@@ -97,6 +103,7 @@ const Post = styled.h4`
 `;
 const Text = styled.p`
   text-overflow: ellipsis;
+  text-transform: capitalize;
   @media (min-width: 800px) {
     text-overflow: unset;
   }
@@ -112,6 +119,10 @@ const Text = styled.p`
 const DetailsBox = styled.div`
   font-size: 0.9rem;
   padding: 0 2rem;
+  > p {
+    color: rgb(36, 133, 175);
+    font-weight: 600;
+  }
 `;
 const Span = styled.span`
   font-weight: ${({ bold }) => (bold ? "bold" : "unset")};

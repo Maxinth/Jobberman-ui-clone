@@ -4,21 +4,27 @@ export const filterConditions = (
   locationFilterInput
 ) => {
   // various condtions for filter
+
+  // destructuring choice and giving it a different alias depending on the input
+  const { choice: moduleChoice } = moduleFilterInput;
+  const { choice: industryChoice } = industryFilterInput;
+  const { choice: locationChoice } = locationFilterInput;
+
   const onlyModuleChanged =
-    moduleFilterInput.choice !== "allJobs" &&
-    industryFilterInput.choice === "allIndustries" &&
-    locationFilterInput.choice === "allLocations";
+    moduleChoice !== "allJobs" &&
+    industryChoice === "allIndustries" &&
+    locationChoice === "allLocations";
 
   // only Industry changed
   const onlyIndustryChanged =
-    moduleFilterInput.choice === "allJobs" &&
-    industryFilterInput.choice !== "allIndustries" &&
-    locationFilterInput.choice === "allLocations";
+    moduleChoice === "allJobs" &&
+    industryChoice !== "allIndustries" &&
+    locationChoice === "allLocations";
 
   const onlyLocationChanged =
-    moduleFilterInput.choice === "allJobs" &&
-    industryFilterInput.choice === "allIndustries" &&
-    locationFilterInput.choice !== "allLocations";
+    moduleChoice === "allJobs" &&
+    industryChoice === "allIndustries" &&
+    locationChoice !== "allLocations";
 
   return { onlyModuleChanged, onlyIndustryChanged, onlyLocationChanged };
 };

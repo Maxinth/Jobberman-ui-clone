@@ -14,7 +14,7 @@ const useJobFilter = () => {
     const industryFilterInput = parameters[1];
     const locationFilterInput = parameters[2];
 
-    const { onlyModuleChanged } = filterConditions(
+    const { onlyModuleChanged, onlyLocationChanged } = filterConditions(
       moduleFilterInput,
       industryFilterInput,
       locationFilterInput
@@ -51,12 +51,8 @@ const useJobFilter = () => {
 
     if (onlyModuleChanged) {
       setJobs(jobsByModuleOnly);
-    } else if (
-      moduleFilterInput.choice === "allJobs" &&
-      industryFilterInput.choice !== "allIndustries" &&
-      locationFilterInput.choice === "allLocations"
-    ) {
-      setJobs(jobsByIndustryOnly);
+    } else if (onlyLocationChanged) {
+      setJobs(jobsByLocationOnly);
     }
   };
 
