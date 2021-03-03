@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { data } from "./data";
 import { filterConditions } from "./filterConditions";
-import { oneChoiceFilter, getInputs, twoChoicesFilter } from "./jobFilters";
+import {
+  oneChoiceFilter,
+  getInputs,
+  multipleChoicesFilter,
+} from "./jobFilters";
 
 const useJobFilter = () => {
   const [jobs, setJobs] = useState(data);
@@ -27,6 +31,7 @@ const useJobFilter = () => {
       bothModuleAndIndustry,
       bothModuleAndLocation,
       bothIndustryAndLocation,
+      checkAll,
     } = filterConditions(...inputs);
 
     // spread out jobs into a new array - don't directly mutate jobs!
@@ -41,7 +46,8 @@ const useJobFilter = () => {
       jobsByModuleAndIndustry,
       jobsByModuleAndLocation,
       jobsByLocationAndIndustry,
-    } = twoChoicesFilter(jobsByModuleOnly, jobsByLocationOnly, ...inputs);
+      fullOptions,
+    } = multipleChoicesFilter(jobsByModuleOnly, jobsByLocationOnly, ...inputs);
 
     if (onlyModuleChanged) {
       setJobs(jobsByModuleOnly);
@@ -55,6 +61,8 @@ const useJobFilter = () => {
       setJobs(jobsByModuleAndLocation);
     } else if (bothIndustryAndLocation) {
       setJobs(jobsByLocationAndIndustry);
+    } else if (checkAll) {
+      setJobs(fullOptions);
     }
 
     console.log(jobs);

@@ -41,7 +41,7 @@ export const filterConditions = (
     industryChoice !== "allIndustries" &&
     locationChoice !== "allLocations";
 
-  const allChoicesSearch =
+  const checkAll =
     moduleChoice !== "allJobs" &&
     industryChoice !== "allIndustries" &&
     locationChoice !== "allLocations";
@@ -53,6 +53,6 @@ export const filterConditions = (
     bothModuleAndIndustry,
     bothModuleAndLocation,
     bothIndustryAndLocation,
-    allChoicesSearch,
+    checkAll,
   };
 };
