@@ -7,10 +7,6 @@ export const multipleChoicesFilter = (
 ) => {
   // filter by module and industry
   const jobsByModuleAndIndustry = jobsByModuleOnly.filter((job) => {
-    // console.log(job);
-    // console.log(industryFilterInput);
-    // console.log(moduleFilterInput);
-    // console.log(job.industry === industryFilterInput.choice);
     return job.industry === industryFilterInput.choice;
   });
 
@@ -24,6 +20,7 @@ export const multipleChoicesFilter = (
     return job.industry === industryFilterInput.choice;
   });
 
+  // filtering by location AND industry AND THEN BY MODULE
   const fullOptions = jobsByLocationAndIndustry.filter((job) => {
     return job.itemValue === moduleFilterInput.choice;
   });
