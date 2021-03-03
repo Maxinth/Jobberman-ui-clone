@@ -37,10 +37,10 @@ const useJobFilter = () => {
       jobsByModuleOnly,
     } = oneChoiceFilter(newJobs, ...inputs);
 
-    const { jobsByModuleAndIndustry } = twoChoicesFilter(
-      jobsByModuleOnly,
-      ...inputs
-    );
+    const {
+      jobsByModuleAndIndustry,
+      jobsByModuleAndLocation,
+    } = twoChoicesFilter(jobsByModuleOnly, ...inputs);
 
     if (onlyModuleChanged) {
       setJobs(jobsByModuleOnly);
@@ -50,6 +50,8 @@ const useJobFilter = () => {
       setJobs(jobsByIndustryOnly);
     } else if (bothModuleAndIndustry) {
       setJobs(jobsByModuleAndIndustry);
+    } else if (bothModuleAndLocation) {
+      setJobs(jobsByModuleAndLocation);
     }
 
     console.log(jobs);

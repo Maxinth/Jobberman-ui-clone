@@ -1,6 +1,5 @@
 export const twoChoicesFilter = (
   jobsByModuleOnly,
-
   moduleFilterInput,
   industryFilterInput,
   locationFilterInput
@@ -14,5 +13,10 @@ export const twoChoicesFilter = (
     return job.industry === industryFilterInput.choice;
   });
 
-  return { jobsByModuleAndIndustry };
+  // filtering by module and location
+  const jobsByModuleAndLocation = jobsByModuleOnly.filter((job) => {
+    return job.location === locationFilterInput.choice;
+  });
+
+  return { jobsByModuleAndIndustry, jobsByModuleAndLocation };
 };
