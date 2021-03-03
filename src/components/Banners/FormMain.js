@@ -9,7 +9,6 @@ const FormMain = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(selectBoxList);
 
     const filterParameters = selectBoxList.map((item) => {
       return { id: item.id, choice: item.currentChoice };

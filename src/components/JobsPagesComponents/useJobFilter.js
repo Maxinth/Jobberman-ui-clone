@@ -16,7 +16,11 @@ const useJobFilter = () => {
     const industryFilterInput = parameters[1];
     const locationFilterInput = parameters[2];
 
-    const { onlyModuleChanged, onlyLocationChanged } = filterConditions(
+    const {
+      onlyModuleChanged,
+      onlyLocationChanged,
+      onlyIndustryChanged,
+    } = filterConditions(
       moduleFilterInput,
       industryFilterInput,
       locationFilterInput
@@ -24,6 +28,7 @@ const useJobFilter = () => {
 
     // spread out jobs into a new array - don't directly mutate jobs!
     const newJobs = [...jobs];
+
     const jobsByModuleOnly = newJobs.filter((job) => {
       // console.log("search by sector only");
       if (moduleFilterInput.id === "jobs") {
@@ -45,7 +50,7 @@ const useJobFilter = () => {
     const jobsByIndustryOnly = newJobs.filter((job) => {
       // console.log("search by location only");
       if (industryFilterInput.id === "industries") {
-        return industryFilterInput.choice === job.itemValue;
+        return industryFilterInput.choice === job.industry;
       }
       console.log("Not filtering by industries  ONLY just yet");
       return null;
@@ -55,6 +60,8 @@ const useJobFilter = () => {
       setJobs(jobsByModuleOnly);
     } else if (onlyLocationChanged) {
       setJobs(jobsByLocationOnly);
+    } else if (onlyIndustryChanged) {
+      setJobs(jobsByIndustryOnly);
     }
   };
 
