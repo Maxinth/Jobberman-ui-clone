@@ -1,5 +1,6 @@
 export { oneChoiceFilter } from "./oneChoiceFilter";
 export { multipleChoicesFilter } from "./multipleChoicesFilter";
+export { FilterJobsByInput } from "./FilterJobsByInput";
 
 // custom function to expose function parameters to be spread in other function's signature
 export const getInputs = (parameters) => {
