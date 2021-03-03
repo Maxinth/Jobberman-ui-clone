@@ -6,6 +6,8 @@ const useJobFilter = () => {
   const [jobs, setJobs] = useState(data);
   const [filterParameters, setFilterParameters] = useState([]);
 
+  const resetToInitialData = () => setJobs(data);
+
   const handleSearch = (e, parameters) => {
     e.preventDefault();
     setFilterParameters(parameters);
@@ -56,7 +58,7 @@ const useJobFilter = () => {
     }
   };
 
-  return { jobs, handleSearch };
+  return { jobs, handleSearch, resetToInitialData };
 };
 
 export default useJobFilter;

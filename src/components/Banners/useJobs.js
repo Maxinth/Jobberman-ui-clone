@@ -10,11 +10,13 @@ export const useJobs = () => {
   const { industryId, industryItems } = jobIndustries;
   const { locationId, locationItems } = jobLocations;
 
-  const [choice, setChoice] = useState({
+  const initialValues = {
     jobs: jobItems[0].itemValue,
     industries: industryItems[0].itemValue,
     locations: locationItems[0].itemValue,
-  });
+  };
+
+  const [choice, setChoice] = useState(initialValues);
 
   const { jobs, industries, locations } = choice;
 
@@ -25,6 +27,12 @@ export const useJobs = () => {
       [e.target.id]: e.target.value,
     });
   };
+  // console.log(choice);
+
+  // reset to initial values
+  const resetChoicesValues = () => {
+    setChoice(initialValues);
+  };
 
   const selectBoxList = [
     { items: jobItems, currentChoice: jobs, id: jobId },
@@ -32,7 +40,7 @@ export const useJobs = () => {
     { items: locationItems, currentChoice: locations, id: locationId },
   ];
 
-  return { selectBoxList, onChange };
+  return { selectBoxList, onChange, resetChoicesValues, choice, initialValues };
 };
 
 /*

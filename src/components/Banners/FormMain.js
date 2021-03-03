@@ -6,9 +6,7 @@ import { useGlobalContext } from "../context";
 const FormMain = () => {
   const { onChange, selectBoxList } = useJobs();
   const { handleSearch } = useGlobalContext();
-  // state to get user's choice
 
-  // const [choice, setChoice] = useState(selectBoxList);
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(selectBoxList);

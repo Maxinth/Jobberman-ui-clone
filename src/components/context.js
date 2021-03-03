@@ -1,9 +1,13 @@
 import React, { useContext, createContext, useState } from "react";
 import useJobFilter from "./JobsPagesComponents/useJobFilter";
+import { useJobs } from "./Banners/useJobs";
+
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-  const { jobs, handleSearch } = useJobFilter();
+  const { jobs, handleSearch, resetToInitialData } = useJobFilter();
+  const { resetChoicesValues, choice, initialValues } = useJobs();
+
   // sidebar state
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const toggleSideBar = () => setIsSideBarOpen(!isSideBarOpen);
@@ -14,6 +18,10 @@ const AppProvider = ({ children }) => {
         toggleSideBar,
         jobs,
         handleSearch,
+        resetToInitialData,
+        resetChoicesValues,
+        choice,
+        initialValues,
       }}
     >
       {children}
