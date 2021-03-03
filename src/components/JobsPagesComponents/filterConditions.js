@@ -26,5 +26,33 @@ export const filterConditions = (
     industryChoice === "allIndustries" &&
     locationChoice !== "allLocations";
 
-  return { onlyModuleChanged, onlyIndustryChanged, onlyLocationChanged };
+  const bothModuleAndIndustry =
+    moduleChoice !== "allJobs" &&
+    industryChoice !== "allIndustries" &&
+    locationChoice === "allLocations";
+
+  const bothModuleAndLocation =
+    moduleChoice !== "allJobs" &&
+    industryChoice === "allIndustries" &&
+    locationChoice !== "allLocations";
+
+  const bothIndustryAndLocation =
+    moduleChoice === "allJobs" &&
+    industryChoice !== "allIndustries" &&
+    locationChoice !== "allLocations";
+
+  const allChoicesSearch =
+    moduleChoice !== "allJobs" &&
+    industryChoice !== "allIndustries" &&
+    locationChoice !== "allLocations";
+
+  return {
+    onlyModuleChanged,
+    onlyIndustryChanged,
+    onlyLocationChanged,
+    bothModuleAndIndustry,
+    bothModuleAndLocation,
+    bothIndustryAndLocation,
+    allChoicesSearch,
+  };
 };
