@@ -9,14 +9,17 @@ const useJobFilter = () => {
 
   // state to determine the array of joblists in view based on page.
   const [jobs, setJobs] = useState(data[pageNo]);
+
   const resetToInitialData = () => setJobs(data[pageNo]);
+  // console.log(data[0]);
+  // console.log(data[1]);
 
   const handleSearch = (e, parameters) => {
     e.preventDefault();
     FilterJobsByInput(parameters, jobs, setJobs);
   };
 
-  return { jobs, handleSearch, resetToInitialData, changePage };
+  return { jobs, handleSearch, resetToInitialData, changePage, pageNo, data };
 };
 
 export default useJobFilter;

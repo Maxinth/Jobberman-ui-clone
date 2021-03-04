@@ -47,6 +47,7 @@ const Page = styled.div`
 
 const MockPagination = () => {
   const { changePage } = useGlobalContext();
+
   return (
     <Container>
       {data.map((item, index) => (
