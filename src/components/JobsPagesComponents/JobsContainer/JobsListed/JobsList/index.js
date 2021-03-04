@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "./styled";
 import JobItemCard from "./JobItemCard";
 import PropTypes from "prop-types";
+import MockPagination from "./MockPagination";
 
 const JobsList = ({ data }) => {
   return (
@@ -9,6 +10,7 @@ const JobsList = ({ data }) => {
       {data.map((item, index) => (
         <JobItemCard key={index} {...item} />
       ))}
+      <MockPagination />
     </Box>
   );
 };
