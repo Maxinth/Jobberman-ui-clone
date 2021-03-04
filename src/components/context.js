@@ -5,7 +5,7 @@ import { useJobs } from "./Banners/useJobs";
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-  const { jobs, handleSearch, resetToInitialData } = useJobFilter();
+  const { jobs, handleSearch, resetToInitialData, changePage } = useJobFilter();
   const { resetChoicesValues, choice, initialValues } = useJobs();
 
   // sidebar state
@@ -22,6 +22,7 @@ const AppProvider = ({ children }) => {
         resetChoicesValues,
         choice,
         initialValues,
+        changePage,
       }}
     >
       {children}

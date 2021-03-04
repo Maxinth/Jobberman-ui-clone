@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { data } from "../../../../data";
+import { useGlobalContext } from "../../../../../context";
 
 const Container = styled.section`
   display: flex;
@@ -45,10 +46,13 @@ const Page = styled.div`
 `;
 
 const MockPagination = () => {
+  const { changePage } = useGlobalContext();
   return (
     <Container>
       {data.map((item, index) => (
-        <Page key={index}>{index + 1}</Page>
+        <Page key={index} onClick={() => changePage(index)}>
+          {index + 1}
+        </Page>
       ))}
     </Container>
   );
