@@ -3,9 +3,10 @@ import { data } from "./data";
 import { FilterJobsByInput } from "./jobFilters";
 
 const useJobFilter = () => {
-  const [jobs, setJobs] = useState(data);
+  // const [jobs, setJobs] = useState(data);
+  const [jobs, setJobs] = useState(data[0]);
 
-  const resetToInitialData = () => setJobs(data);
+  const resetToInitialData = () => setJobs(data[0]);
 
   const handleSearch = (e, parameters) => {
     e.preventDefault();

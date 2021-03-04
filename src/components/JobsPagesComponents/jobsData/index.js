@@ -1,0 +1,1 @@
+export { pageOne } from "./pageOne";
