@@ -46,7 +46,8 @@ const Page = styled.div`
 `;
 
 const MockPagination = () => {
-  const { changePage } = useGlobalContext();
+  const { changePage, jobs, pageNo } = useGlobalContext();
+  console.log("jobs from pagination = ", jobs, "pageNo = ", pageNo);
 
   return (
     <Container>

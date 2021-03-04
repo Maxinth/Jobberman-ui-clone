@@ -5,7 +5,11 @@ import { FilterJobsByInput } from "./jobFilters";
 const useJobFilter = () => {
   //state to manage job page - when mocking pagination
   const [pageNo, setPageNo] = useState(0);
-  const changePage = (n) => setPageNo(n);
+  const changePage = (n) => {
+    setPageNo(n);
+    setJobs(data[n]); // show array data whose index matches pageNo
+    console.log("pageNo inside changePage = ", pageNo);
+  };
 
   // state to determine the array of joblists in view based on page.
   const [jobs, setJobs] = useState(data[pageNo]);
