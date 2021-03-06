@@ -3,10 +3,8 @@ import {
   SelectBoxItem,
   SelectBoxOption,
   SelectBoxContainer,
-  SearchButton,
-  SearchText,
 } from "./banner.elements";
-import SearchIcon from "@material-ui/icons/Search";
+import SearchBtn from "./SearchBtn";
 import PropTypes from "prop-types";
 
 const SelectBox = ({ items, currentChoice, onChange, id, handleSubmit }) => {
@@ -30,12 +28,7 @@ const SelectBox = ({ items, currentChoice, onChange, id, handleSubmit }) => {
       </SelectBoxItem>
 
       {/* render only when the id is === 'locations' */}
-      {id === "locations" && (
-        <SearchButton onClick={handleSubmit}>
-          <SearchIcon />
-          <SearchText>Search</SearchText>
-        </SearchButton>
-      )}
+      {id === "locations" && <SearchBtn handleSubmit={handleSubmit} />}
     </SelectBoxContainer>
   );
 };
