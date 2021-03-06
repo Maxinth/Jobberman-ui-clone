@@ -4,8 +4,7 @@ import { data } from "../../../../data";
 import { useGlobalContext } from "../../../../../context";
 
 const MockPagination = () => {
-  const { changePage, jobs, pageNo } = useGlobalContext();
-  console.log("jobs from pagination = ", jobs, "pageNo = ", pageNo);
+  const { changePage } = useGlobalContext();
 
   return (
     <Container>

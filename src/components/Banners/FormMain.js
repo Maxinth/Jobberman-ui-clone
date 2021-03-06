@@ -4,17 +4,11 @@ import { useJobs } from "./useJobs";
 import { useGlobalContext } from "../context";
 
 const FormMain = () => {
-  const { onChange, selectBoxList } = useJobs();
+  const { onChange, selectBoxList, filterParameters } = useJobs();
   const { handleSearch } = useGlobalContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const filterParameters = selectBoxList.map((item) => {
-      return { id: item.id, choice: item.currentChoice };
-    });
-
-    console.log(filterParameters);
     handleSearch(e, filterParameters);
   };
 

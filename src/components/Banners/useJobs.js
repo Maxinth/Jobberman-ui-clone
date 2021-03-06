@@ -27,20 +27,32 @@ export const useJobs = () => {
       [e.target.id]: e.target.value,
     });
   };
-  // console.log(choice);
 
   // reset to initial values
   const resetChoicesValues = () => {
     setChoice(initialValues);
   };
 
+  // data for selectBoxes
   const selectBoxList = [
     { items: jobItems, currentChoice: jobs, id: jobId },
     { items: industryItems, currentChoice: industries, id: industryId },
     { items: locationItems, currentChoice: locations, id: locationId },
   ];
 
-  return { selectBoxList, onChange, resetChoicesValues, choice, initialValues };
+  // An array of the items selected to be used as identifiers to be filtered from global jobs data
+  const filterParameters = selectBoxList.map((item) => {
+    return { id: item.id, choice: item.currentChoice };
+  });
+
+  return {
+    selectBoxList,
+    onChange,
+    resetChoicesValues,
+    choice,
+    initialValues,
+    filterParameters,
+  };
 };
 
 /*

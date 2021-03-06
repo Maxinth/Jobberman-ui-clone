@@ -5,6 +5,7 @@ import { useJobs } from "./Banners/useJobs";
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
+  // destructuring need data from useJobFilter custom hook
   const {
     jobs,
     handleSearch,
@@ -13,11 +14,14 @@ const AppProvider = ({ children }) => {
     pageNo,
     data,
   } = useJobFilter();
+
+  // destructuring need data from useJobs custom hook
   const { resetChoicesValues, choice, initialValues } = useJobs();
 
   // sidebar state
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const toggleSideBar = () => setIsSideBarOpen(!isSideBarOpen);
+
   return (
     <AppContext.Provider
       value={{
