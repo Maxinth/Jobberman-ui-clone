@@ -198,7 +198,7 @@ Key areas of responsibility include HR, payroll management, and general administ
   },
   {
     jobTitle: "Facility Manager",
-    company: "",
+    company: "Emithron Investments",
     location: "lagos",
     jobType: "Full Time",
     salary: "150,000 - 250,000",
