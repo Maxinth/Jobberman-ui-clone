@@ -1,3 +1,3 @@
-import { pageOne, pageTwo, pageThree, pageFour } from "./jobsData";
+import { pageOne, pageTwo, pageThree, pageFour, pageFive } from "./jobsData";
 
-export const data = [pageOne, pageTwo, pageThree, pageFour];
+export const data = [pageOne, pageTwo, pageThree, pageFour, pageFive];
