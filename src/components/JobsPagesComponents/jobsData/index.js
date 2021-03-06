@@ -3,3 +3,4 @@ export { pageTwo } from "./pageTwo";
 export { pageThree } from "./pageThree";
 export { pageFour } from "./pageFour";
 export { pageFive } from "./pageFive";
+export { pageSix } from "./pageSix";
