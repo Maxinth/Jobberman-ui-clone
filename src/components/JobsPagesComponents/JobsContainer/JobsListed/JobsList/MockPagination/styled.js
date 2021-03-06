@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Container = styled.section`
   display: flex;
@@ -17,22 +17,35 @@ const Page = styled.div`
   align-items: center;
   justify-content: center;
 
-  padding: 0.5rem 1.4rem;
-  border: 3px solid ghostwhite;
-  border-radius: 50px;
+  /* padding: 0.5rem 1.4rem; */
+  padding: 0.3rem 0.9rem;
+  border: 1px solid grey;
+  border-radius: 4px;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
-  background-color: grey;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  margin-right: 0.1rem;
-
+  margin-right: 0.2rem;
+  max-height: 40px;
   :hover {
-    color: black;
-    background: #fff;
-    border: 3px solid grey;
+    color: #fff;
+    background: grey;
+    border: 1px solid #fff;
   }
+
+  ${({ currentPage }) =>
+    currentPage &&
+    css`
+      background-color: rgb(255, 98, 0);
+      color: #fff;
+
+      :hover {
+        background-color: rgb(255, 98, 0);
+        color: #fff;
+      }
+    `}
 `;
 
 export { Container, Page };
