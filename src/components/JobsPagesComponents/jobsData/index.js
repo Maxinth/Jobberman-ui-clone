@@ -6,3 +6,4 @@ export { pageFive } from "./pageFive";
 export { pageSix } from "./pageSix";
 export { pageSeven } from "./pageSeven";
 export { pageEight } from "./pageEight";
+export { pageNine } from "./pageNine";
