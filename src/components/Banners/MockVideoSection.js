@@ -1,22 +1,14 @@
-import styled from "styled-components";
-import { VideoContainer, BannerVideo, BannerBtn } from "./banner.elements";
-import PlayCircleOutlineOutlinedIcon from "@material-ui/icons/PlayCircleOutlineOutlined";
+import { VideoContainer, BannerBtn } from "./banner.elements";
 import { Link, useLocation } from "react-router-dom";
 import { renderByLocation } from "./bannerData";
 import React from "react";
-
-const Text = styled.span`
-  text-transform: capitalize;
-`;
+import BannerVideoIcon from "./BannerVideoIcon";
 
 const MockVideoSection = () => {
   const location = useLocation();
   return (
     <VideoContainer>
-      <BannerVideo>
-        <PlayCircleOutlineOutlinedIcon />
-        <Text>Watch the Video</Text>
-      </BannerVideo>
+      <BannerVideoIcon />
       <BannerBtn>
         <Link to="/sign-up">{renderByLocation(location)}</Link>
       </BannerBtn>

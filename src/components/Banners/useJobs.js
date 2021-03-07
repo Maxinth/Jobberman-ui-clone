@@ -10,6 +10,7 @@ export const useJobs = () => {
   const { industryId, industryItems } = jobIndustries;
   const { locationId, locationItems } = jobLocations;
 
+  // values at initial load
   const initialValues = {
     jobs: jobItems[0].itemValue,
     industries: industryItems[0].itemValue,

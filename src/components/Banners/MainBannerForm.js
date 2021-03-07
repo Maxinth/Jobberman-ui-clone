@@ -17,7 +17,6 @@ const MainBannerForm = ({ selectBoxList, onChange, handleSubmit }) => {
               onChange={onChange}
               id={id}
               handleSubmit={handleSubmit}
-              // choice={choice}
             />
           );
         })}

@@ -318,6 +318,10 @@ const MainContainer = styled.div`
   padding: 1rem;
 `;
 
+const VideoText = styled.span`
+  text-transform: capitalize;
+`;
+
 export {
   SelectBoxItem,
   SelectBoxOption,
@@ -339,4 +343,5 @@ export {
   SearchText,
   Container,
   MainContainer,
+  VideoText,
 };

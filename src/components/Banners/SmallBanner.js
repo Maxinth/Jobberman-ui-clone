@@ -1,18 +1,11 @@
 import React from "react";
-import {
-  SmallBannerBox,
-  SmallBannerContainer,
-  Text,
-  BannerLink,
-} from "./banner.elements";
+import { SmallBannerBox } from "./banner.elements";
+import SmallBannerContents from "./SmallBannerContents";
+
 const SmallBanner = () => {
   return (
     <SmallBannerBox>
-      <SmallBannerContainer>
-        <Text>Seize Your Next Opportunity!</Text>
-        <Text>Top companies on Jobberman are looking for you</Text>
-        <BannerLink to="/">Get Started Today</BannerLink>
-      </SmallBannerContainer>
+      <SmallBannerContents />
     </SmallBannerBox>
   );
 };
