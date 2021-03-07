@@ -206,7 +206,7 @@ export const data = {
       },
       {
         itemName: "Ibadan & Oyo",
-        itemValue: "ibadanOyo",
+        itemValue: "oyo",
       },
       {
         itemName: "Imo",
@@ -278,11 +278,11 @@ export const data = {
       },
       {
         itemName: "Port Harcourt & Rivers",
-        itemValue: "phRivers",
+        itemValue: "rivers",
       },
       {
         itemName: "Rest of Nigeria",
-        itemValue: "restOfNigeria",
+        itemValue: "rest of nigeria",
       },
       {
         itemName: "Taraba",

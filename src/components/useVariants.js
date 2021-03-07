@@ -4,7 +4,7 @@ const variantProps = {
   hover: "hover",
 };
 
-const landRVariant = (direction, delay) => {
+const landRVariant = (direction, delay = 0) => {
   return {
     hidden: {
       x: direction,

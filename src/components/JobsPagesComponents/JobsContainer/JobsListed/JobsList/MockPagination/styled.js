@@ -4,10 +4,16 @@ const Container = styled.section`
   display: flex;
   width: 100%;
   justify-content: center;
-
-  margin: 2rem auto;
+  transition: margin 0.2s;
+  margin: 3rem auto 1rem;
   width: 200px;
   height: 60px;
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    margin: 3rem auto 7rem;
+    gap: 3px 3px;
+  }
 `;
 
 const Page = styled.div`
