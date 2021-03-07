@@ -6,6 +6,7 @@ import {
   TextContainer,
 } from "./findHelp.elements";
 import { Link } from "react-router-dom";
+
 const FindOut = () => {
   return (
     <Container>
