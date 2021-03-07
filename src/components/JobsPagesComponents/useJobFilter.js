@@ -22,7 +22,14 @@ const useJobFilter = () => {
     FilterJobsByInput(parameters, jobs, setJobs);
   };
 
-  return { jobs, handleSearch, resetToInitialData, changePage, pageNo, data };
+  return {
+    jobs,
+    handleSearch,
+    resetToInitialData,
+    changePage,
+    pageNo,
+    data,
+  };
 };
 
 export default useJobFilter;

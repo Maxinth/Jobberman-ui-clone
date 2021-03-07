@@ -6,7 +6,7 @@ const CountAndBtn = () => {
   return (
     <Box>
       <Count>
-        <Span>1970</Span> Jobs Found
+        <Span>1900</Span> Jobs Found!
       </Count>
       <CTA text="create job alert" goTo="/" />
     </Box>
