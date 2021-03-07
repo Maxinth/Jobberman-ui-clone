@@ -1,12 +1,7 @@
-import PropTypes from "prop-types";
-import {
-  RadioButtonUnchecked,
-  RadioButtonChecked,
-  Label,
-  RadioButtonContainer,
-  LabelText,
-} from "./styled";
 import React from "react";
+import PropTypes from "prop-types";
+import RadioButtonDisplayed from "./RadioButtonDisplayed";
+import { Label, RadioButtonContainer, LabelText } from "./styled";
 
 const RadioButton = ({ checked, toggleCheck, label, id }) => {
   // so I don;t have to write same props twice, once for each button state.
@@ -19,14 +14,10 @@ const RadioButton = ({ checked, toggleCheck, label, id }) => {
   return (
     <RadioButtonContainer>
       <Label htmlFor={id} onClick={toggleCheck}>
-        <>
-          {!checked ? (
-            <RadioButtonUnchecked {...radioInputProps} />
-          ) : (
-            <RadioButtonChecked {...radioInputProps} />
-          )}
-        </>
-        {/* <Label htmlFor={id} onClick={toggleCheck}> */}
+        <RadioButtonDisplayed
+          checked={checked}
+          radioInputProps={radioInputProps}
+        />
         <LabelText> {label}</LabelText>
       </Label>
     </RadioButtonContainer>
