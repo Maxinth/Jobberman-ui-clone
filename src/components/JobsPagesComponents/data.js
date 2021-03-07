@@ -6,6 +6,7 @@ import {
   pageFive,
   pageSix,
   pageSeven,
+  pageEight,
 } from "./jobsData";
 
 export const data = [
@@ -16,4 +17,5 @@ export const data = [
   pageFive,
   pageSix,
   pageSeven,
+  pageEight,
 ];
