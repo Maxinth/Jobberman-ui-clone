@@ -55,9 +55,24 @@ const getItems = (data) => {
   const { batchZero, indexZero } = data[0].itemZero;
   const { batchOne, indexOne } = data[1].itemOne;
   const { batchTwo, indexTwo } = data[2].itemTwo;
-  return { batchZero, indexZero, batchOne, indexOne, batchTwo, indexTwo };
-};
 
-// const
+  // array to be mapped over for each batch
+  const logosData = [
+    {
+      batch: batchZero,
+      batchIndex: indexZero,
+    },
+    {
+      batch: batchOne,
+      batchIndex: indexOne,
+    },
+    {
+      batch: batchTwo,
+      batchIndex: indexTwo,
+    },
+  ];
+
+  return { logosData };
+};
 
 export { getItems };
