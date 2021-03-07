@@ -6,6 +6,7 @@ import { JobsContainer } from "./jobsElements";
 
 const JobsView = () => {
   const { featuredJobs, newlyAddedJobs, popularJobs } = data;
+
   return (
     <Container>
       <Heading>Top Jobs</Heading>

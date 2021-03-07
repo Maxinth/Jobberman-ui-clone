@@ -104,3 +104,17 @@ export const data = {
     ],
   },
 };
+
+const { featuredJobs, newlyAddedJobs, popularJobs } = data;
+
+export const jobsData = [
+  {
+    item: featuredJobs,
+  },
+  {
+    item: newlyAddedJobs,
+  },
+  {
+    item: popularJobs,
+  },
+];

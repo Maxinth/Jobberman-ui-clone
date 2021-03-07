@@ -1,13 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import JobCard from "./JobCard";
+import GenerateJobsList from "./GenerateJobsList";
 import PropTypes from "prop-types";
-import {
-  JobSectionContainer,
-  JobHeader,
-  JobsListContainer,
-  LinkContainer,
-} from "./jobsElements";
+import { JobSectionContainer, JobHeader, LinkContainer } from "./jobsElements";
 
 const JobSection = ({ title, jobs, icon, iconColor }) => {
   return (
@@ -15,16 +10,7 @@ const JobSection = ({ title, jobs, icon, iconColor }) => {
       <JobHeader color={iconColor}>
         {title} {icon}
       </JobHeader>
-      <JobsListContainer>
-        {jobs.map((item, index) => (
-          <JobCard
-            {...item}
-            key={`${index}${item.company}`}
-            icon={icon}
-            iconColor={iconColor}
-          />
-        ))}
-      </JobsListContainer>
+      <GenerateJobsList jobs={jobs} iconColor={iconColor} icon={icon} />
 
       <LinkContainer>
         <Link to="/">view all</Link>

@@ -1,16 +1,7 @@
 import React from "react";
-import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import PropTypes from "prop-types";
-import {
-  Container,
-  InnerContainer,
-  IconContainer,
-  TitleContainer,
-  JobTitle,
-  Text,
-  Time,
-  TimeStamp,
-} from "./jobsElements";
+import { Container, Time, TimeStamp } from "./jobsElements";
+import MainContents from "./MainContents";
 
 const JobCard = ({
   duration,
@@ -24,19 +15,13 @@ const JobCard = ({
 }) => {
   return (
     <Container>
-      <InnerContainer>
-        <IconContainer>
-          <BusinessCenterIcon />
-        </IconContainer>
-        <TitleContainer>
-          <JobTitle>{jobTitle}</JobTitle>
-          <Text>{company}</Text>
-          <Text>
-            {place} | {jobType}
-          </Text>
-          <Text>{jobSector}</Text>
-        </TitleContainer>
-      </InnerContainer>
+      <MainContents
+        jobTitle={jobTitle}
+        company={company}
+        place={place}
+        jobType={jobType}
+        jobSector={jobSector}
+      />
       <Time iconColor={iconColor}>
         {icon} <TimeStamp>{duration}</TimeStamp>
       </Time>
