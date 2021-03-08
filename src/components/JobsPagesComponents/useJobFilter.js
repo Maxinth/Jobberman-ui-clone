@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { data } from "./data";
 import { FilterJobsByInput } from "./jobFilters";
 
@@ -14,13 +14,21 @@ const useJobFilter = () => {
 
   // state to determine the array of jobs lists in view based on page.
   const [jobs, setJobs] = useState(data[pageNo]);
-
+  const [jobsNo, setJobsNo] = useState(jobs.length);
   const resetToInitialData = () => setJobs(data[pageNo]);
+
+  // STATES IN QUESTION TO GET MATCHING JOBS COUNT - START FROM HERE
+  const [count, setCount] = useState(data[pageNo].length);
 
   const handleSearch = (e, parameters) => {
     e.preventDefault();
-    FilterJobsByInput(parameters, jobs, setJobs);
+    FilterJobsByInput(parameters, jobs, setJobs, setCount);
   };
+
+  useEffect(() => {
+    setCount(count);
+    console.log("count after setting it to the val of count = ", count);
+  }, [count]);
 
   return {
     jobs,
@@ -29,6 +37,8 @@ const useJobFilter = () => {
     changePage,
     pageNo,
     data,
+    count,
+    jobsNo,
   };
 };
 

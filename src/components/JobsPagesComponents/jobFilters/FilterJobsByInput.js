@@ -1,7 +1,7 @@
 import { getInputs, oneChoiceFilter, multipleChoicesFilter } from "./index";
 import { filterConditions } from "../filterConditions";
 
-export const FilterJobsByInput = (parameters, jobs, setJobs) => {
+export const FilterJobsByInput = (parameters, jobs, setJobs, setCount) => {
   const { inputs } = getInputs(parameters);
 
   const {
@@ -30,20 +30,27 @@ export const FilterJobsByInput = (parameters, jobs, setJobs) => {
     fullOptions,
   } = multipleChoicesFilter(jobsByModuleOnly, jobsByLocationOnly, ...inputs);
 
+  const matchJobsAndCount = (match) => {
+    setJobs(match);
+    console.log("no of matching jobs = ", match.length);
+    setCount(match.length);
+  };
   // section to determine filtered jobs
   if (onlyModuleChanged) {
-    setJobs(jobsByModuleOnly);
+    matchJobsAndCount(jobsByModuleOnly);
   } else if (onlyLocationChanged) {
-    setJobs(jobsByLocationOnly);
+    matchJobsAndCount(jobsByLocationOnly);
   } else if (onlyIndustryChanged) {
-    setJobs(jobsByIndustryOnly);
+    matchJobsAndCount(jobsByIndustryOnly);
   } else if (bothModuleAndIndustry) {
-    setJobs(jobsByModuleAndIndustry);
+    matchJobsAndCount(jobsByModuleAndIndustry);
   } else if (bothModuleAndLocation) {
-    setJobs(jobsByModuleAndLocation);
+    matchJobsAndCount(jobsByModuleAndLocation);
   } else if (bothIndustryAndLocation) {
-    setJobs(jobsByLocationAndIndustry);
+    matchJobsAndCount(jobsByLocationAndIndustry);
   } else if (checkAll) {
-    setJobs(fullOptions);
+    matchJobsAndCount(fullOptions);
+  } else {
+    matchJobsAndCount(jobs);
   }
 };
