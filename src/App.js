@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import BackDrops from "./components/BackDrops/BackDrops";
 import Footer from "./components/Footer";
@@ -12,6 +12,7 @@ import Contact from "./sitePages/Contact";
 import Login from "./sitePages/Login";
 import CvReviews from "./sitePages/CvReviews";
 import Jobs from "./sitePages/Jobs";
+
 function App() {
   return (
     <div className="App">
@@ -26,6 +27,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/cv-services" component={CvReviews} />
         <Route path="/jobs" component={Jobs} />
+        <Redirect from="*" to="/" />
       </Switch>
       <Footer />
     </div>
