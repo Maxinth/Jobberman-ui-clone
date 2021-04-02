@@ -14,7 +14,7 @@ const useJobFilter = () => {
 
   // state to determine the array of jobs lists in view based on page.
   const [jobs, setJobs] = useState(data[pageNo]);
-  const [jobsNo, setJobsNo] = useState(jobs.length);
+  const [jobsNo] = useState(jobs.length);
   const resetToInitialData = () => setJobs(data[pageNo]);
 
   // STATES IN QUESTION TO GET MATCHING JOBS COUNT - START FROM HERE
@@ -27,7 +27,6 @@ const useJobFilter = () => {
 
   useEffect(() => {
     setCount(count);
-    console.log("count after setting it to the val of count = ", count);
   }, [count]);
 
   return {

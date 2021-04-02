@@ -32,7 +32,7 @@ export const FilterJobsByInput = (parameters, jobs, setJobs, setCount) => {
 
   const matchJobsAndCount = (match) => {
     setJobs(match);
-    console.log("no of matching jobs = ", match.length);
+
     setCount(match.length);
   };
   // section to determine filtered jobs
