@@ -22,9 +22,18 @@ const AppProvider = ({ children }) => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const toggleSideBar = () => setIsSideBarOpen(!isSideBarOpen);
 
+  const handleLogoClick = () => {
+    // if sideBar is open and logo is clicked , close sidebar
+    if (isSideBarOpen) {
+      toggleSideBar();
+    }
+    // do nothing
+    return;
+  };
   return (
     <AppContext.Provider
       value={{
+        handleLogoClick,
         isSideBarOpen,
         toggleSideBar,
         jobs,

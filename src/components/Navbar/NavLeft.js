@@ -7,14 +7,15 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 const NavLeft = () => {
-  const { toggleSideBar } = useGlobalContext();
+  const { toggleSideBar, handleLogoClick } = useGlobalContext();
+
   return (
     <NavLeftContainer>
       <IconButton onClick={toggleSideBar}>
         <MenuIcon />
       </IconButton>
       <Link to="/">
-        <NavLogo src={logo} alt="jobber-man logo" onClick={toggleSideBar} />
+        <NavLogo src={logo} alt="jobber-man logo" onClick={handleLogoClick} />
       </Link>
     </NavLeftContainer>
   );
