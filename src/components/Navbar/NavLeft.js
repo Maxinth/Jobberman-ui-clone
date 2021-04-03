@@ -14,7 +14,7 @@ const NavLeft = () => {
         <MenuIcon />
       </IconButton>
       <Link to="/">
-        <NavLogo src={logo} alt="jobber-man logo" />
+        <NavLogo src={logo} alt="jobber-man logo" onClick={toggleSideBar} />
       </Link>
     </NavLeftContainer>
   );
