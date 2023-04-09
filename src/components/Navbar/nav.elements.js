@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 
 const Nav = styled.nav`
   width: 100%;
-  max-width: 1400px;
   position: fixed;
   top: 0;
   left: 0;
